@@ -32,10 +32,5 @@
     "webNavigation",
     "<all_urls>",
     "clipboardWrite"
-  ],
-  "applications": {
-    "gecko": {
-      "id": "redirectpath@ayima.com"
-    }
-  }
+  ]
 }
