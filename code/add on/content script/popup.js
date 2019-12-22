@@ -11,7 +11,7 @@ function transfer(){
 		params="url="+tablink;
         // alert(params);
 		var markup = "url="+tablink+"&html="+document.documentElement.innerHTML;
-		xhr.open("POST","http://localhost/Malicious-Web-Content-Detection-Using-Machine-Learning/clientServer.php",false);
+		xhr.open("POST","http://localhost/Malicious-Web-Content-Detection-Using-Machine-Learning/clientServer.php",true);
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhr.send(markup);
 		// Uncomment this line if you see some error on the extension to see the full error message for debugging.
