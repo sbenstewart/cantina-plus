@@ -5,7 +5,7 @@ function transfer(){
 	var tablink;
 	chrome.tabs.getSelected(null,function(tab) {
 	   	tablink = tab.url;
-		$("#p1").text("The URL being tested is - "+tablink);
+		$("#p1").text("The URL being tested is "+tablink);
 
 		var xhr=new XMLHttpRequest();
 		params="url="+tablink;
