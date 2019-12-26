@@ -2,21 +2,15 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "Background Script",
-  "version": "2.2.1",
-  "version_name" : "2.2.1",
+  "version": "1.1.1",
+  "version_name" : "1.1.1",
   "manifest_version": 2,
   "minimum_chrome_version" : "41",
   "description": "Get the URL redirection list",
 
-  "icons": {  	"16": "assets/images/rpath16.png",
-           		"48": "assets/images/rpath48.png",
-           		"128": "assets/images/rpath128.png"
-           	},
-
   "browser_action": {
-  						"default_icon": "assets/images/rpath19_off.png",
 	  					"default_popup" : "popup.html",
-	  					"default_title" : "Click here to see your Redirect Path."
+	  					"default_title" : "Background Script"
 	  				},
   "background": { "scripts": ["background.js"]},
   "content_scripts": [
