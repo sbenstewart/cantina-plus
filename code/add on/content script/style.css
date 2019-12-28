@@ -18,7 +18,7 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
-  color: #0C5;
+  color: rgb(204, 0, 0);
 
   font-size: 24px;
   font-family: "Nunito", sans-serif;
@@ -36,8 +36,8 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
   width: 50%;
   height:5%;
 
-  background: #0D6;
-  border: 1px solid #0D6;
+  background: rgb(204, 0, 0);
+  border: 1px solid rgb(204, 0, 0);
   color: #FFF;
   overflow: hidden;
   
@@ -47,8 +47,8 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
 .button:hover, .button:active 
 {
   text-decoration: none;
-  color: #0C5;
-  border-color: #0C5;
+  color: rgb(204, 0, 0);
+  border-color: rgb(204, 0, 0);
   background: #FFF;
 }
 
@@ -90,7 +90,7 @@ sup  { font-size: 36px; font-weight: 100; line-height: 55px; }
 {
   transition: opacity 0.5s, top 0.5s, right 0.5s;
   opacity: 1;
-  border-color: #0C5;
+  border-color: rgb(204, 0, 0);
   right: 0;
   top: 50%;
 }
