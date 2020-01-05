@@ -11,8 +11,6 @@ var RedirectPath = {
         chrome.webNavigation.onCommitted.addListener(this.navigationCommited);
         chrome.runtime.onMessage.addListener(this.recordClientDetails);
 
-        //chrome.tabs.onUpdated.addListener(this.tabUpdated);
-        //chrome.tabs.onCreated.addListener(this.tabUpdate);
         chrome.tabs.onRemoved.addListener(this.tabRemoved);
 
 
@@ -23,7 +21,6 @@ var RedirectPath = {
             ok: '#5d945a'
         };
 
-        // Used so our other extension(s) can check if this is installed or not.
         chrome.runtime.onMessageExternal.addListener(function(request, sender, sendResponse) {
             sendResponse({'response': 'whats up'});
         });
@@ -118,9 +115,7 @@ var RedirectPath = {
         }
 
         if (!statusMap[statusCodeLookup])
-        {
-            // We didn't get a specific status code match, round down to the nearest 100
-            // and try again.
+        {   
             statusCodeLookup = (Math.floor(statusCode / 100) * 100).toString();
 
             if (redirectType == 'client_redirect')
@@ -131,7 +126,6 @@ var RedirectPath = {
 
         if (!statusMap[statusCodeLookup] && redirectType == 'client_redirect')
         {
-            // Do it again with out any client redirect appended.
             statusCodeLookup = (Math.floor(statusCode / 100) * 100).toString();
         }
 
@@ -139,16 +133,12 @@ var RedirectPath = {
     },
     onServerClientPathSync: function (tabId, url)
     {
-        // This "event" will execute when both final client (webNavigation) and server (webRequest) events have been received.
-        // We need data from both of the callbacks to determine what type of redirect this was, and if we need to reset the path etc.
 
         var currentClientRequestDetails = this.getClientRequestByUrl(tabId, url);
         var currentServerRequestDetails = this.getServerRequestByUrl(tabId, url);
 
-        // Both populated, we're clear to proceed.
         if (currentClientRequestDetails && currentServerRequestDetails)
         {
-            // Build the pathItem object with what we know so far
             var pathItem = {
                 type: 'normal',
                 redirect_type: 'none',
@@ -161,24 +151,17 @@ var RedirectPath = {
 
             var tab = this.getTab(tabId);
 
-            // Forward/back can get trapped by JS (pushState) so if we pick up that
-            // qualifier mark it as user generated (which it is)
             if (currentClientRequestDetails.transitionQualifiers.indexOf('forward_back') !== -1)
             {
                 tab.userClicked = true;
             }
 
-            // We got here from a client redirect, so the path hasn't ended yet. Also the user hasn't fired any click events
-            // on this page.
             if (currentClientRequestDetails.transitionQualifiers.indexOf('client_redirect') !== -1 && tab.userClicked !== true)
             {
                 tab = this.setClientRedirectData(tab, currentClientRequestDetails);
             }
             else if (tab.previousClientRequest !== null)
             {
-                // We didn't get to the current page via a client redirect, or if we did it was a user initiated client redirect (tab.userClicked)
-                // To reset the path we'll remove everything from the path from before (and including) the previous client request/page. If
-                // there was no previous client request we'll never get here and the path will be fresh anyway.
 
                 var indexToRemove = tab.path.map(function (el)
                 {
@@ -192,8 +175,6 @@ var RedirectPath = {
 
             tab.userClicked = false;
 
-            // Every time the path "syncs" like this, we can discard any of the meta data about
-            // the previous URLs in the path, we will "render" it down in to the path anyway.
             tab.serverClientSyncPath = {
                 client: {},
                 server: {}
@@ -201,7 +182,6 @@ var RedirectPath = {
 
             this.recordPathItem(tabId, pathItem);
 
-            //this.outputDebugPath(tabId);
 
             tab.previousClientRequest = currentClientRequestDetails;
 
@@ -210,9 +190,6 @@ var RedirectPath = {
     },
     setClientRedirectData: function (tab, currentClientRequestDetails)
     {
-        // Btw, we're editing the pathItem for the PREVIOUS client request to set the details of the
-        // client request it initiated. Get the path, as well as the previous client
-        // request to match urls and what not.
         if (tab.previousClientRequest)
         {
             var indexToModify = tab.path.map(function (el, idx)
@@ -221,22 +198,14 @@ var RedirectPath = {
                 return el.url;
             }).lastIndexOf(tab.previousClientRequest.url);
 
-            // lastIndexOf above so we get the most recent client url. This only matters
-            // in a refresh scenario where using indexOf doesn't work.
 
             var pathItemToModify = tab.path[indexToModify];
 
             pathItemToModify.type = 'client_redirect';
             pathItemToModify.redirect_type = 'javascript';
 
-            // Default, set the redirect url to the current client URL, but this
-            // won't be correct if we got here via a server redirect. The next
-            // if takes care of that
             pathItemToModify.redirect_url = currentClientRequestDetails.url;
 
-            // Set the redirect URL to the URL that came right after the last
-            // client request in the path if there is such a thing. Picks up
-            // client > server redirects.
             if (tab.path[(indexToModify + 1)])
             {
                 pathItemToModify.redirect_url = tab.path[(indexToModify + 1)].url;
@@ -286,18 +255,6 @@ var RedirectPath = {
     },
     recordPathItem: function (tabId, pathItem)
     {
-        /*
-         pathItem = {
-         tabId: 0,
-         type: 'normal', 'server_redirect', 'client_redirect'
-         redirect_type: 3XX, javascript, meta, none
-         url:
-         ip: if (!details.ip) details.ip = '(not available)';
-         headers: []
-         status_line: HTTP/1.1 302 Found
-         status_code: HTTP/1.1 302 Found
-         }
-         */
 
         if (tabId > 0)
         {
@@ -305,13 +262,11 @@ var RedirectPath = {
 
             tab.lastactive = new Date().getTime();
 
-            // Fill in optional stuff
             pathItem.redirect_url = pathItem.redirect_url || null;
             pathItem.meta_timer = pathItem.meta_timer || null;
 
             tab.path.push(pathItem);
 
-            // Limit the path to 20 steps.
             if (tab.path.length > 20)
             {
                 var step = tab.path.shift();
@@ -325,10 +280,6 @@ var RedirectPath = {
             var self = this;
             tab.path.forEach(function (pathItem, index)
             {
-                // First actually set the status object. We're doing this here
-                // and re-setting previously set status objects because the status
-                // could have changed after the path item was originally recorded
-                // i.e. a 200 can become a 200_meta after a redirect fires.
 
                 pathItem.statusObject = self.getStatusObject(pathItem);
                 tab.path[index] = pathItem;
@@ -343,7 +294,6 @@ var RedirectPath = {
             this.setBadge(tabId, highestPriorityPathItem, tab.path.length);
             this.setTab(tabId, tab);
 
-            // Perform GC 30 out of every 100 requests.
             if (this.rand(1, 100) <= 30)
             {
                 console.log('RANDOM GC STARTED');
@@ -361,8 +311,6 @@ var RedirectPath = {
         {
             var badgeText = pathItem.status_code.toString();
 
-            // Set variable as issue with directly calling the level index
-            // in setBadgeBackgroundColor
             var badgeColour = this.warningColorMap[pathItem.statusObject.level];
 
             if (pathItem.type == 'client_redirect')
@@ -370,28 +318,13 @@ var RedirectPath = {
                 badgeText = (pathItem.redirect_type == 'javascript') ? 'JS' : 'Meta';
             }
 
-            // We have more than 1 redirect, we append a '+' to badgeText
-            // more than 2 pathItem objects - we have more 2 redirect
-
-            // NOTE: This is commented out because in the most recent versions of Chrome they introduced
-            // the "material" theme. This has made the default font size for the badge text very slightly bigger
-            // in comparison to the space it was in, meaning "301+" now displays as "30..". Until we can find a
-            // better UX method to fix this, don't add the +.
-
-            // if (pathItemCount > 2) {
-            //     badgeText = badgeText + "+";
-            // }
-
-            // Check we have a tab with badge text
-            // If no - we handle the error
+            
             this.checkTabIDIsValid(tabId, 'getBadgeText', function(res){
                 if (res) {
                     chrome.browserAction.setBadgeText({text: badgeText, tabId: tabId});
                 }
             });
 
-            // Check we have a tab with badge background color
-            // If no - we handle the error
             this.checkTabIDIsValid(tabId, 'getBadgeBackgroundColor', function(res){
                 if (res) {
                     chrome.browserAction.setBadgeBackgroundColor({color: badgeColour, tabId: tabId});
@@ -416,8 +349,6 @@ var RedirectPath = {
 
         RedirectPath.garbageCollect();
     },
-    // Look at all active tabs and remove data we have for any
-    // tabs that aren't visible & more than 30 seconds old.
     garbageCollect: function ()
     {
         chrome.windows.getAll({populate: true}, function (windows)
@@ -458,7 +389,6 @@ var RedirectPath = {
             return this.tabs[tabId];
         }
 
-        // Not seen this tab, init it.
         return {
             path: [],
             meta: {},
@@ -496,7 +426,6 @@ var RedirectPath = {
 
         if (currVersion != prevVersion)
         {
-            // Check if we just installed this extension.
             if (typeof prevVersion == 'undefined')
             {
                 this.onInstall();

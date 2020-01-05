@@ -50,23 +50,12 @@ var RedirectPathPopup = {
 
             self.renderPathPopup(redirectPath);
 
-            // Fix height after rendering - this removes a strange "resize" artifact
-            // and hopefully fixes the extension sometimes failing to size it's self
-            // correctly - https://code.google.com/p/chromium/issues/detail?id=428044
             $('html,body').css({height: $('html').height()});
         });
     },
 
     renderBanner: function (banner) {
-        // This 1ms delay is thanks to Windows. There's an odd bug
-        // that causes the popup display to take 4-5 seconds when the popup
-        // has a video in it. Even if we add the video at domready the
-        // delay still happens - waiting even 1ms is enough to apprently
-        // bypass what ever is causing this. Go figure.
-
-        // Jan 2017: This problem has gotten worse, and the 1ms delay now
-        // needs to be a 1000 ms delay. Neat.
-
+      
         var self = this;
         setTimeout(function () {
             var bannerElement = $(".bannerContainer .banner");
@@ -158,16 +147,8 @@ var RedirectPathPopup = {
     setNote: function (pathItem, template) {
         if (pathItem.status_code == 307) {
             $(pathItem.headers).each(function (idx, header) {
-                // 307 is a temp redirect, unless it's not.
                 if (header.name == 'Non-Authoritative-Reason' && header.value == 'HSTS') {
                     redirectType = 'Internal (browser cached)';
-
-                    // This is an internal Chrome "HSTS" Redirect. Chrome maintains a cached
-                    // list of domains that should always redirect to HTTPS if the request comes in via
-                    // HTTP, if there is a cache hit Chrome will NOT visit the server via HTTP and instead
-                    // will inject its own "307" redirect. Long story short, there is no way to know what
-                    // the original redirect code on the server side was, so we need to leave it as 307 with
-                    // an explanation:
                     template.find('p#note').removeClass('hide');
                     template.find('p#note strong').html('The server has previously indicated this domain ' +
                         'should always be accessed via HTTPS (HSTS Protocol). Chrome has cached this internally, ' +
@@ -191,7 +172,6 @@ var RedirectPathPopup = {
 
             if (pathItem.status_code == 307) {
                 $(pathItem.headers).each(function (idx, header) {
-                    // 307 is a temp redirect, unless it's not.
                     if (header.name == 'Non-Authoritative-Reason' && header.value == 'HSTS') {
                         redirectType = 'Internal (browser cached)';
                     }
@@ -204,7 +184,6 @@ var RedirectPathPopup = {
             statusString = pathItem.status_code + ': This page is NOT FOUND';
         }
         else if (pathItem.status_code == 503) {
-            // Search the headers for a retry-after.
             var retryAfter = '';
             if (typeof(pathItem.headers) != 'undefined') {
                 $(pathItem.headers).each(function (idx, val) {
@@ -228,7 +207,6 @@ var RedirectPathPopup = {
         var responseTemplate = template.find('.pathResponseHeaders li').clone();
         template.find('.pathResponseHeaders li').remove();
 
-        // Add the IP first.
         var ipResponseTemplate = responseTemplate.clone();
 
         ipResponseTemplate.find('.responseKey').html('Server IP Address');
@@ -237,8 +215,6 @@ var RedirectPathPopup = {
 
         if (typeof(pathItem.headers) != 'undefined') {
             $(pathItem.headers).each(function (idx, val) {
-
-                // Strip cookie data from the response headers.
                 if (pathItem.name != 'Set-Cookie') {
                     var thisResponseTemplate = responseTemplate.clone();
 
