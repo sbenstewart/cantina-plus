@@ -24,8 +24,8 @@ import sys
 from patterns import *
 
 # Path of your local server. Different for different OSs.
-LOCALHOST_PATH = "/Library/WebServer/Documents/"
-DIRECTORY_NAME = "Malicious-Web-Content-Detection-Using-Machine-Learning"
+LOCALHOST_PATH = "/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/"
+DIRECTORY_NAME = "phish detector"
 
 
 def having_ip_address(url):
@@ -312,7 +312,7 @@ def get_hostname_from_url(url):
 
 
 def main(url):
-    with open(LOCALHOST_PATH + DIRECTORY_NAME + '/markup.txt', 'r') as file:
+    with open('/Applications/MAMP/htdocs' + '/markup.txt', 'r') as file:
         soup_string = file.read()
 
     soup = BeautifulSoup(soup_string, 'html.parser')
