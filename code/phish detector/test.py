@@ -24,21 +24,31 @@ def get_prediction_from_url(test_url):
 def main():
     url = sys.argv[1]
 
-    prediction = get_prediction_from_url(url)
-
-    # Print the probability of prediction (if needed)
-    # prob = clf.predict_proba(features_test)
-    # print 'Features=', features_test, 'The predicted probability is - ', prob, 'The predicted label is - ', pred
-    #    print "The probability of this site being a phishing website is ", features_test[0]*100, "%"
-
-    if prediction == 1:
-        # print "The website is safe to browse"
+    white_list_file = open('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/phish detector/whitelist.txt').read()
+    white_list = white_list_file.split('\n')
+    if url in white_list:
         print("SAFE")
-    elif prediction == -1:
-        # print "The website has phishing features. DO NOT VISIT!"
-        print("PHISHING")
+    else:
+        prediction = get_prediction_from_url(url)
 
-        # print 'Error -', features_test
+        # Print the probability of prediction (if needed)
+        # prob = clf.predict_proba(features_test)
+        # print 'Features=', features_test, 'The predicted probability is - ', prob, 'The predicted label is - ', pred
+        #    print "The probability of this site being a phishing website is ", features_test[0]*100, "%"
+
+        if prediction == 1:
+            # print "The website is safe to browse"
+            print("SAFE")
+            white_list_file=open('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/phish detector/whitelist.txt', "a+")
+            white_list_file.write(url)
+            white_list_file.write("\n")
+            white_list_file.close()
+
+        elif prediction == -1:
+            # print "The website has phishing features. DO NOT VISIT!"
+            print("PHISHING")
+
+            # print 'Error -', features_test
 
 
 if __name__ == "__main__":
