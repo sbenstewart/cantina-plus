@@ -61,7 +61,7 @@ def main():
             json_decoded['url'] = url
 
             with open(json_path, 'w') as json_file:
-                json.dump(json_decoded, json_file)      
+                json.dump(json_decoded, json_file, sort_keys=True, indent=4, separators=(',', ': '))      
 
 
             # print 'Error -', features_test
