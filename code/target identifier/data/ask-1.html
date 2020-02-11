@@ -1,709 +1,1404 @@
-<!DOCTYPE html><!--[if IE 7 ]> <html lang='en' class='ie7'> <![endif]--><!--[if IE 8 ]> <html lang='en' class='ie8'> <![endif]--><!--[if IE 9 ]> <html lang='en' class='ie9'> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]--><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/s/0-4-48/usp-api.min.js"></script>
+    <meta charset="UTF-8"/>
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+    
+
+
+<meta property="og:image" content="//www.ask.com/logo.png" />
+    <meta property="og:description" content="Ask.com is the #1 question answering service that delivers the best answers from the web and real people - all in one place."/>
+    <meta property="og:title" content="Ask.com - What's Your Question?"/>
+    <meta property="og:url" content="www.ask.com"/>
+    <meta property="og:site_name" content="Ask.com"/>
+    <meta property="fb:page_id" content="123118179545" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@askdotcom" />
+
+    <link rel="canonical" href="//www.ask.com"/>
+
+
+<link REL="search" type="application/opensearchdescription+xml" HREF="//www.ask.com/ask-search.xml" title="Ask Search">
+
 <title>Ask.com - What's Your Question?</title>
-<style>
-html{
-background: #ffffff url(http://sp.ask.com/sh/i/a16/themes/bluelinen.jpg) no-repeat center top !important;
-}
-</style>
-<meta charset="UTF-8">
-<meta content="initial-scale=0.9, user-scalable=no, maximum-scale=1, width=device-width" name="viewport">
-<meta name="description" content="Ask.com is the #1 question answering service that delivers the best answers from the web and real people - all in one place.">
-<link rel="shortcut icon" href="http://sp.ask.com/sh/i/a14/favicon/favicon.ico">
-<link rel="apple-touch-icon" href="http://www.ask.com/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="76x76" href="http://www.ask.com/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="120x120" href="http://www.ask.com/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="152x152" href="http://www.ask.com/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="http://www.ask.com/apple-touch-icon-180x180.png"> <!--[if lt IE 9]> <script src="/st/c/js/ask_home-head.min.70d8a586.js" type="text/javascript"></script>
-<![endif]-->
-<link type="text/css" rel="stylesheet" href="/st/c/css/ask_home.min.c321868e.css">
-<link rel="canonical" href="http://www.ask.com">
-<link rel="alternate" hreflang="en" href="http://www.ask.com">
-<link rel="alternate" hreflang="en-AU" href="http://au.ask.com">
-<link rel="alternate" hreflang="en-GB" href="http://uk.ask.com">
-<link rel="alternate" hreflang="fr" href="http://fr.ask.com">
-<link rel="alternate" hreflang="ru" href="http://ru.ask.com">
-<link rel="alternate" hreflang="pt-BR" href="http://br.ask.com">
-<link rel="alternate" hreflang="pt" href="http://pt.ask.com">
-<link rel="alternate" hreflang="de" href="http://de.ask.com">
-<link rel="alternate" hreflang="de-AT" href="http://at.ask.com">
-<link rel="alternate" hreflang="it" href="http://it.ask.com">
-<link rel="alternate" hreflang="nl" href="http://nl.ask.com">
-<link rel="alternate" hreflang="jp" href="http://jp.ask.com">
-<link rel="alternate" hreflang="es" href="http://es.ask.com">
-<link rel="alternate" hreflang="es-AR" href="http://ar.ask.com">
-<link rel="alternate" hreflang="es-MX" href="http://mx.ask.com">
-<link rel="alternate" hreflang="es-CL" href="http://cl.ask.com">
-<meta property="og:image" content="http://about.ask.com/wp-content/uploads/2013/04/Ask-Logo-Medium.jpg">
-<meta property="og:description" content="Ask.com is the #1 question answering service that delivers the best answers from the web and real people - all in one place.">
-<meta property="og:title" content="Ask.com - What's Your Question?">
-<meta property="og:url" content="www.ask.com">
-<meta property="og:site_name" content="Ask.com">
-<meta property="fb:page_id" content="123118179545">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@askdotcom">
-<meta name="google-site-verification" content="t1SUuVQ_reOZwUXy_U6JBSSqrKRH6gGsDnjriV7LzF0">
-<meta name="google-site-verification" content="s89ONKESmARKIiARRHPtHQytGUqVAsbSpJowT1vzEmw">
-<meta name="google-site-verification" content="ULKVDJtuDYjxxCkZM521VKYgqMrdXGyuETfTOmwf3dE">
-<meta name="google-site-verification" content="Yy-rANR5ykcKJ9jFbLRTh9YE18tcdT40JvEW2qT2OM4">
-<meta name="google-site-verification" content="YzLed7-k4UKktSHljrLZZYL6wVstSOrNWs_Vr462n9I">
-<meta name="google-site-verification" content="f149PvK8Pkssqod0hWO2cHV00Xcicoj2naDl_OenW4Q">
-<meta name="google-site-verification" content="ef6bneVqkEMDsgtDS3oqTxRlNsqCBPBS8qsR84Mp4DQ">
-<meta name="google-site-verification" content="a2VFwibISMkZ3dwloxR6hqrCilAXxQYh545JhkiA2jk">
-<meta name="google-site-verification" content="XAfLMau8YSciNtKLEdAYhQWdh66dO3v6EF8Iw4ZptDM">
-<meta name="google-site-verification" content="bLDlJEIYv9pAO9jyRA5cDPS4QyvEpw-e6FZTUpi93U0"> <script async="" src="http://b.scorecardresearch.com/beacon.js"></script><script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script async="" type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script><script src="http://ad.crwdcntrl.net/5/c=4736/pe=y/var=ccauds" async="" id=""></script><script src="http://tags.crwdcntrl.net/c/4737/cc.js?ns=_cc4737" async="" id="LOTCC_4737"></script><script async="" type="text/javascript" src="http://partner.googleadservices.com/gpt/pubads_impl_59.js"></script></head>
-<body class="legacy-home">
-<div id="wrapper">
-<div id="page-head">
-<div class="mod-top-navigation">
-<nav id="mod-top-nav">
-<ul id="tabs-left">
-<li class="active">
-<a>
-Answers </a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'52c2M=CYLAuP&amp;7=qxln0h&amp;pw=w&amp;aG=OBtKlG1%t8&amp;SS=OhdpnQOhxK&amp;Eo=v&amp;n4=EwHrhAMwu'});" href="http://www.ask.com/answers/browse?qsrc=321&amp;qo=channelNavigation&amp;o=0&amp;l=dir">
-Q&amp;A Community </a>
-</li>
-</ul>
-<ul id="channels-left">
-<li>
-<a onmousedown="uaction(this,{up:'088f4=6HajAB&amp;4=P5nGc4&amp;SY=K&amp;1K=d3+Byvo0fw&amp;LT=0tpONZ8dY1&amp;U5=N&amp;03=esP10ZBsu'});" href="http://www.ask.com/pictures?qsrc=321&amp;qo=channelNavigation&amp;o=0&amp;l=dir">Images</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'0a92J=POG5oI&amp;d=t%iIAA&amp;o4=E&amp;aI=xhaQhVqgCT&amp;03=%C4EWIjyh%&amp;SI=s&amp;lZ=2Gc6HXPSX'});" href="http://www.ask.com/news?qsrc=321&amp;qo=channelNavigation&amp;o=0&amp;l=dir">News</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'7dbfC=HKH6Kk&amp;B=NLPgmi&amp;1C=8&amp;OA=VCv+hhhf4v&amp;bR=PFosFmEATB&amp;Z9=L&amp;NF=2tPat3OaG'});" href="http://www.ask.com/videos?qsrc=321&amp;qo=channelNavigation&amp;o=0&amp;l=dir">Videos</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'3862Q=d5ye1w&amp;O=GXF0QB&amp;i3=Y&amp;o+=eDBPHi4PJk&amp;P9=X76gqeyKuK&amp;ir=n&amp;ZC=hiTWwgyVj'});" href="http://theknow.ask.com/?qsrc=321&amp;qo=channelNavigation&amp;o=0&amp;l=dir" target="_blank">theKnow</a>
-</li>
-</ul>
-<ul class="tabs-right">
-<li>
-<a onmousedown="uaction(this,{up:'dcefD=s0BOyN&amp;5=cDthvc&amp;S+=Y&amp;LE=2+wqXwkJer&amp;hv=ziykYIQFJF&amp;cp=%&amp;yY=vphv+wYyz'});" href="http://www.ask.com/themes?qsrc=321&amp;qo=channelNavigation&amp;o=0&amp;l=dir">Themes</a>
-</li>
-<li style="padding-left: 10px;">
-<div id="signin" style="visibility: visible; ">
-<img style="width:16px;height:16px;margin-top:1px;" alt="" src="http://sp.ask.com/sh/i/a14/c/generic.png">
-<a onmousedown="uaction(this,{up:'1c32S=6uEPz0&amp;7=OdauvA&amp;SK=a&amp;6M=%oZuOC9w2b&amp;BT=svz6%bLApd&amp;ck=v&amp;2d=eDtdvOGVl'});" href="http://www.ask.com/answers/browse?qsrc=321&amp;q=&amp;o=0&amp;l=dir#opensignin" style="margin-left:12px;display:inline-block;vertical-align:top;">Sign In </a>
+
+
+
+<link rel="stylesheet" type="text/css" href="/s/0-4-48/site-ask-sites-askus-home-page.css"/>
+    <script>
+        var App = {};
+    </script>
+    
+
+
+<script>
+        var isDataLayerDefined = (typeof dataLayer !== "undefined");
+
+        var dataObj = {
+            "ldid": "",
+            "channel": "home",
+            "affiliateid": "0",
+            "sessionid": "1536978812",
+            "acquisitiondivision": "dirN"
+        };
+
+        
+
+
+if (isDataLayerDefined) {
+            dataLayer.push(dataObj);
+        } else {
+            var dataLayer = [dataObj];
+        }
+
+    </script>
+
+    
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T3KVMC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer_temp'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T3KVMC');</script>
+    
+
+
+
+
+
+
+
+
+<script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+            
+
+fbq('init', '1236983599798824');
+            
+fbq('track', 'PageView');
+        fbq('track', 'ViewContent');
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function () {
+        googletag.pubads().disableInitialLoad();
+    });
+</script>
+<script type='text/javascript' src="//www.googletagservices.com/tag/js/gpt.js" async></script>
+
+
+<script>
+    window.deCfg = {
+        device: 'desktop',
+        post_id: '',
+        is_gallery: '',
+        is_gallery_excerpt:'',
+        is_gallery_content: '',
+        is_serp: '',
+        page_number: '1',
+        page_total: '1',
+        country_code: 'in'
+    };
+</script>
+
+
+<script src="https://amg-cdn.novelty.media/iac/ask/nf.js" async ></script>
+<script src="https://amg-cdn.novelty.media/iac/ask/decfg.js" async ></script>
+
+
+
+
+
+
+
+</head>
+<body>
+<div class="row">
+    <div class="col col-12">
+        <header class="l-header">
+            <div class="l-header-container">
+                
+
+<div class="PartialLogo js-PartialLogo">
+
+    
+
+<div class="PartialLogo-image">
+            <a class="PartialLogo-link" href='/' data-unified='{"moduleName":"logo","resultType":"navigation","providerSource":"navigation","zoneName":"header","moduleInZone":1,"resultInModule":1}' data-qo='logo'>Ask.com</a></div>
+    
 </div>
-<div id="signedin" style="display:none;">
-<a id="avatar" href="http://www.ask.com/answers/profile?qsrc=3099" style="display:inline-block;height:16px;width:16px;vertical-align:top;margin-top:2px;"></a>
-<a id="profile" href="http://www.ask.com/answers/profile?qsrc=3099" style="vertical-align:top;margin-left:8px;"></a>
-<a id="signout" href="javascript:void(0);" style="vertical-align:top;margin-left:10px;">Sign Out</a>
+
+
+<div class="PartialSearchBox  ">
+    <div class="PartialSearchBox-wrapper">
+        <div class="PartialSearchBox-container" name="searchBoxContainer" >
+            <form target="_top" action="/web" method="get" class="PartialSearchBox-form js-PartialSearchBox-form"
+                  data-unified="{&quot;resultType&quot;:&quot;navigation&quot;,&quot;providerSource&quot;:&quot;navigation&quot;,&quot;zoneName&quot;:&quot;header&quot;,&quot;moduleName&quot;:&quot;searchBox&quot;,&quot;moduleInZone&quot;:2,&quot;resultInModule&quot;:1}">
+                <input type="hidden" id="qsrc">
+                <input type="hidden" id="origin" name="o" value="0">
+                <input type="hidden" id="partnerID" name="l" value="dir">
+                <input type="hidden" id="qo" name="qo" value="serpSearchTopBox">
+                <input class="PartialSearchBox-input js-PartialSearchBox-input "
+                       data-zone="header" validate="required" value="" name="q" autocomplete="off" maxlength="2048" 
+placeholder="Search...">
+            </form>
+            <button class="PartialSearchBox-button js-PartialSearchBox-button" type="submit">
+                <div class="PartialSearchBox-button-magnifier">
+<svg viewBox="0 0 25 24" version="1.1" xml:space="preserve">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title></title>
+    <g id="Page-2" stroke=#FFFFFF stroke-width=1.75 fill="none" fill-rule="evenodd">
+        <g id="pronto-int-new-magnify-glass" transform="translate(-770.000000, -15.000000)" fill=#FFFFFF fill-rule="nonzero">
+            <path d="M794.048828,37.0527344 L794.022461,37.0527344 C794.215821,37.2636729 794.3125,37.4921863 794.3125,37.7382812 C794.3125,37.9843762 794.215821,38.2041006 794.022461,38.3974609 C793.829101,38.5908213 793.609376,38.6875 793.363281,38.6875 C793.117186,38.6875 792.897462,38.5908213 792.704102,38.3974609 L787.272461,32.9921875 C786.39355,33.7128942 785.404791,34.2797831 784.306152,34.6928711 C783.207514,35.1059591 782.042975,35.3125 780.8125,35.3125 C777.947251,35.2421871 775.561045,34.2534275 773.653809,32.3461914 C771.746572,30.4389553 770.757813,28.0527487 770.6875,25.1875 C770.757813,22.3222513 771.746572,19.9360447 773.653809,18.0288086 C775.561045,16.1215725 777.947251,15.1328129 780.8125,15.0625 C783.677749,15.1328129 786.063955,16.1215725 787.971191,18.0288086 C789.878428,19.9360447 790.867187,22.3222513 790.9375,25.1875 C790.9375,26.4179749 790.730959,27.582514 790.317871,28.6811523 C789.904783,29.7797906 789.337894,30.7685503 788.617188,31.6474609 L794.048828,37.0527344 Z M784.00293,32.7548828 C784.98731,32.3505839 785.861813,31.7661171 786.626465,31.0014648 C787.391117,30.2368126 787.984373,29.3579151 788.40625,28.3647461 C788.828127,27.3715771 789.039062,26.3125056 789.039062,25.1875 C789.039062,24.0624944 788.828127,23.0034229 788.40625,22.0102539 C787.984373,21.0170849 787.391117,20.1381874 786.626465,19.3735352 C785.861813,18.6088829 784.982915,18.0156271 783.989746,17.59375 C782.996577,17.1718729 781.937506,16.9609375 780.8125,16.9609375 C779.687494,16.9609375 778.628423,17.1718729 777.635254,17.59375 C776.642085,18.0156271 775.763187,18.6088829 774.998535,19.3735352 C774.233883,20.1381874 773.640627,21.0170849 773.21875,22.0102539 C772.796873,23.0034229 772.585938,24.0624944 772.585938,25.1875 C772.585938,26.3125056 772.796873,27.3715771 773.21875,28.3647461 C773.640627,29.3579151 774.233883,30.2368126 774.998535,31.0014648 C775.763187,31.7661171 776.642085,32.3593729 777.635254,32.78125 C778.628423,33.2031271 779.687494,33.4140625 780.8125,33.4140625 C781.937506,33.4140625 783.000972,33.1943381 784.00293,32.7548828 Z" id=""></path>
+        </g>
+    </g>
+</svg>
 </div>
-</li>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    'use strict';
+    if (App) {
+        (function () {
+            App.events = App.events || [];
+            App.events.push (
+                    {
+                        partial: "PartialSearchBox",
+                        contextSelector: ".PartialSearchBox-wrapper",
+                        elementSelector: ".js-PartialSearchBox-form",
+                        type: "submit",
+                        handler: function (e) {
+                            var $searchTextInputBox = $(".js-PartialSearchBox-input", this);
+                            if (!$searchTextInputBox.val()) {
+                                return false;
+                            }
+                        }
+                    },
+                    {
+                        partial: "PartialSearchBox",
+                        contextSelector: ".PartialSearchBox-wrapper",
+                        elementSelector: null,
+                        type: "ready",
+                        handler: function () {
+                            var searchButton = $(".js-PartialSearchBox-button", this),
+                                    searchForm = $(".js-PartialSearchBox-form", this);
+
+                            //Attach submit under searchButton click event.
+                            searchButton.on("click", function(e) {
+                                searchForm.submit();
+                            });
+
+                        }
+                    },
+                    {
+                        partial: "PartialSearchBox",
+                        contextSelector: ".PartialSearchBox-wrapper",
+                        elementSelector: ".js-PartialSearchBox-top-form",
+                        type: "submit",
+                        handler: function (e) {
+                            var topForm = $(".js-PartialSearchBox-top-form"),
+                                    searchPayload = topForm.data("unified");
+
+                            if (!searchPayload) {
+                                return;
+                            }
+                            searchPayload.actionType = "click";
+                            searchPayload.assetType = "searchBox";
+
+                            topForm.unbind(e);
+                            e.preventDefault();
+                            ask.unified.sendAction(searchPayload, function () {
+                                topForm.submit();
+                            });
+                        }
+                    },
+                    {
+                        partial: "PartialSearchBox",
+                        contextSelector: ".PartialSearchBox-wrapper",
+                        elementSelector: ".js-PartialSearchBox-top-input",
+                        type: "keydown",
+                        handler: function (e) {
+                            e.stopPropagation();
+                        }
+                    },
+                    //append query in search box
+                    {
+                        partial: "PartialSearchBox",
+                        contextSelector: document,
+                        elementSelector: "body",
+                        type: "keydown",
+                        handler: function (e) {
+                            var element = document.getElementById('js-PartialSearchBox-top-input');
+                            if (element) {
+                                if (_searchQuery.isEligibleKey(e)) {
+                                    if (_searchQuery.isSAClick(elementID, e)) {
+                                        return;
+                                    }
+                                    if (_searchQuery.isDeleteKey(e) || _searchQuery.isBackspaceKey(e)) {
+                                        //delete & back button click functionality
+                                        _searchQuery.deleteBackButtonClickEvent(e, element);
+                                    } else {
+                                        //appends space after the current query
+                                        _searchQuery.appendSpaceAfterQuery(element);
+                                    }
+
+                                    //get cursor position
+                                    _searchQuery.getCursorPosition(element);
+
+                                    element.focus();
+                                }
+                            }
+                        }
+                    }
+            );
+        })();
+    }
+
+    var _searchQuery = {
+        //Keys 0 - 9
+        isNumberKey: function (target) {
+            return (target.which >= 48 && target.which <= 57);
+        },
+        //Keys a - z
+        isLetterKey: function (target) {
+            return (target.which >= 65 && target.which <= 90);
+        },
+        //Keys numpad0 - numpad9
+        isNumPadKey: function (target) {
+            return (target.which >= 96 && target.which <= 105);
+        },
+        // Keys *,+,-,/,decimal point
+        isMathKey: function (target) {
+            return (target.which >= 106 && target.which <= 111);
+        },
+        //Keys :,=,,,dash,.,/,[,],',\
+        isOperatorKey: function (target) {
+            return (target.which >= 186 && target.which <= 192) || (target.which >= 219 && target.which <= 222);
+        },
+        //Keys Backspace
+        isBackspaceKey: function (target) {
+            return (target.which === 8);
+        },
+        //Keys delete
+        isDeleteKey: function (target) {
+            return (target.which === 46);
+        },
+        //SA click events
+        isSAClick: function (elementID, e) {
+            return ((e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") && e.target.id !== elementID);
+        },
+        //Click event for delete & back button
+        deleteBackButtonClickEvent: function (e, element) {
+            e.preventDefault();
+            element.value = element.value.substring(0, element.value.length - 1);
+            if (typeof element.selectionStart === "number") {
+                var textLen = element.value.length;
+                element.setSelectionRange(textLen, textLen);
+            }
+            element.focus();
+        },
+
+        //Appends space after query in search box
+        appendSpaceAfterQuery: function (element) {
+            element.value = element.value + " ";
+            /*Append space to the query once focus is out of text box*/
+            element.focus();
+        },
+
+        //Gets cursor position inside search box
+        getCursorPosition: function (element) {
+            /*get cursor position in input box if browser supports selectionStart */
+            if (typeof element.selectionStart === "number") {
+                if (element.selectionStart === 0 && element.selectionEnd === element.value.length) {
+                    element.value = "";
+                    element.focus();
+                } else {
+                    if (element.selectionStart === 0 || element.selectionStart >= element.value.length) {
+                        var len = element.value.length;
+                        element.setSelectionRange(len, len);
+                    }
+                }
+            } else {
+                /*get the cursor position in the input box if the browser does not have a support for selectionStart*/
+                var cursorPos = 0;
+                if (document.selection) {
+                    var oSel = document.selection.createRange();
+                    oSel.moveStart("character", -element.value.length);
+                    cursorPos = oSel.text.length;
+                }
+                if (cursorPos === 0 || cursorPos >= element.value.length) {
+                    element.value = element.value;
+                    /*setSelectionRange will not work for IE version < 9*/
+                }
+            }
+        },
+
+        //Checks whether pressed key is eligible for the functionality
+        isEligibleKey: function (e) {
+            return ((e.which !== 0 && !e.ctrlKey && !e.metaKey && !e.altKey) &&
+                    (_searchQuery.isNumberKey(e) || _searchQuery.isLetterKey(e) || _searchQuery.isNumPadKey(e) ||
+                            _searchQuery.isMathKey(e) || _searchQuery.isOperatorKey(e) || (_searchQuery.isBackspaceKey(e) ||
+                                    _searchQuery.isDeleteKey(e))));
+        }
+    };
+</script>
+
+
+
+</div>
+        </header>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col col-12">
+        <main class="main">
+            
+<div class="row row-nowrap ">
+                
+<div class="col col-sm-12 col-fix-200 hidden-mm">
+                        <aside class="l-left content-visible">
+                            <div class="l-left-container">
+                                
+
+<nav class="PartialCategoryNavigation">
+    
+
+
+            <div class="PartialCategoryNavigation-body">
+    <ul class="PartialCategoryNavigation-categories">
+        
+<li class="PartialCategoryNavigation-category">
+                <div class="PartialCategoryNavigation-category-item ">
+                    
+
+<div class="PartialCategoryNavigation-category-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 16.681" preserveAspectRatio="xMidYMid meet">
+    <defs>
+        <style>
+            .b-culture {
+                clip-path: url(#a-culture);
+            }
+        </style>
+        <clipPath id="a-culture">
+            <rect class="svg-a" width="18" height="16.681" />
+        </clipPath>
+    </defs>
+    <g class="b-culture" transform="translate(0 0)">
+        <path class="svg-c" d="M5.623,13.665a6.469,6.469,0,0,1-1.815-.24l-.015,0a9.381,9.381,0,0,0,.771-2.466c.391-.058.736-.1,1.057-.117.1-.006.2-.01.31-.01a8.288,8.288,0,0,1,1.631.195c.144.03.286.061.371.08l.014,0a3.93,3.93,0,0,0,.634.112c.074,0,.11-.018.11-.055a2.979,2.979,0,0,0-.9-1.435,4.06,4.06,0,0,0-.976-.739,2.551,2.551,0,0,0-1.2-.319,2.393,2.393,0,0,0-.823.152c.017-.324.026-.623.033-.841V7.948l0-.063c0-.047,0-.093,0-.136.064-1.889,0-4.521,0-4.546h0c-.062.025-.628.255-1.451.494-.515.149-1.034.275-1.543.374A14.363,14.363,0,0,1,0,4.313V.66H0C.077.642.768.483,1.741.33,2.353.234,2.958.157,3.54.1,4.272.035,4.973,0,5.623,0S6.97.035,7.694.1C8.272.158,8.868.234,9.467.33c.993.159,1.673.323,1.7.33h0v0c.006.276.061,2.745,0,4.542,0,.06,0,.122-.006.184h0v.033h0a14.758,14.758,0,0,1-.81,4.938,6.53,6.53,0,0,1-.669,1.27,4.789,4.789,0,0,1-.972,1.052,4.362,4.362,0,0,1-1.334.716A5.56,5.56,0,0,1,5.623,13.665ZM7.533,3.977h0a.055.055,0,0,0-.028.007.872.872,0,0,0-.254.3,2.457,2.457,0,0,0-.233.554,1.769,1.769,0,0,0,.088,1.334,1.564,1.564,0,0,0,.785.636,2.513,2.513,0,0,0,.915.183.892.892,0,0,0,.4-.069c.044-.025.046-.111.008-.255a7.773,7.773,0,0,0-.8-1.616C8.1,4.532,7.7,3.977,7.534,3.977Z" transform="translate(6.803)"/>
+        <path class="svg-c" d="M5.623,13.005A4.823,4.823,0,0,1,.757,9.9,14.625,14.625,0,0,1,0,4.546V0A17.315,17.315,0,0,0,5.623,1.131,16.583,16.583,0,0,0,11.169,0a.159.159,0,0,1,0,.018V.085c.035,1.79.034,3.374,0,4.46l0,.081c0,.019,0,.039,0,.059s0,.044,0,.067v.014A14.751,14.751,0,0,1,10.351,9.7,4.766,4.766,0,0,1,5.623,13.005ZM2.73,8.011c-.121,0-.179.024-.179.074a3.767,3.767,0,0,0,3.071,2.492A3.767,3.767,0,0,0,8.692,8.085c0-.037-.036-.055-.111-.055a3.976,3.976,0,0,0-.639.113c-.117.026-.244.054-.379.082a8.222,8.222,0,0,1-1.633.2c-.105,0-.209,0-.309-.01a17.777,17.777,0,0,1-1.955-.267A6.928,6.928,0,0,0,2.73,8.011Zm5.112-3.77a2.015,2.015,0,0,0-1.7,1.439c0,.177.882.257,1.7.257s1.7-.081,1.7-.257A2.016,2.016,0,0,0,7.842,4.241Zm-4.535,0a2.015,2.015,0,0,0-1.7,1.439c0,.177.881.257,1.7.257s1.7-.081,1.7-.257A2.016,2.016,0,0,0,3.307,4.241Z" transform="translate(0 3.675)"/>
+    </g>
+</svg>
+
+</div>
+                    
+<a href='/culture' data-unified='{"moduleName":"taxonomyLeft","providerSource":"taxonomy","resultType":"taxonomy","zoneName":"left","moduleInZone":1,"resultInModule":1}' data-qo='homePageTaxonomyLeft'>
+                        Culture
+</a>
+                </div>
+                
+<ul class="PartialCategoryNavigation-subcategories">
+                        
 </ul>
+                
+</li>
+        
+<li class="PartialCategoryNavigation-category">
+                <div class="PartialCategoryNavigation-category-item ">
+                    
+
+<div class="PartialCategoryNavigation-category-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.082 18" preserveAspectRatio="xMidYMid meet">
+    <defs>
+        <style>
+            .b-travel {
+                clip-path: url(#a-travel);
+            }
+        </style>
+        <clipPath id="a-travel">
+            <rect class="svg-a" width="21.082" height="18"/>
+        </clipPath>
+    </defs>
+    <g class="b-travel" transform="translate(0 0)">
+        <path class="svg-c" d="M9.985,12.9H1.667v-1.66H7.493L6.016,5.708l.723-.194,1.529,5.728h.814L12.42,7.891l1.173,1.178L10.361,12.7l-.342.19V12.9H10l-.009.005ZM.159,6.863c-.078,0-.124-.015-.133-.048a6.3,6.3,0,0,1,.82-3.553A6.54,6.54,0,0,1,4.8.315C6.387-.111,8.6-.234,10.05.786A9.684,9.684,0,0,1,12.573,3.44c.074.276-2.988.8-6.165,1.658C3.58,5.859.794,6.863.159,6.863Z" transform="translate(7.489 5.093)"/>
+        <path class="svg-c" d="M3.329,8.294h0l-.377-1.3-1.231.6.191-1.344L.544,6.289l.727-1.15L0,4.631l1.136-.758L.184,2.9l1.349-.235L1.064,1.387l1.329.329L2.488.362,3.566,1.2,4.209,0l.642,1.2L5.93.362l.095,1.354,1.329-.329L6.885,2.662,8.234,2.9l-.952.976,1.136.758-1.27.508.727,1.15L6.505,6.241,6.7,7.585l-1.231-.6-.377,1.3-.88-1.04-.88,1.04ZM4.195,1.8a2.531,2.531,0,0,0-.494.049,2.472,2.472,0,0,0-.877.36,2.458,2.458,0,0,0-.363.292,2.423,2.423,0,0,0-.3.354,2.374,2.374,0,0,0-.226.406,2.341,2.341,0,0,0,0,1.862,2.374,2.374,0,0,0,.226.406,2.423,2.423,0,0,0,.3.354,2.461,2.461,0,0,0,.78.513,2.485,2.485,0,0,0,.46.139,2.538,2.538,0,0,0,.988,0,2.472,2.472,0,0,0,.877-.36,2.458,2.458,0,0,0,.363-.292,2.423,2.423,0,0,0,.3-.354,2.374,2.374,0,0,0,.226-.406,2.341,2.341,0,0,0,0-1.862,2.374,2.374,0,0,0-.226-.406,2.423,2.423,0,0,0-.3-.354,2.461,2.461,0,0,0-.78-.513,2.485,2.485,0,0,0-.46-.139A2.531,2.531,0,0,0,4.195,1.8Z" transform="translate(0)"/>
+    </g>
+</svg>
+
+</div>
+                    
+<a href='/travel' data-unified='{"moduleName":"taxonomyLeft","providerSource":"taxonomy","resultType":"taxonomy","zoneName":"left","moduleInZone":1,"resultInModule":2}' data-qo='homePageTaxonomyLeft'>
+                        Travel
+</a>
+                </div>
+                
+<ul class="PartialCategoryNavigation-subcategories">
+                        
+</ul>
+                
+</li>
+        
+<li class="PartialCategoryNavigation-category">
+                <div class="PartialCategoryNavigation-category-item ">
+                    
+
+<div class="PartialCategoryNavigation-category-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="15" viewBox="0 0 18 15">
+    <defs>
+        <style>
+            .b-entertainment {
+                clip-path:url(#a-entertainment);
+            }
+        </style>
+        <clipPath id="a-entertainment">
+            <rect class="svg-a" width="18" height="15"/>
+        </clipPath>
+    </defs>
+    <g class="b-entertainment">
+        <path class="svg-c" d="M14.543,15H3.743a.938.938,0,0,1,0-1.875h4.5v-.937H1.35A1.381,1.381,0,0,1,0,10.781V1.406A1.38,1.38,0,0,1,1.35,0h15.3A1.381,1.381,0,0,1,18,1.406v9.375a1.381,1.381,0,0,1-1.351,1.407H10.043v.937h4.5a.938.938,0,0,1,0,1.875ZM1.8,1.875v8.438H16.2V1.875Z"/>
+    </g>
+</svg>
+
+</div>
+                    
+<a href='/entertainment' data-unified='{"moduleName":"taxonomyLeft","providerSource":"taxonomy","resultType":"taxonomy","zoneName":"left","moduleInZone":1,"resultInModule":3}' data-qo='homePageTaxonomyLeft'>
+                        Entertainment
+</a>
+                </div>
+                
+<ul class="PartialCategoryNavigation-subcategories">
+                        
+<li class="PartialCategoryNavigation-subcategory">
+                                <div class="PartialCategoryNavigation-subcategory-item ">
+                                    
+
+<a href='/entertainment/music' data-unified='{"moduleName":"taxonomyLeft","providerSource":"taxonomy","resultType":"taxonomy","zoneName":"left","moduleInZone":1,"resultInModule":4}' data-qo='homePageTaxonomyLeft'>
+                                        Music
+</a>
+                                </div>
+                            </li>
+                        
+<li class="PartialCategoryNavigation-subcategory">
+                                <div class="PartialCategoryNavigation-subcategory-item ">
+                                    
+
+<a href='/entertainment/movies' data-unified='{"moduleName":"taxonomyLeft","providerSource":"taxonomy","resultType":"taxonomy","zoneName":"left","moduleInZone":1,"resultInModule":5}' data-qo='homePageTaxonomyLeft'>
+                                        Movies
+</a>
+                                </div>
+                            </li>
+                        
+<li class="PartialCategoryNavigation-subcategory">
+                                <div class="PartialCategoryNavigation-subcategory-item ">
+                                    
+
+<a href='/entertainment/tv' data-unified='{"moduleName":"taxonomyLeft","providerSource":"taxonomy","resultType":"taxonomy","zoneName":"left","moduleInZone":1,"resultInModule":6}' data-qo='homePageTaxonomyLeft'>
+                                        TV
+</a>
+                                </div>
+                            </li>
+                        
+<li class="PartialCategoryNavigation-subcategory">
+                                <div class="PartialCategoryNavigation-subcategory-item ">
+                                    
+
+<a href='/entertainment/celebrities' data-unified='{"moduleName":"taxonomyLeft","providerSource":"taxonomy","resultType":"taxonomy","zoneName":"left","moduleInZone":1,"resultInModule":7}' data-qo='homePageTaxonomyLeft'>
+                                        Celebrities
+</a>
+                                </div>
+                            </li>
+                        
+</ul>
+                
+</li>
+        
+</ul>
+</div>
+
+
+
 </nav>
-<style>
-.ssp, #sbut{
-background-image: url(http://sp.ask.com/sh/i/a16/serp/SERP_sprite_19_optimized.png);
-}
-.hcsa {
-visibility:hidden;
-}
-.speech {
-background-position: 52px 0;
-}
-.sa_headline {
-font-size: 15px;
-}
-.sa {
-min-width: 546px;
-min-width: 540px \0/; 
-}
-.avtsp {
-background-image:url('http://sp.ask.com/sh/i/a16/avatarblock_sprite_02.png');
-width:160px;
-height:16px;
-}
-.txt1 {
-line-height:14px;
-}
-.txt2 {
-line-height:15px;
-}
-.txt3 {
-line-height: 17px;
-}
-.txt4 {
-line-height: 17px;
-}
-.txt_lg {
-line-height:19px;
-}
-.spl_ad_plus .lindp {
-line-height: 17px;
-}
-.spl_ad_plus {
-line-height: 17px;
-}
-.lindp .splTitle{
-line-height: 19px;
-}
-.arw_btn{
-background-image: url(http://sp.ask.com/sh/i/a10f/btn_play.png);
-}
-</style>
-<style>
-.txt4 {
-font-size: 14px;line-height:17px;
-}
-.txt1 {
-font-size: 11px;line-height:13px;
-}
-</style>
-<div id="mod-kraken-header">
-<a href="http://www.ask.com/themes?qsrc=321&amp;o=0&amp;l=dir" id="themes-link">Select a Theme</a>
-<div id="header-logo"></div>
-<div id="header-search" name="searchBoxContainer" style="width:652px">
-<form accept-charset="UTF-8" action="/web" id="main-search" data-ordinal="0">
-<input autocomplete="off" id="search-box" maxlength="2048" name="q" type="text" data-modulenumber="2">
-<input id="sbut" class="search-button btn" type="submit" value="Find Answers">
-<h2 id="header-vertical">
-<span></span>
-</h2>
-<input id="header-qsrc" type="hidden" value="0" name="qsrc">
-<input id="header-origin" type="hidden" value="0" name="o">
-<input id="header-partnerID" type="hidden" value="dir" name="l">
-<input id="header-qo" type="hidden" value="homepageSearchBox" name="qo">
-</form>
-</div>
-</div> </div>
-</div>
-<div class="container" id="main">
-<div class="content-left">
-<div class="mod-qotd">
-<h2 class="secondary-header">Question of the Day</h2>
-<div class="qotd-body">
-<h3 class="mod-title">Who created the IRS?</h3>
-<div class="mod-thumbnail">
-<div class="thumbnail-frame">
-<img alt="20150415" src="http://sp.ask.com/qotdxdict/i/20150415.jpg">
-</div>
-</div>
-<ol class="qotd-choices">
-<li>
-<a href="http://quizzes.ask.com/Who_created_the_IRS%3F?qqa=Woodrow+Wilson" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'e61fm=bVF6&amp;Y=1SrDFG&amp;Vu=o&amp;rZ=C6nY&amp;QO=pHiz&amp;AB=o&amp;S5=XoRnRgNa',io:'1'})">
-<span class="multiple-choice-a"></span>
-Woodrow Wilson
-</a>
-</li>
-<li>
-<a href="http://quizzes.ask.com/Who_created_the_IRS%3F?qqa=Abraham+Lincoln" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'d85fp=q++z&amp;K=HXl0Nj&amp;fp=Y&amp;DL=67%a&amp;Tf=KmVs&amp;sI=y&amp;aw=u9BnPzZK',io:'1'})">
-<span class="multiple-choice-b"></span>
-Abraham Lincoln
-</a>
-</li>
-<li>
-<a href="http://quizzes.ask.com/Who_created_the_IRS%3F?qqa=Dwight+Eisenhower" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'6a9fP=gOip&amp;+=MDEZiz&amp;0X=U&amp;sW=btwM&amp;y5=Go9I&amp;Za=l&amp;TA=otK2atyX',io:'1'})">
-<span class="multiple-choice-c"></span>
-Dwight Eisenhower
-</a>
-</li>
-<li>
-<a href="http://quizzes.ask.com/Who_created_the_IRS%3F?qqa=Franklin+D.+Roosevelt" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'9cdfC=LO4E&amp;b=cYizas&amp;68=d&amp;Us=VexL&amp;Qg=fP0k&amp;73=L&amp;Xh=GsehU2uL',io:'1'})">
-<span class="multiple-choice-d"></span>
-Franklin D. Roosevelt
-</a>
-</li>
-</ol>
-<div class="qotd-status">
-<p>
-25% of users knew the answer. <span>Do You?</span>
-</p>
-</div>
-</div>
-</div>
-<div class="mod-questions-history">
-<h2 class="secondary-header">
-Previous Questions of the Day </h2>
-<div class="questions-body">
-<div class="questions-result">
-<div class="mod-thumbnail">
-<div class="thumbnail-frame">
-<img alt="20150414" src="http://sp.ask.com/qotdxdict/i/20150414.jpg">
-</div>
-</div>
-<h3 class="question-headline">
-<a href="http://quizzes.ask.com/Which_country_eats_the_most_ice_cream?" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'6f1fM=Rbre099rJD5&amp;Q=I%Vm6p&amp;1g=l&amp;Pu=DnBJ&amp;hf=Exm0&amp;2i=g&amp;4U=kfDNJhZl'})">Which country eats the most ice cream?</a>
-</h3>
-<p class="question-byline">
-April 14, 2015
-</p>
-</div>
-<div class="questions-result">
-<div class="mod-thumbnail">
-<div class="thumbnail-frame">
-<img alt="20150413" src="http://sp.ask.com/qotdxdict/i/20150413.jpg">
-</div>
-</div>
-<h3 class="question-headline">
-<a href="http://quizzes.ask.com/How_many_times_have_astronauts_been_to_the_moon?" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'0642B=OziTOdrHAg3&amp;w=P8HjCx&amp;Og=u&amp;Vv=vjs9&amp;Ra=7wp6&amp;S5=D&amp;wZ=4KEUAIJh',io:'1'})">How many times have astronauts been to the moon?</a>
-</h3>
-<p class="question-byline">
-April 13, 2015
-</p>
-</div>
-<div class="questions-result">
-<div class="mod-thumbnail">
-<div class="thumbnail-frame">
-<img alt="20150412" src="http://sp.ask.com/qotdxdict/i/20150412.jpg">
-</div>
-</div>
-<h3 class="question-headline">
-<a href="http://quizzes.ask.com/What_is_an_albatross_in_golf?" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'f7cfN=ZeUAx1v8Glm&amp;Q=7H9IUN&amp;%W=B&amp;2y=C3CI&amp;Bk=ur1t&amp;H9=e&amp;Zp=6yZ9pVJw',io:'2'})">What is an albatross in golf?</a>
-</h3>
-<p class="question-byline">
-April 12, 2015
-</p>
-</div>
-<div class="questions-result">
-<div class="mod-thumbnail">
-<div class="thumbnail-frame">
-<img alt="20150411" src="http://sp.ask.com/qotdxdict/i/20150411.jpg">
-</div>
-</div>
-<h3 class="question-headline">
-<a href="http://quizzes.ask.com/How_many_sounds_can_cats_make?" onmousedown="pk(this,{en:'qotd',b:'qotd',up:'3092b=LLho6Qf%bhG&amp;T=LzaBTp&amp;8u=9&amp;bE=Dea7&amp;Uq=dioF&amp;qG=w&amp;qY=uyThSsh8',io:'3'})">How many sounds can cats make?</a>
-</h3>
-<p class="question-byline">
-April 11, 2015
-</p>
-</div>
-<a onmousedown="pk(this,{en:'qotd',b:'qotd',up:'ca7fU=D9%w8d+SbUs&amp;p=wzE8e0&amp;5a=T&amp;yV=Hduu&amp;vr=GDKv&amp;cL=N&amp;Wf=9WRiS9w2',io:'5'})" href="http://quizzes.ask.com/" class="morelink">See more questions »</a>
-</div>
-</div>
-</div>
-<div class="content-right">
-<script>
-function lotame_getScript(e,t,id){var n=document.getElementsByTagName("head")[0],r=!1,i=document.createElement("script");i.src=e,i.async=true,i.id=id||"",i.onload=i.onreadystatechange=function(){!r&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")&&(r=!0,typeof t=="function"&&t())},n.appendChild(i)};
-lotame_getScript("http://ad.crwdcntrl.net/5/c=4736/pe=y/var=ccauds",function() {
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-googletag.cmd.push(function(){
-var dartCC = [];
-var lpid = (typeof(ccauds.Profile.pid) != 'undefined') ? ccauds.Profile.pid : "",
-ltpid = (typeof(ccauds.Profile.tpid) != 'undefined') ? ccauds.Profile.tpid : "";
-if (typeof(ccauds) != 'undefined')
-{
-for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++)
-{
-dartCC.push(ccauds.Profile.Audiences.Audience[cci].abbr);
-}
-}
-googletag.pubads().setTargeting("lpid",lpid);
-googletag.pubads().setTargeting("ltpid",ltpid);
-googletag.pubads().setTargeting("lseg",dartCC);
-});
-} );
-</script>
-<div id="displayAdConfiguration">
-<script type="text/javascript">
-var googletag = googletag || {};
-googletag.cmd = googletag.cmd || [];
-(function() {
-var gads = document.createElement("script");
-gads.async = true;
-gads.type = "text/javascript";
-var useSSL = "https:" == document.location.protocol;
-gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
-var node =document.getElementsByTagName("script")[0];
-node.parentNode.insertBefore(gads, node);
-})();
-googletag.cmd.push(function() {
-googletag.defineSlot('/23219321/iac.ask-ask.us.dw/homepage/homepage/homepage',[300,250], 'dart-0')
-.addService(googletag.pubads())
-.setTargeting("pos", "top");
-googletag.pubads().setTargeting("iabcat","iab19-35")
-.setTargeting("ptype","homepage")
-.setTargeting("ref","direct")
-.setTargeting("rpv","12")
-.setTargeting("tx1","homepage")
-.setTargeting("tx2","homepage")
-.setTargeting("tx3","null")
-.setTargeting("lang","eng")
-.setTargeting("loc", "us")
-.setTargeting("kw","null")
-.setTargeting("dc_ref",encodeURIComponent("http://www.ask.com/"));
-googletag.pubads().enableSingleRequest();
-googletag.enableServices();
-});
-</script>
-</div>
-<div class="displayAd">
-<div id="dart-0">
-<script type="text/javascript">
-googletag.cmd.push(function() { googletag.display('dart-0'); });
-</script>
-<div id="google_ads_iframe_/23219321/iac.ask-ask.us.dw/homepage/homepage/homepage_0__container__" style="border-top-width: 0pt; border-right-width: 0pt; border-bottom-width: 0pt; border-left-width: 0pt; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-color: initial; "><iframe id="google_ads_iframe_/23219321/iac.ask-ask.us.dw/homepage/homepage/homepage_0" name="google_ads_iframe_/23219321/iac.ask-ask.us.dw/homepage/homepage/homepage_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; vertical-align: bottom; " src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"></iframe></div><iframe id="google_ads_iframe_/23219321/iac.ask-ask.us.dw/homepage/homepage/homepage_0__hidden__" name="google_ads_iframe_/23219321/iac.ask-ask.us.dw/homepage/homepage/homepage_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; vertical-align: bottom; visibility: hidden; display: none; " src="javascript:&quot;<html><body style='background:transparent'></body></html>&quot;"></iframe></div>
-<div class="adLabel">Advertisement</div>
-</div>
-<div class="mod-poll" id="pollroll">
-<h2 class="secondary-header">Poll</h2>
-<div class="poll-body">
-<h3 class="poll-title">
-<span class="title-padding">Should all states collect income tax?</span>
-</h3>
-<div class="mod-thumbnail">
-<img src="http://static.pollroll.in/images/poll-20150315085859833-1853-large.jpg">
-</div>
-<a href="javascript:void(0);" class="poll-option can-vote choices0" data-index="0" data-canvote="can-vote" data-pollid="poll-20150315085859833-1853" data-pollstat="[340, 366, 355, 0]" data-size="3" style="cursor: default; ">
-<span class="multiple-choice-a"></span>
-<p class="option-background">
-<span style="width:0%" class="option-selected choices-bar">&nbsp;</span>
-<span class="option-text">Yes</span>
-<span class="option-percentage choices-percent" style="display:none">10%</span>
-</p>
-</a>
-<a href="javascript:void(0);" class="poll-option can-vote choices1" data-index="1" data-canvote="can-vote" data-pollid="poll-20150315085859833-1853" data-pollstat="[340, 366, 355, 0]" data-size="3" style="cursor: default; ">
-<span class="multiple-choice-b"></span>
-<p class="option-background">
-<span style="width:0%" class="option-selected choices-bar">&nbsp;</span>
-<span class="option-text">Up to the state</span>
-<span class="option-percentage choices-percent" style="display:none">10%</span>
-</p>
-</a>
-<a href="javascript:void(0);" class="poll-option can-vote choices2" data-index="2" data-canvote="can-vote" data-pollid="poll-20150315085859833-1853" data-pollstat="[340, 366, 355, 0]" data-size="3" style="cursor: default; ">
-<span class="multiple-choice-c"></span>
-<p class="option-background">
-<span style="width:0%" class="option-selected choices-bar">&nbsp;</span>
-<span class="option-text">No</span>
-<span class="option-percentage choices-percent" style="display:none">10%</span>
-</p>
-</a>
-</div>
-</div>
-</div>
-<div class="mod-category-questions">
-<ul>
-<li>
-<a onmousedown="uaction(this,{up:'b0e26=Rfb6FEqNS&amp;Z=SSshR%&amp;hM=Y&amp;wJ=sP9+dRO8np&amp;Az=DWJ9TcJg&amp;mB=G&amp;d8=qsbHP78LY'});" href="http://www.ask.com/art-literature">Art &amp; Literature</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'8022X=zIO9bhS2b&amp;P=8hCiVL&amp;fZ=Q&amp;jv=Sv8LOkZw%J&amp;XM=B4g+2%s8&amp;Hl=B&amp;TD=0zFobooE9'});" href="http://www.ask.com/beauty-fashion">Beauty &amp; Fashion</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'af62q=FNOO6yGUV&amp;g=Kk%Xl0&amp;BO=6&amp;LF=TyJJ1cMhxp&amp;Xm=ayrzNsPk&amp;Et=+&amp;VN=VivJWj3+H'});" href="http://www.ask.com/business-finance">Business &amp; Finance</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'3ea2y=8va7mrSn1&amp;l=K24d+R&amp;jf=H&amp;Ob=w0Y4Rsbryt&amp;yk=nqelb%OW&amp;dY=k&amp;jy=dFIH4S5iD'});" href="http://www.ask.com/education">Education</a>
-</li>
-</ul>
-<ul>
-<li>
-<a onmousedown="uaction(this,{up:'2de2h=YQW22Yqut&amp;4=8jk8kk&amp;pk=H&amp;t6=NOQMi6eZbV&amp;NG=cGGvcbpU&amp;qQ=9&amp;6X=VFigy3t5X'});" href="http://www.ask.com/family">Family</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'7d22E=aN4A48ldj&amp;n=ReZDUs&amp;S4=5&amp;Mm=G0jSn6WTtJ&amp;Eo=FhJ3RDEd&amp;g6=y&amp;eY=ZggtqQftD'});" href="http://www.ask.com/food">Food</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'2c62D=MmxLsTFAw&amp;l=ZN1MQb&amp;In=P&amp;H2=byqk6sd+mU&amp;9u=KhoW8rwX&amp;JI=B&amp;MB=pvCiGgpuG'});" href="http://www.ask.com/geography">Geography</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'3ba2e=KzpydglA8&amp;W=tYpx%y&amp;Wk=X&amp;f4=lt+apb%OTs&amp;fX=sFHc1D13&amp;OI=h&amp;GT=dmkLhjX98'});" href="http://www.ask.com/government-politics">Government &amp; Politics</a>
-</li>
-</ul>
-<ul>
-<li>
-<a onmousedown="uaction(this,{up:'aae2t=5pFZnhpb6&amp;9=lLbXQx&amp;wV=q&amp;qs=8NwnnjHQ2o&amp;0N=NpCSwb8v&amp;v6=A&amp;YM=oRqQh0QoW'});" href="http://www.ask.com/health">Health</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'7a22l=NSh2VWRqq&amp;Y=BblYT%&amp;u8=i&amp;dd=vtwZYPSeNI&amp;l1=KxaUG8Rl&amp;QP=v&amp;Bh=YZTyFh8h8'});" href="http://www.ask.com/history">History</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'a962Q=TXhIPcFh%&amp;p=ceTBjn&amp;PY=y&amp;En=wx9X+HF2bo&amp;kB=j2lirqcy&amp;OX=4&amp;Dq=UIJTpcMOG'});" href="http://www.ask.com/hobbies-games">Hobbies &amp; Games</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'38a2X=lEF177QMe&amp;u=cVMS9f&amp;xp=a&amp;HV=+Zmh0X7acr&amp;Xz=wU%5Q8c%&amp;nr=d&amp;3b=c5XQxMOYB'});" href="http://www.ask.com/holidays-celebrations">Holidays &amp; Celebrations</a>
-</li>
-</ul>
-<ul>
-<li>
-<a onmousedown="uaction(this,{up:'27e2G=bZoWKCoUH&amp;c=Ac4LjK&amp;Du=a&amp;nP=rNd1ry%IRT&amp;aU=m%zdRaP8&amp;Aj=2&amp;PB=U4xp2XcJV'});" href="http://www.ask.com/home-garden">Home &amp; Garden</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'77223=oXwtMLkDx&amp;x=k9IgTR&amp;7b=y&amp;G7=kYI7wyPB8H&amp;4C=PMCLuC4s&amp;pz=s&amp;ZC=XFvCUKZ8B'});" href="http://www.ask.com/math">Math</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'26623=0w2EawE0L&amp;u=sHKqOA&amp;Xw=h&amp;BK=RwQyeW8T1T&amp;xI=UMiFMqVa&amp;Sa=v&amp;vf=nUQs%+99F'});" href="http://www.ask.com/pets-animals">Pets &amp; Animals</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'35a2E=YJUrYWkZl&amp;5=XS%b8X&amp;%u=p&amp;%M=0szozG3xwr&amp;Ea=B%BXFBog&amp;Xa=a&amp;ow=bMyVMcFM7'});" href="http://www.ask.com/science">Science</a>
-</li>
-</ul>
-<ul>
-<li>
-<a onmousedown="uaction(this,{up:'a4e2T=iy%T8XnAj&amp;g=PFVAOX&amp;K5=V&amp;ja=LMWCwOBzGm&amp;n2=WTwAa+wJ&amp;Fy=t&amp;Gp=nfE0MUz4V'});" href="http://www.ask.com/sports-active-lifestyle">Sports &amp; Active Lifestyle</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'7422K=21LWEAPPE&amp;8=565BSy&amp;Ig=N&amp;8Y=+sVc7hMZrG&amp;Kd=U15Cj7fz&amp;0i=o&amp;kW=Xm8H%bRX6'});" href="http://www.ask.com/technology">Technology</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'a362d=86LBxRDHm&amp;z=H9BeiN&amp;47=3&amp;y8=avwai+zKQm&amp;KP=tve26pCN&amp;Xq=Y&amp;m6=S7Y2T8usE'});" href="http://www.ask.com/vehicles">Vehicles</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'32a2l=zO9UPKPas&amp;E=HPvw8E&amp;My=E&amp;BE=PXLv%p0URq&amp;lN=Gn3Ou7Bn&amp;wV=9&amp;MR=as+01FwBA'});" href="http://www.ask.com/world-view">World View</a>
-</li>
-</ul>
-</div> 
-<div class="mod-footer">
-<ul id="footer-left-nav">
-<li>
-<a href="#" class="mobileViewFooter" style="display: none; " target="_top">Mobile Site</a>
-<span class="separator mobileViewFooter" style="display: none; "></span>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'21e26=j9RPtfnhW&amp;l=58Nph9&amp;SD=E&amp;gx=6LDdB33quS&amp;A9=pDrSoWj7LN&amp;hK=N&amp;AD=KDdMikPpC'});" href="http://about.ask.com" target="_top">About</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'29d2g=RYCxd7TvV&amp;c=hR1hfo&amp;jw=l&amp;3e=0bV+wcRBqM&amp;Uw=mgguliGYKU&amp;%R=N&amp;q1=6DOGTm9Pp'});" href="http://about.ask.com/privacy-policy" target="_top">Privacy</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'f7c2j=UTEA1y%Aq&amp;+=OXfL1u&amp;iv=k&amp;+Y=up4CxE0NYr&amp;5r=pas%WsSlPh&amp;mZ=n&amp;4e=XLEVt0c6K'});" href="http://about.ask.com/terms-of-service/" class="link grey" target="_top">Terms</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'4bb2s=c+IfzQXLd&amp;t=kDh6gI&amp;yR=k&amp;Tr=R9hkV8LKlE&amp;kE=P8eAl9a2fH&amp;aS=Q&amp;bz=5cwMQtPrl'});" href="http://about.ask.com/jobs" target="_top">Careers</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'e5a2Y=y3yLEe2h3&amp;n=DaQvOf&amp;QO=7&amp;ss=i%T6TmldQ9&amp;YS=PQTxS5PIhS&amp;Rh=n&amp;Bf=dhasJ4I+Z'});" href="http://blog.ask.com" target="_blank">Ask Blog</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'85924=GMVn0Z8pC&amp;%=sPEhmq&amp;UA=o&amp;9L=8a5CI95ZGD&amp;aR=G4CLK36+az&amp;C0=h&amp;3x=+clgU0Ctm'});" href="http://www.ask.com/mobile?&amp;o=0&amp;l=dir&amp;qsrc=121" target="_top">Mobile</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'eb821=jBxkmkZoJ&amp;1=zPuFIq&amp;tu=Z&amp;+5=wZ8FD+8L9U&amp;fm=DzI1cNa%+y&amp;KI=N&amp;fG=CdNp6whEh'});" href="http://help.ask.com" target="_blank">Help</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'d7724=dNbVwwmt8&amp;d=Hp8Uzy&amp;jJ=z&amp;N%=NifZVdNjpH&amp;q+=X7o3x4oovy&amp;sb=%&amp;ZV=kBfa3VuVu'});" href="http://feedback.ask.com" target="_blank">Feedback</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'0962s=+zDkbQ3Vw&amp;3=ASfdH1&amp;bA=W&amp;gL=%VLjN5hoPM&amp;YZ=RoXAYAXGsj&amp;3c=B&amp;0v=6zvMwoZxI'});" href="http://www.ask.com/sitemap.html" target="_blank">Sitemap</a>
-</li>
-<li>
-<span style="color:#91939C;">© 2015 Ask.com</span>
-</li>
-</ul>
-<ul id="footer-right-nav">
-<li>Follow Us:</li>
-<li>
-<a onmousedown="uaction(this,{up:'4152s=TcAR9tJXH&amp;I=1pFVR6&amp;Rg=P&amp;RE=SxRrwqVKyS&amp;6y=CdAoK%8KeC&amp;Iv=p&amp;2H=CogugetLH'});" class="social-facebook" href="http://www.facebook.com/AskDotCom" target="_blank">Facebook</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'3f42j=7XOJ7KaQo&amp;t=Ij7bN1&amp;26=0&amp;Ny=aWO6l4S8VJ&amp;5F=tkAe8u8j%b&amp;KP=P&amp;PK=Fjix4HKQc'});" class="social-twitter" href="http://twitter.com/askdotcom" target="_blank">Twitter</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'c332g=C34bRQ+Pn&amp;B=qPjke2&amp;sd=a&amp;jd=lRR0xIrg78&amp;%4=HsaSlle+nN&amp;mU=6&amp;%T=ZBmcCZx11'});" class="social-instagram" href="http://instagram.com/askdotcom" target="_blank">Instagram</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'8d22A=%J6w84p+n&amp;j=Va3zYo&amp;W0=9&amp;Iq=C4fWj%SXpN&amp;As=vlD1GtH3e%&amp;Rv=r&amp;Ln=jtcIHnCxP'});" class="social-google" href="https://plus.google.com/105149213719916216015/" target="_blank">Google+</a>
-</li>
-<li>
-<a onmousedown="uaction(this,{up:'5d12u=rgDXEBH8%&amp;U=WD4+Im&amp;aA=C&amp;bV=egfEY7nT4t&amp;CD=aMapmDMHW3&amp;qo=+&amp;nt=rczk38IFo'});" class="social-rss" target="_blank" href="http://blog.ask.com">Blog</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<script src="/st/c/js/ask_home.min.6239cf50.js" type="text/javascript"></script>
-<script type="text/javascript">
-JASK.ssCfg = (function(){
-return {
-"topOffset":3,
-"channel":"home",
-"path":"web",
-"disableTurnOffLink":"'false'",
-"disableSS": false,
-"server":"ss.ask.com",
-"ldomain":"http://www.ask.com/",
-"ssBold":"'false'",
-"clearSearchHistory":"Clear search history",
-"max":"",
-"ssFromQueryHistory":"true",
-"queryHistory":"",
-"queryHistoryContentColor":"",
-"ssContentColor":"'false'",
-"ssContentColorCode": "",
-"matchingTextUnBold": "",
-"suggestionTextUnBold": "",
-"ssItems":"",
-"appendParams":[]
-};
-})();
-</script>
-<script type="text/javascript">
-var UInfo = window.UInfo || {};
-UInfo.pl = "f302jm=&X8B=&ey=xGqsc&sb=W8lHyoe15cddyOnE4%+W%VdCYZjzmY1w&WU=aSb4w4A&swlZ=a4-0GD&z5H=ZgwY&U%=vVRolk&CB=M2p.JNC&Ih1=&uk=Zpr1k2ve&Xw=I13w6&TjA=8g&zS=GQkm&KN=K&mE=&TXt=&4=l";
-</script>
-<script type="text/javascript">
-var _AnemoneParams2 = {
-appId: 'T2_AskUS',
-appVersion: '29f6a44',
-appDate: '2015-04-13T14:52:00Z',
-serverName: 'askus038iad.io.askjeeves.info',
-uniqueUser: '3FB44D04-488E-4616-89E4-736091DF5EA2',
-backFillRequired: true,
-suppressCookies: false,
-eventId: '146645C9-E10D-4320-BCC5-DD9A4A91DB05',
-browserLanguage: 'en',
-maxSession: 30,
-domain: '.ask.com',
-url: '/ulog',
-logPageView: false
-};
-</script>
-<script type="text/javascript" src="/st/c/js/ask_unified.min.c7f61e55.js"></script>
-<script type="text/javascript">
-var ask = (typeof ask === 'undefined') ? {} : ask;
-(function(){
-var _timedOut = false,
-_fullPayload = window.backfillParam || {}, _timeFromSerpStart = null,
-_adsLoggingTimeout = null,
-_dynamicLoggingTimeout = null;
-try{
-_timeFromSerpStart = ((new Date() - ask.CSA.startTime) - ask.CSA.showSerpStartTime);
-_adsLoggingTimeout = parseInt('2000') - _timeFromSerpStart;
-_dynamicLoggingTimeout = Math.max(_adsLoggingTimeout, 1);
-}catch(e){
-_dynamicLoggingTimeout = 2000;
-}
-function mixinCSAAdData(payload){
-var externalData = {
-csaInfo: {
-domTime: ask.CSA.domReadyTime ? ask.CSA.domReadyTime : 0,
-adsResponseTime: ask.CSA.responseTime ? ask.CSA.responseTime : 0,
-adsShownTime: ask.CSA.adsShownTime ? ask.CSA.adsShownTime : 0,
-serpShownTime: ask.CSA.serpShownTime ? ask.CSA.serpShownTime : 0,
-supplement: _timedOut,
-serpTimedOut: !!ask.CSA.showSerpTimeoutFired,
-serpTimeoutStartTime: ask.CSA.showSerpStartTime ? ask.CSA.showSerpStartTime : 0,
-dynamicTimeout: _dynamicLoggingTimeout,
-viewportHeight: ask.CSA.viewportHeight ? ask.CSA.viewportHeight : 0,
-viewportWidth: ask.CSA.viewportWidth ? ask.CSA.viewportWidth : 0,
-adContentRatio: ask.CSA.adContentRatio ? ask.CSA.adContentRatio : 0,
-csaHeight: ask.CSA.csaHeight ? ask.CSA.csaHeight : 0,
-csaWidth: ask.CSA.csaWidth ? ask.CSA.csaWidth : 0,
-centerRailHeight: ask.CSA.centerRailHeight ? ask.CSA.centerRailHeight : 0,
-centerRailWidth: ask.CSA.centerRailWidth ? ask.CSA.centerRailWidth : 0,
-rightRailHeight: ask.CSA.rightRailHeight ? ask.CSA.rightRailHeight : 0,
-rightRailWidth: ask.CSA.rightRailWidth ? ask.CSA.rightRailWidth : 0,
-gslExtensions : ask.CSA.gslExtensions ? ask.CSA.gslExtensions : ""
-}
-};
-payload.pl_time = ask.CSA.responseTime ? ask.CSA.responseTime : 0;
-payload.pl_tnum = ask.CSA.numTopAds ? ask.CSA.numTopAds : 0;
-payload.pl_bnum = ask.CSA.numBottomAds ? ask.CSA.numBottomAds : 0;
-payload.pl_rnum = parseInt(payload.pl_tnum) + parseInt(payload.pl_bnum);
-try{
-mixinNavigationTimingInfo(externalData);
-payload.pl_edata = JSON.stringify(externalData);
-}catch(e){
-}
-}
-function mixinNavigationTimingInfo(eData) {
-if (typeof window.performance === 'undefined') {
-return;
-}
-var navInfo = eData["navInfo"] = {},
-csaInfo = eData.csaInfo,
-timing = window.performance.timing,
-navigation = window.performance.navigation,
-navStart = timing.navigationStart;
-navInfo.redirectCount = navigation.redirectCount;
-navInfo.navType = navigation.type;
-csaInfo.csaStartTime = (ask.CSA.startTime.getTime() - navStart);
-for (var k in timing) {
-if (timing.hasOwnProperty(k)) {
-navInfo[k] = Math.max((timing[k] - navStart), 0);
-}
-}
-}
-if (typeof ask !== 'undefined' && typeof ask.CSA !== 'undefined' && typeof ask.CSA.addCSALoadCallback === "function") {
-ask.CSA.addCSALoadCallback(function(){
-var payload = _timedOut ? { pl_supplement: true } : _fullPayload;
-var bookmark = false;
-if(typeof ask.CSA.calculateAdContentMetrics === "function") {
-ask.CSA.calculateAdContentMetrics(bookmark);
-}
-mixinCSAAdData(payload);
-logBackfillEvent(payload);
-}, function(){
-_timedOut = true;
-logBackfillEvent(_fullPayload);
-}, _dynamicLoggingTimeout);
-} else {
-logBackfillEvent(_fullPayload);
-}
-function addBingParams(payload) {
-payload.presentation={"count":0};
-payload.provider={};
-payload.pl_bfj = JSON.stringify(payload);
-return payload;
-}
-function logBackfillEvent(payload) {
-payload['anxi'] = JSUtil.defaultVal(_AnemoneParams2.eventId, '');
-_Anemone.logEvent('BackFill', payload);
-}
-})();
-</script>
-<span style="display:none">
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-5081537-46']);
-_gaq.push(['_setCustomVar', 1, 'LD', '0', 3]);
-_gaq.push(['_trackPageview']);
-_gaq.push(['_trackPageLoadTime']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
-</span>
-<script>
-var _comscore = _comscore || [];
-_comscore.push({ c1: "2", c2: "6034776", c3: "", c4: "" });
-(function() {
-var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-el.parentNode.insertBefore(s, el);
-})();
-</script>
-<noscript>
-&lt;img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=6034776&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cv=2.0&amp;cj=1" /&gt;
-</noscript> <script>
-function lotame_getScript(e,t,id){var n=document.getElementsByTagName("head")[0],r=!1,i=document.createElement("script");i.src=e,i.async=true,i.id=id||"",i.onload=i.onreadystatechange=function(){!r&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")&&(r=!0,typeof t=="function"&&t())},n.appendChild(i)};
-lotame_getScript("http://tags.crwdcntrl.net/c/4737/cc.js?ns=_cc4737",function(){
-_cc4737.bcp();
-},"LOTCC_4737");
-</script>
-<script type="text/javascript">
-var ask = ask || {},
-sp = sp || {};
-sp.site = 'US';
-sp.gls_top = parseInt('$gslTop');
-sp.gls_bottom = parseInt('$gslBottom');
-sp.ad_count = (window['google_ads']) ? window['google_ads'].length : (sp.gls_top + sp.gls_bottom);
-ask.adsPixelTimeout = '2000';
-function initPixel(cb, cbTimeout) {
-if (typeof ask !== 'undefined' && typeof ask.CSA !== 'undefined' && typeof ask.CSA.addCSALoadCallback === "function") {
-ask.CSA.addCSALoadCallback(function() {
-cb(true);
-}, function(){
-cbTimeout();
-}, ask.adsPixelTimeout);
-} else {
-cb(false);
-}
-}
-$j(document).ready(function(){
-if (typeof ask !== 'undefined' && typeof ask.CSA !== 'undefined' && typeof ask.CSA.domReady == "function") {
-ask.CSA.domReady();
-}
-});
-</script><script async="" type="text/javascript" src="http://www.googletagservices.com/tag/js/check_359604.js"></script><iframe src="http://tpc.googlesyndication.com/safeframe/1-0-2/html/container.html" style="visibility: hidden; display: none; "></iframe>
 
 
-<div class="ac_results" style="position: absolute; display: none; top: 157px; left: 236px; width: 475px; max-height: 300px; z-index: 9999; "></div></body></html>
+
+
+
+
+</div>
+                        </aside>
+                    </div>
+                
+<div class="col col-fill">
+                    <section class="l-mid content-visible expand">
+                        <div class="l-mid-container">
+                            
+
+
+
+<div class="PartialCategoryArticleTiles top">    
+    
+<div class="PartialCategoryArticleTiles-hero-categories ">
+    
+
+<div>
+            
+<a href='/slideshow/best-places-first-time-solo-travelers' data-unified='{"resultType":"content","providerSource":"content","slug":"best-places-first-time-solo-travelers","zoneName":"center","moduleInZone":1,"resultInModule":1}' data-qo='articleNav' class="PartialCategoryArticleTiles-hero-tile">
+            
+<img src="https://images.ask.com/amg-cms-images/media/iporhzjdtuoef5zrz-plub9la7mzsrbmwzg3q2gdcspuq60ehkpew4etohcqwgqjy3pzkz7dfll8lllwgep97jt28swvyfuc6uwqgfnfyhlhhzvihchssna9opmq0lmecaanm4gf-3ayep-s1a.jpeg?width=380&height=210&fit=crop" alt="Iporhzjdtuoef5zrz Plub9la7mzsrbmwzg3q2gdcspuq60ehkpew4etohcqwgqjy3pzkz7dfll8lllwgep97jt28swvyfuc6uwqgfnfyhlhhzvihchssna9opmq0lmecaanm4gf 3ayep S1a"/>
+                    <div class="PartialCategoryArticleTiles-hero-category">Travel</div>
+                    <div class="PartialCategoryArticleTiles-hero-title">The Best Places to Go for First-Time Solo Travelers</div>
+            
+</a>
+            
+</div>
+    
+
+<div>
+            
+<a href='/slideshow/twitch-intro' data-unified='{"resultType":"content","providerSource":"content","slug":"twitch-intro","zoneName":"center","moduleInZone":1,"resultInModule":2}' data-qo='articleNav' class="PartialCategoryArticleTiles-hero-tile">
+            
+<img src="https://images.ask.com/amg-cms-images/media/fxpqvib4vpza9yfnbl8nln-yc-ahb96xhd3ay-mn-axf0g-lomjepd5ptyiqeplswuuzbbc-10t4qzpq-9zbrezjxn8zpcdjpamemlwy0n4lyykuusaf3cqyjyy5uhaarfpv2gouv-gxqzbfbg.png?width=380&height=210&fit=crop" alt="Fxpqvib4vpza9yfnbl8nln Yc Ahb96xhd3ay Mn Axf0g Lomjepd5ptyiqeplswuuzbbc 10t4qzpq 9zbrezjxn8zpcdjpamemlwy0n4lyykuusaf3cqyjyy5uhaarfpv2gouv Gxqzbfbg"/>
+                    <div class="PartialCategoryArticleTiles-hero-category">Culture</div>
+                    <div class="PartialCategoryArticleTiles-hero-title">From Pokémon to ASMR: The Rise of Live-Video Streaming Giant Twitch</div>
+            
+</a>
+            
+</div>
+    
+</div>
+
+    
+<div class="PartialCategoryArticleTiles ad_placeholder  ">
+    
+<div id="Ask_HP_D728x90_1" class="display-ad-block"></div>
+</div>
+
+<div class="PartialCategoryArticleTiles-categories">
+    
+
+
+<div>
+                
+<a href='/slideshow/lgbtq-superheroes-feature-batwoman' data-unified='{"resultType":"content","providerSource":"content","slug":"lgbtq-superheroes-feature-batwoman","zoneName":"center","moduleInZone":2,"resultInModule":1}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/n2ia3hyxhgmv4jniaghr-8-pwlecarxmsvjm8p55kqv5rd8wqchhdhekcdsnvjcyr1npx6gosqvtdy4x5brgxdcxmjlvphzptvaebmahm2erhbbrg0auomycrp8tgbgaz6aejwi9zn6zr1-4w.png?width=240&height=165&fit=crop" alt="N2ia3hyxhgmv4jniaghr 8 Pwlecarxmsvjm8p55kqv5rd8wqchhdhekcdsnvjcyr1npx6gosqvtdy4x5brgxdcxmjlvphzptvaebmahm2erhbbrg0auomycrp8tgbgaz6aejwi9zn6zr1 4w"/>
+                        <div class="PartialCategoryArticleTiles-category">TV</div>
+                        <div class="PartialCategoryArticleTiles-title">Batwoman Is Moving the Dial When It Comes to the Superhero Genre’s LGBTQ+ Representation on TV</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/slideshow/jeff-goldblum-internet-heartthrob' data-unified='{"resultType":"content","providerSource":"content","slug":"jeff-goldblum-internet-heartthrob","zoneName":"center","moduleInZone":2,"resultInModule":2}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/eqf-oujzfve-ntrh9ee2twflf5uu8hil7a9js0umjwfngbi24-zneahumgyq2egrpqgyrtanafe4bdkjqhf2m2artjmf-vzvwululwjm56ftre1iy5e5zr5w7lwwk0548qlwls-z0qbut9oueg.jpeg?width=240&height=165&fit=crop" alt="Eqf Oujzfve Ntrh9ee2twflf5uu8hil7a9js0umjwfngbi24 Zneahumgyq2egrpqgyrtanafe4bdkjqhf2m2artjmf Vzvwululwjm56ftre1iy5e5zr5w7lwwk0548qlwls Z0qbut9oueg"/>
+                        <div class="PartialCategoryArticleTiles-category">Celebrities</div>
+                        <div class="PartialCategoryArticleTiles-title">How Jeff Goldblum Became the Internet&#39;s Heartthrob</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/slideshow/last-decade-of-celebrity-worship' data-unified='{"resultType":"content","providerSource":"content","slug":"last-decade-of-celebrity-worship","zoneName":"center","moduleInZone":2,"resultInModule":3}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/mwge2kkzts8xflwfs8zd98xzq9sgevpjw2fqdfryu9ezh42zejg4dcov-vxywncldolx-u6qpzhzlhtkgll7n05jmqevydfvhyaf-jcftvgk0c409xuuzgsmn-dkdxbinrl4wnkft7t15x-yqg.jpeg?width=240&height=165&fit=crop" alt="Mwge2kkzts8xflwfs8zd98xzq9sgevpjw2fqdfryu9ezh42zejg4dcov Vxywncldolx U6qpzhzlhtkgll7n05jmqevydfvhyaf Jcftvgk0c409xuuzgsmn Dkdxbinrl4wnkft7t15x Yqg"/>
+                        <div class="PartialCategoryArticleTiles-category">Celebrities</div>
+                        <div class="PartialCategoryArticleTiles-title">Are the 2010s the Last Decade of Celebrity Worship?</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/entertainment/legacy-fred-rogers' data-unified='{"resultType":"content","providerSource":"content","slug":"legacy-fred-rogers","zoneName":"center","moduleInZone":2,"resultInModule":4}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/innim-ehuf5zkzyzgsz4nl9a4tm-siufz15qybrsrzbg4zorijwcquyvxpv3u9tijrldoiggjuq9uvtxfub4xiu8ibhqyetkhvquryw2wft2bakqqy73qqyyylb8hrrgkko7hrhoffotbn-15q.png?width=240&height=165&fit=crop" alt="Innim Ehuf5zkzyzgsz4nl9a4tm Siufz15qybrsrzbg4zorijwcquyvxpv3u9tijrldoiggjuq9uvtxfub4xiu8ibhqyetkhvquryw2wft2bakqqy73qqyyylb8hrrgkko7hrhoffotbn 15q"/>
+                        <div class="PartialCategoryArticleTiles-category">TV</div>
+                        <div class="PartialCategoryArticleTiles-title">Won&#39;t You Be My Neighbor? The Legacy of Mr. Rogers</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/entertainment/future-of-rhythm-and-blues' data-unified='{"resultType":"content","providerSource":"content","slug":"future-of-rhythm-and-blues","zoneName":"center","moduleInZone":2,"resultInModule":5}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/pghyb-ljcu6ori-rfjkq9q9qzxvysduato7rphfohdgybyfzlbp2xums3fmdyhnkzr1zxioicgoe2hr78cutylxqxmlpouvto0w1slfvyxl-ccf2jg0gx66vz8fhwepguohe73tqd8pv-t5ksa.png?width=240&height=165&fit=crop" alt="Pghyb Ljcu6ori Rfjkq9q9qzxvysduato7rphfohdgybyfzlbp2xums3fmdyhnkzr1zxioicgoe2hr78cutylxqxmlpouvto0w1slfvyxl Ccf2jg0gx66vz8fhwepguohe73tqd8pv T5ksa"/>
+                        <div class="PartialCategoryArticleTiles-category">Music</div>
+                        <div class="PartialCategoryArticleTiles-title">These R&amp;B Stars Are Taking Rhythm and Blues into the Future</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/culture/gender-neutral-fashion-labels' data-unified='{"resultType":"content","providerSource":"content","slug":"gender-neutral-fashion-labels","zoneName":"center","moduleInZone":2,"resultInModule":6}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/dec-cw2fztwpchjt7hjraunvyylfenc-tpm4ew-pyyedl8gsqcmbo80ldaeddxnsbl598irhorrzebl0031a8c6dv6aewraffrmzrjhfmc8nknikp9fzma7b2cvvnfmbndyypudhrhehyb0nuq.png?width=240&height=165&fit=crop" alt="Dec Cw2fztwpchjt7hjraunvyylfenc Tpm4ew Pyyedl8gsqcmbo80ldaeddxnsbl598irhorrzebl0031a8c6dv6aewraffrmzrjhfmc8nknikp9fzma7b2cvvnfmbndyypudhrhehyb0nuq"/>
+                        <div class="PartialCategoryArticleTiles-category">Culture</div>
+                        <div class="PartialCategoryArticleTiles-title">Meet the Designers Leading the Gender-Neutral Fashion Movement</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/entertainment/best-actresses-2019-oscar' data-unified='{"resultType":"content","providerSource":"content","slug":"best-actresses-2019-oscar","zoneName":"center","moduleInZone":2,"resultInModule":7}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/rwt-s0iiscnm8moeuo1-hixqyfizsddvi8eb-crcvyuoqkuhlrdliyusmnscaeshh9vln0hhmnouemor2tosgzjiofffwokz7lindoyznenzn-8-onclxsi36ot6qhkexfe9wv4sf6runyyeyw.png?width=240&height=165&fit=crop" alt="Rwt S0iiscnm8moeuo1 Hixqyfizsddvi8eb Crcvyuoqkuhlrdliyusmnscaeshh9vln0hhmnouemor2tosgzjiofffwokz7lindoyznenzn 8 Onclxsi36ot6qhkexfe9wv4sf6runyyeyw"/>
+                        <div class="PartialCategoryArticleTiles-category">Movies</div>
+                        <div class="PartialCategoryArticleTiles-title">Move Over, Meryl: These Actresses Gave Us Some of 2019’s Greatest Performances</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/slideshow/best-actors-2019-oscars' data-unified='{"resultType":"content","providerSource":"content","slug":"best-actors-2019-oscars","zoneName":"center","moduleInZone":2,"resultInModule":8}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/prfgw8v3decn1lc82ctxth5xzrfds7ubtx1mofmhfdz04qfejlxbht1m7-w8dvdro8pxejnxrszd1xlf3tqlrz0aoyyl0zvsifywtp30fiewspjyhkmv3cfasauwrzyl-eo-gbt5vmm61lxwa.png?width=240&height=165&fit=crop" alt="Prfgw8v3decn1lc82ctxth5xzrfds7ubtx1mofmhfdz04qfejlxbht1m7 W8dvdro8pxejnxrszd1xlf3tqlrz0aoyyl0zvsifywtp30fiewspjyhkmv3cfasauwrzyl Eo Gbt5vmm61lxwa"/>
+                        <div class="PartialCategoryArticleTiles-category">Movies</div>
+                        <div class="PartialCategoryArticleTiles-title">Joaquin Phoenix Is No Joke But These Actors Also Blew Us Away in 2019</div>
+                
+</a>
+                
+</div>
+        
+
+
+
+<div>
+                
+<a href='/travel/world-cat-festivals' data-unified='{"resultType":"content","providerSource":"content","slug":"world-cat-festivals","zoneName":"center","moduleInZone":2,"resultInModule":9}' data-qo='articleNav' class="PartialCategoryArticleTiles-tile">
+                
+<img src="https://images.ask.com/amg-cms-images/media/afqttkcy89wb8yl3llul9-kka-dszz5wihitoeglswchap4ow8klhel7fgebezztgvkoqqcvk3flnz8vb-t1nhuyf5mjqu7-iauirco6y9r1dd9mgkizx8mzatrc29n-svzzuxk4lcwtmh7kog.png?width=240&height=165&fit=crop" alt="Afqttkcy89wb8yl3llul9 Kka Dszz5wihitoeglswchap4ow8klhel7fgebezztgvkoqqcvk3flnz8vb T1nhuyf5mjqu7 Iauirco6y9r1dd9mgkizx8mzatrc29n Svzzuxk4lcwtmh7kog"/>
+                        <div class="PartialCategoryArticleTiles-category">Travel</div>
+                        <div class="PartialCategoryArticleTiles-title">Feline Festivities: The Most Purrfect Cat Festivals in the World</div>
+                
+</a>
+                
+</div>
+        
+
+</div>
+
+    
+<div class="PartialCategoryArticleTiles-load-more-div">
+            <button class="PartialCategoryArticleTiles-load-more">View More</button>
+        </div>
+    
+</div>
+
+<script>
+    (function () {
+        if (App) {
+            App.events = App.events || [];
+            App.events.push(
+                {
+                    partial: "PartialCategoryArticleTiles",
+                    contextSelector: ".PartialCategoryArticleTiles.top",
+                    elementSelector: ".PartialCategoryArticleTiles-load-more",
+                    type: "click",
+                    handler: function (evt) {
+                        
+                        var totalLength = parseInt("21"),
+                            fragOffset =  $(".PartialCategoryArticleTiles.top .PartialCategoryArticleTiles-categories > div").length,
+                            currentHref = ("" + window.location.href).replace(/\?.*?$/, "").replace(/\/$/, ""),
+                            slashCount = (currentHref.match(/\//g) || []).length,
+                            fragmentUrl = currentHref + "/fragment?section=main&partial=./node_modules/ask-archie-shared/components/partials/partial-category-article-tiles&offset=" + fragOffset + "&suffix=" ;
+
+                        App["PartialCategoryArticleTilesFragOffset"] = fragOffset;
+
+                        
+                        if (!currentHref) {
+                            return;
+                        }
+                        $.get(fragmentUrl).then(
+                            function (html) {
+                                if (html) {
+                                    $(".PartialCategoryArticleTiles.top .PartialCategoryArticleTiles-categories > div:last").after(html);
+                                    
+                                    if ($("html").hasClass("ie8")) {
+                                        $(".main").addClass("forceRefresh").removeClass("forceRefresh");
+                                    }
+                                    var $item = $(".PartialCategoryArticleTiles.top .PartialCategoryArticleTiles-categories > div");
+                                    if ($item.length >= totalLength) {
+                                        $(".PartialCategoryArticleTiles.top .PartialCategoryArticleTiles-load-more").remove();
+                                    }
+                                } else {
+                                    $(".PartialCategoryArticleTiles.top .PartialCategoryArticleTiles-load-more").remove();
+                                }
+
+                                var morePayLoad = $("#PartialCategoryArticleTiles-categories a").attr('data-unified') || {};
+
+                                morePayLoad.actionType = "click";
+                                morePayLoad.assetType = "viewmore";
+                                if (ask && ask.unified !== undefined) {
+                                    ask.unified.sendAction(morePayLoad);
+                                }
+
+                                
+                                $(document).trigger("pageChange");
+                            }
+                        );
+                    }
+                }
+            );
+        }
+    })();
+</script>
+
+
+</div>
+                    </section>
+                </div>
+                
+</div>
+        </main>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-12">
+        <footer class="l-footer content-visible">
+            <div class="l-footer-container">
+                
+
+<div class="PartialFooter-body">
+    <ul class="PartialFooter-list">
+        
+
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link"  href='/about' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>About</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link"  href='/privacy' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>Privacy</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link"  href='/terms' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>Terms</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link"  href='/cookies' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>Cookie Policy</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link" target=_blank href='https://www.askmediagroup.com/careers/' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>Careers</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link" target=_blank href='https://help.askmediagroup.com/hc/en-us' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>Help</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link" target=_blank href='https://help.askmediagroup.com/hc/en-us' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>Feedback</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+                
+<a class="PartialFooter-item-link"  href='/privacy#5' data-unified='{"moduleName":"navBottom","providerSource":"navigation","resultType":"navigation","zone":"footer","moduleInZone":2,"resultInModule":1}' data-qo='footerLinks'>Do Not Sell</a>
+                
+</li>
+        
+<li class="PartialFooter-item">
+            <span class="PartialFooter-item-label copyright">© 2020 Ask Media Group, LLC</span>
+        </li>
+    </ul>
+</div>
+
+
+</div>
+        </footer>
+    </div>
+</div>
+<script src="/s/0-4-48/site-ask-sites.min.js"></script>
+<script>
+    $(document).ready(function ($) {
+        var i, k, event, readyElementList;
+        if (typeof App.events === "object" && App.events.length) {
+            for (i = 0, k = App.events.length; i < k; i += 1) {
+                event = App.events[i];
+                if (event.type === "ready") {
+                    try {
+                        readyElementList = (event.elementSelector) ?
+                                $(event.elementSelector, event.contextSelector) :
+                                $(event.contextSelector);
+                        readyElementList.each(function (index) {
+                            event.handler.apply(this);
+                        });
+                    } catch (e) {
+                        console.error("Failed to run a 'ready' event handler.");
+                        console.error(e);
+                    }
+                } else {
+                    $(event.contextSelector).on(event.type, event.elementSelector || null, event.handler);
+                }
+            }
+        }
+    });
+</script>
+    
+
+
+<script>
+        var _UnifiedApiParams = {"uniqueUser":"FEFC1C0C-C788-46E6-9F66-C3AA075DF250","appId":"Archie_Askus","appVersion":"a5dea5f","appDate":"2020-02-07T22:00:05Z","logPageView":false,"updateSession":false,"domain":"ask.com","url":"www.ask.com/log/browser/event","backFillRequired":false,"eventId":"B2A29C5E-DA97-4141-88DC-E4659AA89A7B","maxSession":30,"suppressCookies":false,"cookieExpirationMinutes":129600,"newSessionOnDomainChange":false,"cookieName":"uc"};
+        _UnifiedApiParams.url = (("https:" === window.location.protocol)? "https://" : "http://" ) + _UnifiedApiParams.url;
+    </script>
+
+    <script src="/s/0-4-48/unified-api.min.js"></script>
+    <script>
+    if(App) {
+        (function () {
+            App.events = App.events || [];
+            App.events.push({
+                partial: "partial-unified-footer",
+                contextSelector: document,
+                elementSelector: null,
+                type: "ready",
+                handler: function () {
+                        window.ask = window.ask || {};
+                        var ask = window.ask;
+                        ask.unified = ask.unified || {};
+                        ask.unified.pageContext = {"anuaaf":"Archie","anxut":"UNIFIED","anuaci":"61.3.159.98","anuaafl":"0","anxsn":"ask-sites-2323417404-rwlcb","anuahm":"GET","anuadc":"usw2","anuaqs":"url=http%3A%2F%2Fwww.ask.com%2F&height=300&width=400&html=1&timeout=10&images=0&png=1","anxu":"http://www.ask.com/?url=http%3A%2F%2Fwww.ask.com%2F&height=300&width=400&html=1&timeout=10&images=0&png=1","anuaad":"dirN","anuapbr":"","anuaan":"","anuaamt":"","anuaagc":"","anuaadid":"","ucctr":"","ucctn":"","ucs":"","ucdm":"","uccnt":"","ucpc":"","anuadtp":"desktop","anxbt":"","anxbv":"","anxpt":"","anxpv":"","anxcd":"","anxw":"800","anxh":"600","anxv":"a5dea5f","anxd":"2020-02-07T22:00:05.752Z","anuaptp":"homePage","anuachl":"home","anuaprdd":"search","anxa":"Archie_Askus","anxp":"ask.com","anualcl":"us","anuasv":"1","anuaapp":"{\"pageViewId\":\"35c54cf0e58929fd3876c4d366c1fd3a\",\"queryOrigination\":\"\",\"templateId\":\"desktop\"}","anuapn":1,"anuaptl":"Ask.com - What's Your Question?"};
+                        ask.unified.payload = {
+                            pageResults: [],
+                            providers: ask.unified.pendingProviders || {}
+                        };
+
+                        if (ask.unified.pendingParams) {
+                            for (var key in ask.unified.pendingParams) {
+                                ask.unified.payload[key] = ask.unified.pendingParams[key];
+                            }
+                            ask.unified.pendingParams = {};
+                        }
+
+                        ask.unified.pendingProviders = {};
+                        ask.unified.events = [];
+
+                        
+                        ask.unified.addPresentation = function (zoneName, moduleName, moduleOrdinal, resultTemplate, count) {
+                            for (var i = 0; i < count; i++) {
+                                var nextResult = {};
+                                $.extend(nextResult, resultTemplate);
+                                nextResult.resultInModule = i + 1;
+                                nextResult.zoneName = zoneName;
+                                nextResult.moduleName = moduleName;
+                                nextResult.moduleInZone = moduleOrdinal;
+                                ask.unified.payload.pageResults.push(nextResult);
+                            }
+                        };
+
+                        ask.unified.addPresentationResult = function (results) {
+                            ask.unified.payload.pageResults = ask.unified.payload.pageResults.concat(results);
+                        };
+
+                        
+                        ask.unified.addProvider = function (providerName, providerPayload) {
+                            if (!ask.unified.payload.providers[providerName]) {
+                                ask.unified.payload.providers[providerName] = providerPayload;
+                            } else {
+                                $.extend(providerPayload, ask.unified.payload.providers[providerName]);
+                                ask.unified.payload.providers[providerName] = providerPayload;
+                            }
+                        };
+
+                        
+                        ask.unified.sendAction = function (actionPayload, cb) {
+                            var payload = {};
+                            $.extend(payload, ask.unified.pageContext);
+
+                            if(ask.unified.pageContext.anuaapp) {
+                                $.extend(actionPayload, JSON.parse(ask.unified.pageContext.anuaapp));
+                            }
+                            payload.anuaapp = JSON.stringify(actionPayload);
+
+                            if (!cb) {
+                                _UnifiedApi.logEvent("Action", payload, ask.unified.apiHandler);
+                            } else {
+                                var callback = function (success, response) {
+                                    ask.unified.apiHandler(success, response, function () {
+                                        cb();
+                                    });
+                                };
+                                _UnifiedApi.logEvent("Action", payload, callback);
+                            }
+                        };
+
+                        ask.unified.sendBackFill = function () {
+                            var navInfo = getNavigationTimingInfo(window);
+                            if(navInfo) {
+                                
+                                if (isNavInfoAvailableInUnifiedPayload()) {
+                                    if(isPageLoadComplete(navInfo)) {
+                                        
+                                        if(ask.unified.payload.externalData.navInfo.loadEventEnd === 0) {
+                                            
+                                            ask.unified.payload.externalData.navInfo = navInfo;
+                                        } else {
+                                            
+                                            return;
+                                        }
+                                    } else {
+                                        
+                                        
+                                        registerSendBackFillOnPageLoadComplete();
+                                    }
+                                } else {
+                                    if(ask.unified.payload.externalData) {
+                                        ask.unified.payload.externalData.navInfo = navInfo;
+                                    } else {
+                                        ask.unified.payload.externalData = { "navInfo": navInfo };
+                                    }
+
+                                    if(!isPageLoadComplete(navInfo)) {
+                                        
+                                        
+                                        registerSendBackFillOnPageLoadComplete();
+                                    }
+                                }
+                            }
+
+                            var payload = { anxi: _UnifiedApiParams.eventId};
+                            $.extend(payload, ask.unified.pageContext);
+
+                            if ($.isEmptyObject(ask.unified.payload.providers)) {
+                                delete ask.unified.payload.providers;
+                            }
+                            payload.anuaapp = JSON.stringify(ask.unified.payload);
+
+                            _UnifiedApi.logEvent("BackFill", payload, ask.unified.apiHandler);
+
+                            
+                            ask.unified.payload = {
+                                pageResults: [],
+                                providers: {}
+                            };
+                        };
+
+                        function isPageLoadComplete(navInfo) {
+                            return navInfo.loadEventEnd > 0;
+                        }
+
+                        function isNavInfoAvailableInUnifiedPayload() {
+                            return !!ask.unified.payload.externalData && !!ask.unified.payload.externalData.navInfo;
+                        }
+
+                        function registerSendBackFillOnPageLoadComplete() {
+                            $(window).on("load", function(){
+                                setTimeout(function(){
+                                    ask.unified.sendBackFill();
+                                }, 0);
+                            });
+                        }
+
+                        
+                        ask.unified.cancelPending = function (key) {
+                            var length = ask.unified.pending.length;
+                            for (var i = 0; i < length; i++) {
+                                if (ask.unified.pending[i] === key) {
+                                    ask.unified.pending.splice(i, 1);
+                                    break;
+                                }
+                            }
+                        };
+
+                        
+                        ask.unified.apiHandler = function (success, responseText, cb) {
+                            
+if (cb) {
+                                cb();
+                            }
+                        };
+
+                        var _timedOut = false,
+                                _timeFromSerpStart = null,
+                                _adsLoggingTimeout = null,
+                                _dynamicLoggingTimeout = null;
+
+
+                        try {
+                            _timeFromSerpStart = ((new Date() - ask.CSA.startTime) - ask.CSA.showSerpStartTime);
+                            _adsLoggingTimeout = 5000 - _timeFromSerpStart;
+                            _dynamicLoggingTimeout = Math.max(_adsLoggingTimeout, 1);
+                        } catch (e) {
+                            _dynamicLoggingTimeout = 2000;
+                        }
+
+                        function mixinCSAAdData(payload) {
+                            var externalData = {
+                                csaInfo: {
+                                    domTime: ask.CSA.domReadyTime ? ask.CSA.domReadyTime : 0,
+                                    adsResponseTime: ask.CSA.responseTime ? ask.CSA.responseTime : 0,
+                                    adsShownTime: ask.CSA.adsShownTime ? ask.CSA.adsShownTime : 0,
+                                    serpShownTime: ask.CSA.serpShownTime ? ask.CSA.serpShownTime : 0,
+                                    supplement: _timedOut,
+                                    serpTimedOut: !!ask.CSA.showSerpTimeoutFired,
+                                    serpTimeoutStartTime: ask.CSA.showSerpStartTime ? ask.CSA.showSerpStartTime : 0,
+                                    dynamicTimeout: _dynamicLoggingTimeout,
+                                    viewportHeight: ask.CSA.viewportHeight ? ask.CSA.viewportHeight : 0,
+                                    viewportWidth: ask.CSA.viewportWidth ? ask.CSA.viewportWidth : 0,
+                                    adContentRatio: ask.CSA.adContentRatio ? ask.CSA.adContentRatio : 0,
+                                    csaHeight: ask.CSA.csaHeight ? ask.CSA.csaHeight : 0,
+                                    csaWidth: ask.CSA.csaWidth ? ask.CSA.csaWidth : 0,
+                                    centerRailHeight: ask.CSA.centerRailHeight ? ask.CSA.centerRailHeight : 0,
+                                    centerRailWidth: ask.CSA.centerRailWidth ? ask.CSA.centerRailWidth : 0,
+                                    rightRailHeight: ask.CSA.rightRailHeight ? ask.CSA.rightRailHeight : 0,
+                                    rightRailWidth: ask.CSA.rightRailWidth ? ask.CSA.rightRailWidth : 0
+                                }
+                            };
+
+                              var totalAds = 0,
+                                  topCount = 0,
+                                  midCount = 0,
+                                  botCount = 0,
+                                  uniqueResultsDisplayed = 0,
+                                  csaTopModule = "" || "csaTop",
+                                  csaMiddleModule = "" || "csaMiddle",
+                                  csaBottomModule = "" || "csaBottom",
+                                  csaZone = "" || "primary";
+
+                            if(ask.CSA.adModules){
+                                for(var i= 0; i < ask.CSA.adModules.length; i++){
+                                    var m = ask.CSA.adModules[i];
+                                    totalAds =+ m.count();
+                                    ask.unified.addPresentation(m.zoneName, m.moduleName, m.ordinal, {resultType: m.resultType, providerSource: m.providerSource}, m.count());
+                                }
+                                uniqueResultsDisplayed = ask.CSA.pageOptions.numRepeated ? ask.CSA.adModules[0].count() : totalAds;
+                            }
+                            else {
+                                topCount = ask.CSA.numTopAds ? ask.CSA.numTopAds : 0;
+                                midCount = ask.CSA.numMiddleAds ? ask.CSA.numMiddleAds : 0;
+                                botCount = ask.CSA.numBottomAds ? ask.CSA.numBottomAds : 0;
+                                totalAds = topCount + midCount + botCount;
+                                ask.unified.addPresentation(csaZone, csaTopModule, ask.moduleOrdinals[0], { resultType: "gsl", providerSource: "csa"}, topCount);
+                                ask.unified.addPresentation(csaZone, csaMiddleModule, ask.moduleOrdinals[1], {resultType: "gsl", providerSource: "csa"}, midCount);
+                                ask.unified.addPresentation(csaZone, csaBottomModule, ask.moduleOrdinals[2], {resultType: "gsl", providerSource: "csa"}, botCount);
+                                uniqueResultsDisplayed = ask.CSA.pageOptions.numRepeated ? (midCount + botCount) : totalAds;
+                            }
+
+                            if(csaZone === "center") {
+                                ask.unified.addProvider("gsl", {
+                                    zoneCenterResults: totalAds
+                                });
+                            } else {
+                                ask.unified.addProvider("gsl", {
+                                    zonePrimaryResults: totalAds
+                                });
+                            }
+
+                            ask.unified.addProvider("gsl", {
+                                responseTime: ask.CSA.responseTime ? ask.CSA.responseTime : 0,
+                                resultsDisplayed: totalAds,
+                                uniqueResultsDisplayed: uniqueResultsDisplayed
+                            });
+
+                            try {
+                                mixinNavigationTimingInfo(externalData);
+
+                                ask.unified.payload.externalData = externalData;
+                            } catch (e) {
+                            }
+                        };
+
+                        
+                        function mixinNavigationTimingInfo(eData) {
+                            var navInfo = getNavigationTimingInfo(window);
+                            if(navInfo) {
+                                eData["csaInfo"].csaStartTime = (ask.CSA.startTime.getTime() - navInfo.navigationStart);
+                            }
+                        };
+
+                        $(document).on("unified:BackFill", function (evt, data) {
+                            var ask = window.ask;
+                            if (data && data.payload) {
+                                ask.unified.addPresentationResult(data.payload);
+                                ask.unified.sendBackFill();
+                            }
+                        });
+
+                        if ("1" !== CookieUtil.getChipValue("uc", "nv")) {
+                            
+                            return;
+                        }
+
+                        if (ask.afc) {
+                            ask.unified.addProvider("gsl", ask.afc.provider);
+                            ask.unified.addPresentation.apply(null, ask.afc.presentation.top);
+                            ask.unified.addPresentation.apply(null, ask.afc.presentation.bottom);
+                            ask.unified.sendBackFill();
+                        } else if (!ask.unified.pending || ask.unified.pending.length == 0) {
+                            if(ask.unified.payload) {
+                                ask.unified.payload.suspectBackFill = true;
+                            } else {
+                                ask.unified.payload = { "suspectBackFill": true };
+                            }
+                            ask.unified.sendBackFill();
+                        } else if (ask.CSA && typeof ask.CSA.addCSALoadCallback === "function") {
+                            ask.CSA.addCSALoadCallback(function () {
+                                var payload = _timedOut ? { pl_supplement: true } : {};
+
+                                if (typeof ask.CSA.calculateAdContentMetrics === "function") {
+                                    ask.CSA.calculateAdContentMetrics();
+                                }
+
+                                mixinCSAAdData(payload);
+
+                                ask.unified.sendBackFill();
+                            }, function () {
+                                _timedOut = true;
+
+                                if (ask.CSA && typeof ask.CSA.showSerp === "function") {
+                                    ask.CSA.showSerp();
+                                }
+
+                                ask.unified.sendBackFill();
+                            }, _dynamicLoggingTimeout);
+                        }
+                    }
+                });
+
+                App.events.push({
+                    partial: "partial-unified-footer",
+                    contextSelector: document,
+                    elementSelector: "a",
+                    type: "click",
+                    handler: function(evt) {
+                        var ask = window.ask;
+                        var target = $(this);
+
+                        var unifiedData = target.data("unified");
+                        if(!unifiedData) {
+                            return; 
+                        }
+
+                        var isImage = "img" === evt.target.tagName.toLowerCase();
+                        var assetType = target.data("unified-assettype") || (isImage ? "image" : "primaryTextLink");
+                        var destUrl = target.attr("href");
+                        var qoParam = target.data("qo");
+
+                        var appPayload = {
+                            actionType: "click",
+                            assetType: assetType,
+                            text: $.trim(target.text()).replace(/\s+/g, " "),
+                            url: destUrl
+                        };
+
+                        
+                        if(ask.unified.pageContext.metaInfo) {
+                            unifiedData.metaInfo = unifiedData.metaInfo || {};
+                            unifiedData.metaInfo.client = ask.unified.pageContext.metaInfo.client || "";
+                            unifiedData.metaInfo.clientChannel = ask.unified.pageContext.metaInfo.clientChannel || "";
+                        }
+
+                        
+                        if(unifiedData.imagePresent) {
+                            unifiedData.metaInfo = unifiedData.metaInfo || {};
+                            unifiedData.metaInfo.imagePresent = unifiedData.imagePresent;
+                            delete unifiedData.imagePresent;
+                        }
+
+                        $.extend(appPayload, unifiedData);
+
+                        
+var payload = {};
+                        $.extend(payload, ask.unified.pageContext);
+
+                        if(ask.unified.pageContext.anuaapp) {
+                            $.extend(appPayload, JSON.parse(ask.unified.pageContext.anuaapp));
+                        }
+
+                        var targetAttr = target.attr("target");
+                        var nonNav = assetType === "carouselClick" || assetType === "loadMore";
+
+                        
+payload.anuaapp = JSON.stringify(appPayload);
+
+                        if(targetAttr || nonNav) {
+                            _UnifiedApi.logEvent("Action", payload, ask.unified.apiHandler);
+                        } else {
+                            var callback = ask.unified.apiHandler;
+                            if (destUrl) {
+                                callback = function (success, response) {
+                                    ask.unified.apiHandler(success, response, function() {
+                                        destUrl = _UnifiedApi.addURLParam(destUrl, "qo", qoParam);
+                                        document.location = destUrl;
+                                    });
+                                };
+                            }
+                            _UnifiedApi.logEvent("Action", payload, callback);
+                            return false;
+                        }
+                    }
+                });
+        })();
+        }
+    </script>
+
+
+
+<script>
+
+    var lssCfg = (function(){
+        return {
+            "topOffset": 3,
+            "leftOffset": 0,
+            "channel": "home",
+            "path": "web",
+            "disableTurnOffLink": "'true'",
+            "disableSS": false,
+            "server": "amg-ss.ask.com",
+            "serverPath": "/query",
+            "ldomain": "/",
+            "locale" : "en-US",
+            "limit" : 10,
+            "ssBold": "'false'",
+            "clearSearchHistory": "Clear search history",
+            "max": "",
+            "ssFromQueryHistory": "true",
+            "queryHistory": "",
+            "queryHistoryContentColor": "",
+            "ssContentColor": "'false'",
+            "ssContentColorCode": "",
+            "matchingTextUnBold": "",
+            "suggestionTextUnBold": "",
+            "ssItems": "",
+            "containerClass" : "ac_results",
+            "onSelect": function(data) {
+                if( ask && ask.unified && ask.unified.sendAction ){
+                    var assetType = (data.url.indexOf("searchHistory") !== -1)? "searchHistory" : "searchSuggestions",
+                            searchPayload = JSON.parse('{"resultType":"navigation","providerSource":"navigation","assetType":"searchBar","actionType":"click","zoneName":"header","moduleName":"searchBox"}');
+                    searchPayload.assetType = assetType;
+                    ask.unified.sendAction(searchPayload, function () {
+                        window.location.href = data.url;
+                    });
+                    return;
+                }
+                window.location.href = data.url;
+            }
+        };
+    })();
+
+    if(App) {
+        (function () {
+            App.events = App.events || [];
+            App.events.push({
+                partial: "PartialLss",
+                contextSelector: document,
+                elementSelector: null,
+                type: "ready",
+                handler: function () {
+                    if (!lssCfg.disableSS) {
+                        $("input[name=q]:first:not(:hidden)").lssSuggestions(lssCfg);
+                    }
+                }
+            });
+        })();
+    }
+</script>
+
+
+
+    <script>
+        var _comscore = _comscore || [];
+        _comscore.push(
+                { c1: "2", c2: "6034776" }
+        );
+        (function()
+                { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); }
+        )();
+    </script>
+    <noscript>
+        <img src="//b.scorecardresearch.com/p?c1=2&c2=6034776&cv=2.0&cj=1" />
+    </noscript>
+
+
+
+
+
+</body>
+</html>
+
+

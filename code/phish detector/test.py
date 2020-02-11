@@ -8,6 +8,7 @@ import sys
 import numpy as np
 import json
 import sys
+import os
 
 from features_extraction import LOCALHOST_PATH, DIRECTORY_NAME
 
@@ -49,11 +50,11 @@ def main():
         elif prediction == -1:
             # print "The website has phishing features. DO NOT VISIT!"
             print("PHISHING")
-            #data = {'url': url}
+            # load into the whole list for target identifier
             json_path = '/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/sites.json'
             with open(json_path, 'r') as json_file:
                 results = json.load(json_file)
-                print(results)
+                #print(results)
 
             with open(json_path) as json_file:
                 json_decoded = json.load(json_file)
@@ -61,10 +62,21 @@ def main():
             json_decoded['url'] = url
 
             with open(json_path, 'w') as json_file:
-                json.dump(json_decoded, json_file, sort_keys=True, indent=4, separators=(',', ': '))      
+                json.dump(json_decoded, json_file, sort_keys=True, indent=4, separators=(',', ': ')) 
+
+             
+            #only single url to be scraped
+            single_json_decoded = {}
+            json_path = '/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/single-sites.json'
+            single_json_decoded['url'] = url
+            with open(json_path, 'w') as json_file:
+                json.dump(single_json_decoded, json_file, sort_keys=True, indent=4, separators=(',', ': '))    
 
 
-            # print 'Error -', features_test
+            # call the target identifier
+            os.chdir('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/')
+            os.system('python compare-tags-all.py data')
+
 
 
 if __name__ == "__main__":

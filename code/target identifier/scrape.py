@@ -41,21 +41,21 @@ def main():
     for site, url in sites.items():
         print('Requesting %s (%s).' % (site, url))
         params['url'] = url
-        response = requests.get(splash_url, headers=headers, params=params)
+        response = requests.get(url, headers=headers, params=params)
 
         if response.status_code != 200:
             print("Requested failed: %d" % response.status_code)
             continue
 
-        body = json.loads(response.text)
+        #print(response.text)
+
+        body = response.text
         encoding = response.encoding or 'utf-8'
         filename = '%s-%d' % (site, run_number)
 
         with open('%s.html' % filename, 'wb') as htmlfile:
-            htmlfile.write(body['html'].encode(encoding))
+            htmlfile.write(body.encode(encoding))
 
-        with open('%s.png' % filename, 'wb') as pngfile:
-            pngfile.write(base64.b64decode(body['png']))
 
 
 if __name__ == '__main__':

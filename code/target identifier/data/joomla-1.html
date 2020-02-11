@@ -1,1045 +1,1863 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-gb" xml:lang="en-gb"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta http-equiv="content-language" content="en-gb">
-<meta http-equiv="content-style-type" content="text/css">
-<meta http-equiv="imagetoolbar" content="no">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="keywords" content="Joomla, CMS, content management, PHP, MySQL, free, open, source, forum, website, webhosting">
-<meta name="description" content="Joomla! Discussion Forums">
-<title>Joomla! • Index page</title>
-<link href="./styles/joomla12/theme/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-<link rel="alternate" type="application/atom+xml" title="Feed - Joomla!" href="http://forum.joomla.org/feed.php">
-<link rel="stylesheet" href="./styles/joomla12/theme/stylesheet.css?20110428" type="text/css">
-<!--[if lt IE 7]>
-	<link rel="stylesheet" type="text/css" href="./styles/joomla12/theme/ie6.css" />
+<!DOCTYPE html>
+<html dir="ltr" lang="en-gb">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="/favicon.ico?v=1" rel="icon" />
+
+<title>Joomla! Forum - community, help and support - Index page</title>
+
+	<link rel="alternate" type="application/atom+xml" title="Feed - Joomla! Forum - community, help and support" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246">							
+
+<script>
+	WebFontConfig = {
+		google: {
+			families: ['Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese']
+		}
+	};
+
+	(function(d) {
+		var wf = d.createElement('script'), s = d.scripts[0];
+		wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+		wf.async = true;
+		s.parentNode.insertBefore(wf, s);
+	})(document);
+</script>
+
+
+<script src="https://www.joomla.org/media/jui/js/jquery.min.js" type="text/javascript"></script>
+<script src="https://www.joomla.org/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+<script src="https://www.joomla.org/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://www.joomla.org/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="https://www.joomla.org/templates/joomla/js/blockadblock.js" type="text/javascript"></script>
+<script src="https://www.joomla.org/templates/joomla/js/template.js" type="text/javascript"></script>
+<script src="https://www.joomla.org/templates/joomla/js/js.cookie.js" type="text/javascript"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="./styles/joomla/theme/stylesheet.css?assets_version=164.361" rel="stylesheet">
+<link href="./styles/joomla/theme/en/stylesheet.css?assets_version=164" rel="stylesheet">
+<link href="./styles/joomla/theme/responsive.css?assets_version=164" rel="stylesheet" media="all and (max-width: 700px)">
+
+
+
+
+<!--[if lte IE 9]>
+	<link href="./styles/joomla/theme/tweaks.css?assets_version=164" rel="stylesheet">
 <![endif]-->
-<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
-</script>
-<script type="text/javascript">
- GS_googleAddAdSenseService("ca-pub-1189370408998555");
- GS_googleEnableAllServices();
-</script><script src="http://partner.googleadservices.com/gampad/google_ads.js"></script>
-<script type="text/javascript">
- GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_forum_1");
- GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_forum_2");
- GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_Forum");
- GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_Forum_Footer");
- GA_googleAddSlot("ca-pub-1189370408998555", "Joomla_forum_in_post");
-</script>
-<script type="text/javascript">
- GA_googleFetchAds();
-</script>
-<script type="text/javascript">
-// <![CDATA[
-
-
-function popup(url, width, height, name)
-{
-	if (!name)
-	{
-		name = '_popup';
-	}
-
-	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
-	return false;
-}
-
-function jumpto()
-{
-	var page = prompt('Enter the page number you wish to go to:', '');
-	var per_page = '';
-	var base_url = '';
-
-	if (page !== null && !isNaN(page) && page == Math.floor(page) && page > 0)
-	{
-		if (base_url.indexOf('?') == -1)
-		{
-			document.location.href = base_url + '?start=' + ((page - 1) * per_page);
-		}
-		else
-		{
-			document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * per_page);
-		}
-	}
-}
-
-/**
-* Find a member
-*/
-function find_username(url)
-{
-	popup(url, 760, 570, '_usersearch');
-	return false;
-}
-
-/**
-* Mark/unmark checklist
-* id = ID of parent container, name = name prefix, state = state [true/false]
-*/
-function marklist(id, name, state)
-{
-	var parent = document.getElementById(id);
-	if (!parent)
-	{
-		eval('parent = document.' + id);
-	}
-
-	if (!parent)
-	{
-		return;
-	}
-
-	var rb = parent.getElementsByTagName('input');
-	
-	for (var r = 0; r < rb.length; r++)
-	{
-		if (rb[r].name.substr(0, name.length) == name)
-		{
-			rb[r].checked = state;
-		}
-	}
-}
 
 
 
-// ]]>
-</script>
-<script type="text/javascript" src="http://forum.joomla.org/styles/joomla12/template/jquery.js"></script>
-<script type="text/javascript" src="http://forum.joomla.org/styles/joomla12/template/jquery.cookie.js"></script>
-<script type="text/javascript" language="javascript">
 
-$(document).ready(function () {
-    
-	//$('#page').css('width',$.cookie('pageWidth'));
-	$('BODY').css('font-size',$.cookie('fontSize'));
-	
-	$('#change-width').bind("click", function(e){
-		var pageWidth = $('#page').css('width');
-		if (pageWidth == '960px') pageWidth = '94%'; else pageWidth = '960px';
-		
-		$.cookie('pageWidth', pageWidth);
+<link href="https://cdn.joomla.org/template/css/template_3.0.0.min.css?v=1.3.4" rel="stylesheet">
 
-		$('#page').css('width',pageWidth);
-	});
-	
-	$('#change-font-size').bind("click", function(e){
-		var fontSize = parseInt($('BODY').css('font-size'));
-		
-		if(fontSize < 12){
-			fontSize++;
-		} else {
-			fontSize = 10;
-		}
-		
-		$.cookie('fontSize', fontSize);
 
-		$('BODY').css('font-size',fontSize);
-		
-	});
-	
-	
+<script>
+jQuery(document).ready(function ($) {
+    var navTop,
+        isFixed = false;
+
+    processScrollInit();
+    processScroll();
+
+
+    function processScrollInit() {
+        if ($('.subnav-wrapper').length) {
+            navTop = $('.subnav-wrapper').length && $('.subnav-wrapper').offset().top - 30;
+
+            // Fix the container top
+            $('.body .container-main').css('top', $('.subnav-wrapper').height() + $('#mega-menu').height());
+
+            // Only apply the scrollspy when the toolbar is not collapsed
+            if (document.body.clientWidth > 480) {
+                $('.subnav-wrapper').height($('.subnav').outerHeight());
+                $('.subnav').affix({
+                    offset: {top: $('.subnav').offset().top - $('#mega-menu').height()}
+                });
+            }
+        }
+    }
+
+    function processScroll() {
+        if ($('.subnav-wrapper').length) {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop >= navTop && !isFixed) {
+                isFixed = true;
+                $('.subnav-wrapper').addClass('subhead-fixed');
+
+                // Fix the container top
+                $('.body .container-main').css('top', $('.subnav-wrapper').height() + $('#mega-menu').height());
+            } else if (scrollTop <= navTop && isFixed) {
+                isFixed = false;
+                $('.subnav-wrapper').removeClass('subhead-fixed');
+            }
+        }
+    }
 });
 </script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/osd.js"></script></head>
-<body class="site ltr">
-<a name="top"></a>
-<div id="menuWrap">
-<div id="menuWrapInner" class="container_12 clearfix">
-<div id="menu" class="width">
- 
-<ul id="menu">
-<li class="home_item"><a href="http://www.joomla.org/" class="drop"><span class="logo">Joomla!<span class="sup">®</span></span></a>
- 
-<div class="dropdown_2columns">
- 
-<div class="col_2">
-<h2>Welcome to Joomla!</h2>
-</div>
-<div class="col_2">
-<p>Joomla! is an award-winning open source CMS for building powerful websites.</p>
-</div>
-<div class="col_2">
-<h2>Recent Joomla! News</h2>
-</div>
-<div class="col_2"> <img src="./styles/joomla12/theme/images/menu/joomla.jpg" class="img_left imgshadow" width="70" height="70" alt="Joomla!">
-<ul class="img_left">
-<li><a href="http://www.joomla.org/announcements.html">Announcements</a></li>
-<li><a href="http://community.joomla.org/blogs/community.html">Joomla! Blogs</a></li>
-<li><a href="http://magazine.joomla.org/">Joomla! Magazine</a></li>
-</ul>
-</div>
-<div class="col_2">
-<h2>Support Joomla!</h2>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li class="blue"><a href="http://shop.joomla.org/">Shop Joomla! Gear</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li class="blue"><a href="http://opensourcematters.org/support-joomla.html">Contribution</a></li>
-</ul>
-</div>
-</div>
- 
-</li>
- 
-<li><a href="http://www.joomla.org/about-joomla.html" class="drop">About</a>
- 
-<div class="dropdown_4columns">
- 
-<div class="col_4">
-<h2>What Is Joomla?</h2>
-<p>Joomla is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications.<br><a href="http://www.joomla.org/about-joomla.html">Read more...</a></p>
-</div>
-<div class="col_2">
-<h3>Joomla! for Business</h3>
-<p>Joomla! is a extremely customizable and adaptable for Enterprise, SMBs, NPOs and beyond. <a href="http://www.joomla.org/core-features.html">Read more...</a></p>
-</div>
-<div class="col_2">
-<h3>Joomla! for Developers</h3>
-<p class="black_box">No matter what level of experience you hold, Joomla! has strengths to match; programmers, designers and end users alike!<a href="http://developer.joomla.org/">Read more...</a></p>
-</div>
-<div class="col_4">
-<h2>Learn more about Joomla!</h2>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://www.joomla.org/about-joomla.html">The Software</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://www.joomla.org/about-joomla/the-project.html">The Project</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://www.joomla.org/about-joomla/the-project/leadership-team.html">The Leadership</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://opensourcematters.org/index.php">Open Source Matters</a></li>
-</ul>
-</div>
-</div>
- 
-</li>
- 
-<li><a href="http://community.joomla.org/" class="drop">Community &amp; Support</a>
- 
-<div class="dropdown_3columns"> 
-<div class="col_1">
-<h3>Connect!</h3>
-<ul>
-<li><a href="http://community.joomla.org/events.html">Joomla! Events</a></li>
-<li><a href="http://ux.joomla.org/">Joomla! UX</a></li>
-<li><a href="http://community.joomla.org/user-groups.html">Joomla! User Groups</a></li>
-</ul>
-</div>
-<div class="col_1">
-<h3>Support!</h3>
-<ul>
-<li><a href="http://forum.joomla.org/">Joomla! Forum</a></li>
-<li><a href="http://docs.joomla.org/">Joomla! Documentation</a></li>
-<li><a href="http://resources.joomla.org/">Joomla! Resources</a></li>
-</ul>
-</div>
-<div class="col_1">
-<h3>Read!</h3>
-<ul>
-<li><a href="http://magazine.joomla.org/">Joomla! Magazine</a></li>
-<li><a href="http://community.joomla.org/connect.html">Joomla! Connect</a></li>
-<li><a href="http://www.joomla.org/mailing-lists.html">Joomla! Mailing Lists</a></li>
-</ul>
-</div>
-<div class="col_3">
-<h2>Get involved with Joomla!</h2> <img src="./styles/joomla12/theme/images/menu/joomla.jpg" alt="Joomla!" width="70" height="70" class="img_left imgshadow">
-<p>Joomla is an open source project and contributions from the community are essential to its growth and success. Anyone can contribute on any level, even newcomers can contribute to Joomla. <a href="http://www.joomla.org/about-joomla/contribute-to-joomla.html">Read more...</a></p>
-</div>
-</div>
- 
-</li>
- 
-<li><a href="http://extensions.joomla.org/" class="drop">Extend</a>
- 
-<div class="dropdown_2columns">
- 
-<div class="col_1">
-<h3>Directories</h3>
-<ul>
-<li><a href="http://extensions.joomla.org/">Extension Directory</a></li>
-<li><a href="http://community.joomla.org/showcase/">Showcase Directory</a></li>
-<li><a href="http://resources.joomla.org/">Resource Directory</a></li>
-<li><a href="http://community.joomla.org/translations.html">Translations</a></li>
-<li><a href="http://ideas.joomla.org/">Idea Pool</a></li>
-</ul>
-</div>
-<div class="col_1">
-<h3>Developers</h3>
-<ul>
-<li><a href="http://developer.joomla.org/">Developer Site</a></li>
-<li><a href="http://docs.joomla.org/">Documentation</a></li>
-<li><a href="http://docs.joomla.org/Bug_Squad">Joomla! Bug Squad</a></li>
-<li><a href="http://api.joomla.org/">Joomla! API</a></li>
-<li><a href="http://joomlacode.org/">JoomlaCode</a></li>
-<li><a href="https://github.com/joomla/joomla-platform">Joomla! Platform</a></li>
-</ul>
-</div>
-</div>
- 
-</li>
- 
-<li class="download"><a href="http://www.joomla.org/download.html" class="drop">Download</a>
- 
-<div class="dropdown_3columns">
- 
-<div class="col_3">
-<h2>Download Joomla! 3.3 </h2>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li class="blue"><a href="http://www.joomla.org/download.html#j3">3.3 Full Package</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://joomlacode.org/gf/project/joomla/frs/?action=index">Update Packages</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://demo.joomla.org/">Demo Joomla! 3.3</a></li>
-</ul>
-</div>
-<div class="col_3">
-<h2>Download Joomla! 2.5</h2>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li class="orange"><a href="http://www.joomla.org/download.html">2.5 Full Package</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://joomlacode.org/gf/project/joomla/frs/?action=index">Update Packages</a></li>
-</ul>
-</div>
-<div class="col_1">
-<ul class="greybox">
-<li><a href="http://demo.joomla.org/">Demo Joomla! 2.5</a></li>
-</ul>
-</div>
-<div class="col_3">
-<h2>Getting Started with Joomla!</h2>
-</div>
-<div class="col_3">
-<ul class="nowrap">
-<li><a href="http://docs.joomla.org/Beginners">Beginner Documentation</a></li>
-<li><a href="http://www.joomla.org/technical-requirements.html">Technical Requirements</a></li>
-<li><a href="http://opensourcematters.org/index.php?option=com_content&amp;view=article&amp;id=56&amp;Itemid=155">License &amp; Usage</a></li>
-</ul>
-</div>
-</div>
- 
-</li>
-<li class="menu_right language"><a href="http://community.joomla.org/translations.html" class="drop language_link">Internationalization</a> 
-<div class="dropdown_1column align_right"> 
-<div class="col_1">
-<h2>Internationalization
-</h2>
-</div>
-<div class="col_1">
-<ul class="nowrap">
-<li><a href="http://community.joomla.org/translations.html">Translations</a></li>
-<li><a href="http://multilingual-joomla-demo.cloudaccess.net/">Multilingual Demo</a></li>
-<li><a href="http://docs.joomla.org/Translations_Working_Group">Translation Working Group</a></li>
-<li><a href="http://forum.joomla.org/viewforum.php?f=11">Translations Forum</a></li>
-</ul>
-</div>
-</div> 
-</li> 
-<li class="menu_right search">
- 
-<form action="http://forum.joomla.org/results.php" id="searchbox_007628682600509520926:higrppcfurc">
-<div class="search-box-area">
-<input type="hidden" name="cx" value="007628682600509520926:higrppcfurc">
-<input type="hidden" name="cof" value="FORID:9">
- 
-<input type="text" class="text inputbox" name="q" size="25">
- 
-</div>
-</form>
-<script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=searchbox_007628682600509520926%3Ahigrppcfurc&amp;lang=en"></script>
- 
-</li>
-</ul>
- 
-</div>
-</div>
-</div>
-<div id="titleWrap">
-<div id="title" class="container_12 clearfix">
-<div class="grid_7">
-<h1 title="Welcome to the Joomla! Forum">The Joomla! Forum ™</h1>
-</div>
-<div class="grid_5 right">
-<div class="downdemo">
-<p class="download-16">
-<a href="http://www.joomla.org/download.html">Download</a>
-</p>
-<p class="demo">
-<a href="http://demo.joomla.org">Demo</a>
-</p>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<div class="clear"></div>
-<div id="insetWrap">
-<div id="inset" class="container_12 clearfix">
-<ul class="menu">
-<li><a href="http://forum.joomla.org">Home</a></li>
-<li><a href="./ucp.php?mode=register&amp;sid=7a784c443338b520f229994e327ca31c">Register</a></li>
-<li><a href="http://forum.joomla.org/viewtopic.php?f=8&amp;t=65">Forum rules</a></li>
-<li><a href="./faq.php?sid=7a784c443338b520f229994e327ca31c">FAQ</a></li>
-<li><a href="./memberlist.php?mode=leaders&amp;sid=7a784c443338b520f229994e327ca31c">The team</a></li>
-<li><a href="./ucp.php?mode=login&amp;sid=7a784c443338b520f229994e327ca31c">Login</a></li>
-</ul>
-<div class="clear"></div>
-</div>
-</div>
-<div class="clear"></div>
-<div id="containerWrap">
-<div id="container" class="container_12 clearfix">
-<div id="mainbody" class="6 maincontent">
-<div class="clr"></div>
-<div style="text-align:center;">
-<script type="text/javascript">
-									GA_googleFillSlot("Joomla_Forum");
-							</script><script src="http://pubads.g.doubleclick.net/gampad/ads?correlator=2951829915697152&amp;output=json_html&amp;callback=GA_googleSetAdContentsBySlotForSync&amp;impl=s&amp;client=ca-pub-1189370408998555&amp;slotname=Joomla_Forum&amp;page_slots=Joomla_Forum&amp;cookie_enabled=1&amp;url=http%3A%2F%2Fforum.joomla.org%2F&amp;lmt=1429158825&amp;dt=1429158825026&amp;cc=26&amp;biw=1024&amp;bih=768&amp;adk=3020655944&amp;adx=32&amp;ady=177&amp;ifi=1&amp;oid=3&amp;u_his=1&amp;u_h=768&amp;u_w=1024&amp;u_ah=768&amp;u_aw=1024&amp;u_cd=24&amp;flash=0&amp;gads=v2&amp;ga_vid=290328385.1429158825&amp;ga_sid=1429158825&amp;ga_hid=1117976440"></script><div id="google_ads_div_Joomla_Forum_ad_wrapper">
-<div id="google_ads_div_Joomla_Forum_ad_container" style="display:inline-block;">
-<ins style="width: 728px; height: 90px; display: inline-table; position: relative; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; "><ins style="width: 728px; height: 90px; display: block; position: relative; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; "><iframe id="google_ads_iframe_Joomla_Forum" name="google_ads_iframe_Joomla_Forum" width="728" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; position: absolute; top: 0px; left: 0px; "></iframe></ins></ins></div>
-</div>
-<script>GA_googleCreateDomIframe("google_ads_div_Joomla_Forum_ad_container" ,"Joomla_Forum");</script>
-</div>
-<div id="wrapcentre">
-<br style="clear: both;">
-<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
-<tbody><tr>
-<td class="row1">
-<p class="breadcrumbs"><a href="./index.php?sid=7a784c443338b520f229994e327ca31c">Board index</a></p>
-</td>
-</tr>
-</tbody></table>
-<br><table class="tablebg table-white" cellspacing="1" width="100%">
-<tbody><tr>
-<th colspan="2">&nbsp;Forum&nbsp;</th>
-<th width="50">&nbsp;Topics&nbsp;</th>
-<th width="50">&nbsp;Posts&nbsp;</th>
-<th>&nbsp;Last post&nbsp;</th>
-</tr>
-<tr>
-<td class="forum-cat" colspan="5"><h4><a href="./viewforum.php?f=504&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Announcements</a></h4></td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=8&amp;sid=7a784c443338b520f229994e327ca31c">Announcements</a>
-<p class="forumdesc">Announcements from the Joomla! Project for the attention of all Users. We encourage all Joomla! users to subscribe to this forum or check it regularly. <br><strong><span style="color: red">Joomla! Security Updates</span></strong>:  <a class="postlink" href="http://feeds.joomla.org/JoomlaSecurityNews">http://feeds.joomla.org/JoomlaSecurityNews</a>  | <strong><span style="color: red">Joomla! Vulnerable Extensions</span></strong>:  <a class="postlink" href="http://feeds.joomla.org/JoomlaSecurityVulnerableExtensions">http://feeds.joomla.org/JoomlaSecurityV ... Extensions</a> </p>
-<p class="forumdesc"><strong>Subforum: </strong> <a href="./viewforum.php?f=9&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Announcements Discussions</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">401</p></td>
-<td class="row2" align="center"><p class="topicdetails">10323</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=9&amp;p=3291247&amp;sid=7a784c443338b520f229994e327ca31c#p3291247">Re: Discuss Joomla! 3.4</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=774685&amp;sid=7a784c443338b520f229994e327ca31c">bizguy15</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Mon Apr 13, 2015 12:42 pm</p>
-</td>
-</tr>
-<tr>
-<td class="forum-cat" colspan="5"><h4><a href="./viewforum.php?f=705&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! 3.x - Ask Support Questions Here</a></h4></td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=706&amp;sid=7a784c443338b520f229994e327ca31c">General Questions/New to Joomla! 3.x</a>
-<p class="forumdesc">General questions relating to Joomla! 3.x. Please consider the availability of third-party templates and extensions when deciding which Joomla version to use.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">14154</p></td>
-<td class="row2" align="center"><p class="topicdetails">54779</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=706&amp;p=3292364&amp;sid=7a784c443338b520f229994e327ca31c#p3292364">Re: Language switcher problem</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=224484&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #000066;" class="username-coloured">imanickam</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 3:24 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=707&amp;sid=7a784c443338b520f229994e327ca31c">Installation Joomla! 3.x</a>
-<p class="forumdesc">Need help installing Joomla! 3.x? For all Joomla! 3.x installation issues please use this forum. Note: Users creating new sites can use either version 2.5 or 3.x. Please consider the availability of third-party templates and extensions when deciding which Joomla version to use.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-<p class="forumdesc"><strong>Subforum: </strong> <a href="./viewforum.php?f=717&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 3.x on IIS webserver</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">1650</p></td>
-<td class="row2" align="center"><p class="topicdetails">8314</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=707&amp;p=3292205&amp;sid=7a784c443338b520f229994e327ca31c#p3292205">Re: Global Configuration screen is completely blank -please </a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=610054&amp;sid=7a784c443338b520f229994e327ca31c">sovainfo</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 1:54 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=708&amp;sid=7a784c443338b520f229994e327ca31c">Administration Joomla! 3.x</a>
-<p class="forumdesc">Need help with the Administration of your Joomla! 3.x site? This is the spot for you.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-<p class="forumdesc"><strong>Subforum: </strong> <a href="./viewforum.php?f=719&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Access Control List (ACL) in Joomla! 3.x</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">4161</p></td>
-<td class="row2" align="center"><p class="topicdetails">17103</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=708&amp;p=3292352&amp;sid=7a784c443338b520f229994e327ca31c#p3292352">Re: Responsive menu options</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=6679&amp;sid=7a784c443338b520f229994e327ca31c">masoesa</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 1:59 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=710&amp;sid=7a784c443338b520f229994e327ca31c">Migrating and Upgrading to Joomla! 3.x</a>
-<p class="forumdesc">Need help upgrading your Joomla! website or converting to Joomla! 3.x? Please consider the availability of third-party templates and extensions when deciding which Joomla version to use.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">2033</p></td>
-<td class="row2" align="center"><p class="topicdetails">11897</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=710&amp;p=3292369&amp;sid=7a784c443338b520f229994e327ca31c#p3292369">Re: White screen on site after migrating from 2.5 to 3.4.1</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=275615&amp;sid=7a784c443338b520f229994e327ca31c">trusting</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 3:43 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=714&amp;sid=7a784c443338b520f229994e327ca31c">Security in Joomla! 3.x</a>
-<p class="forumdesc">Discussion regarding Joomla! 3.x security issues.</p>
-<p class="forumdesc"><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=28000&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">mandville</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=67439&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">PhilD</a>, <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">298</p></td>
-<td class="row2" align="center"><p class="topicdetails">1711</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=714&amp;p=3292155&amp;sid=7a784c443338b520f229994e327ca31c#p3292155">Re: Potential security risk after migrating from 2.5.28 to 3</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=709093&amp;sid=7a784c443338b520f229994e327ca31c">JAVesey</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 11:23 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=715&amp;sid=7a784c443338b520f229994e327ca31c">Extensions for Joomla! 3.x</a>
-<p class="forumdesc">This forum is for general questions about extensions for Joomla! 3.x.</p>
-<p class="forumdesc"><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=471&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #000066;" class="username-coloured">pe7er</a>, <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">4625</p></td>
-<td class="row2" align="center"><p class="topicdetails">13108</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=715&amp;p=3292351&amp;sid=7a784c443338b520f229994e327ca31c#p3292351">Re: Take information forma email to page?</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=767574&amp;sid=7a784c443338b520f229994e327ca31c">jootempl</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 1:54 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=713&amp;sid=7a784c443338b520f229994e327ca31c">Templates for Joomla! 3.x</a>
-<p class="forumdesc">Everything to do with Joomla! 3.x templates and templating.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">2990</p></td>
-<td class="row2" align="center"><p class="topicdetails">11424</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=713&amp;p=3292370&amp;sid=7a784c443338b520f229994e327ca31c#p3292370">Re: Change LOGO when changing language in multilanguage webs</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=69616&amp;sid=7a784c443338b520f229994e327ca31c">MastaChu</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 3:51 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=712&amp;sid=7a784c443338b520f229994e327ca31c">Search Engine Optimization (Joomla! SEO) in Joomla! 3.x</a>
-<p class="forumdesc">Discuss Search Engine Optimization in relation to Joomla! 3.x. This forum will also have discussions on SEF/SEO Joomla! 3.x extensions.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">628</p></td>
-<td class="row2" align="center"><p class="topicdetails">3692</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=712&amp;p=3292367&amp;sid=7a784c443338b520f229994e327ca31c#p3292367">Converting normal html5 to joomla without change the layout</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=777708&amp;sid=7a784c443338b520f229994e327ca31c">rotividros</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 3:32 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=711&amp;sid=7a784c443338b520f229994e327ca31c">Language - Joomla! 3.x</a>
-<p class="forumdesc">General questions regarding the use of languages in Joomla! 3.x.</p>
-<p class="forumdesc"><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=14&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #666600;" class="username-coloured">infograf768</a>, <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">614</p></td>
-<td class="row2" align="center"><p class="topicdetails">3055</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=711&amp;p=3292256&amp;sid=7a784c443338b520f229994e327ca31c#p3292256">Re: The other menu disappears on multilingual site</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=777557&amp;sid=7a784c443338b520f229994e327ca31c">sarza</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 4:35 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=709&amp;sid=7a784c443338b520f229994e327ca31c">Performance - Joomla! 3.x</a>
-<p class="forumdesc">Discussion regarding Joomla! 3.x Performance issues.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=7a784c443338b520f229994e327ca31c">General Support Moderators</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">415</p></td>
-<td class="row2" align="center"><p class="topicdetails">1819</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=709&amp;p=3292310&amp;sid=7a784c443338b520f229994e327ca31c#p3292310">Problemas Con Jf Slideshow</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=777692&amp;sid=7a784c443338b520f229994e327ca31c">jvc</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 9:29 pm</p>
-</td>
-</tr>
-<tr>
-<td class="forum-cat" colspan="5"><h4><a href="./viewforum.php?f=513&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Older Version Support</a></h4></td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=614&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! 2.5</a>
-<p class="forumdesc"></p>
-<p class="forumdesc"><strong>Subforums: </strong> <a href="./viewforum.php?f=615&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">General Questions/New to Joomla! 2.5</a>, <a href="./viewforum.php?f=622&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Installation Joomla! 2.5</a>, <a href="./viewforum.php?f=623&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 2.5 on IIS webserver</a>, <a href="./viewforum.php?f=624&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Administration Joomla! 2.5</a>, <a href="./viewforum.php?f=673&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Access Control List (ACL) in Joomla! 2.5</a>, <a href="./viewforum.php?f=620&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Extensions for Joomla! 2.5</a>, <a href="./viewforum.php?f=619&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Templates for Joomla! 2.5</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">87146</p></td>
-<td class="row2" align="center"><p class="topicdetails">321714</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=619&amp;p=3292356&amp;sid=7a784c443338b520f229994e327ca31c#p3292356">Re: how to edit copyright and designed by from the footer</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=224484&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #000066;" class="username-coloured">imanickam</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 2:33 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=506&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! 1.5</a>
-<p class="forumdesc"></p>
-<p class="forumdesc"><strong>Subforums: </strong> <a href="./viewforum.php?f=428&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">General Questions/New to Joomla! 1.5</a>, <a href="./viewforum.php?f=429&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Installation 1.5</a>, <a href="./viewforum.php?f=543&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 1.5 on IIS webserver</a>, <a href="./viewforum.php?f=431&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Administration 1.5</a>, <a href="./viewforum.php?f=430&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Migrating and Upgrading to Joomla! 1.5</a>, <a href="./viewforum.php?f=432&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Security in Joomla! 1.5</a>, <a href="./viewforum.php?f=470&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Extensions for Joomla! 1.5</a>, <a href="./viewforum.php?f=466&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Templates for Joomla! 1.5</a>, <a href="./viewforum.php?f=544&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Search Engine Optimization (Joomla! SEO) in Joomla! 1.5</a>, <a href="./viewforum.php?f=485&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Language - Joomla! 1.5</a>, <a href="./viewforum.php?f=433&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Performance - Joomla! 1.5</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">260961</p></td>
-<td class="row2" align="center"><p class="topicdetails">955327</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=431&amp;p=3292355&amp;sid=7a784c443338b520f229994e327ca31c#p3292355">Re: Joomla 1.5 and PHP 5.4</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=411332&amp;sid=7a784c443338b520f229994e327ca31c">nfleming</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 2:17 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=505&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! 1.0</a>
-<p class="forumdesc"></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">148832</p></td>
-<td class="row2" align="center"><p class="topicdetails">605341</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=216&amp;p=3292240&amp;sid=7a784c443338b520f229994e327ca31c#p3292240">Re: joomla extentions</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=760519&amp;sid=7a784c443338b520f229994e327ca31c">angie_s</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 3:42 pm</p>
-</td>
-</tr>
-<tr>
-<td class="forum-cat" colspan="5"><h4><a href="./viewforum.php?f=542&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! International Language Support</a></h4></td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=511&amp;sid=7a784c443338b520f229994e327ca31c">International Zone</a>
-<p class="forumdesc"></p>
-<p class="forumdesc"><strong>Subforums: </strong> <a href="./viewforum.php?f=243&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Albanian Forum</a>, <a href="./viewforum.php?f=17&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Arabic Forum</a>, <a href="./viewforum.php?f=568&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Azeri Forum</a>, <a href="./viewforum.php?f=274&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Basque Forum</a>, <a href="./viewforum.php?f=753&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Belarusian Forum</a>, <a href="./viewforum.php?f=64&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Bengali Forum</a>, <a href="./viewforum.php?f=104&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Bosnian Forum</a>, <a href="./viewforum.php?f=95&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Catalan Forum</a>, <a href="./viewforum.php?f=98&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Chinese Forum</a>, <a href="./viewforum.php?f=150&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Croatian Forum</a>, <a href="./viewforum.php?f=16&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Danish Forum</a>, <a href="./viewforum.php?f=13&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Dutch Forum</a>, <a href="./viewforum.php?f=21&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Filipino Forum</a>, <a href="./viewforum.php?f=25&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Finnish Forum</a>, <a href="./viewforum.php?f=19&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">French Forum</a>, <a href="./viewforum.php?f=14&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">German Forum</a>, <a href="./viewforum.php?f=50&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Greek Forum</a>, <a href="./viewforum.php?f=172&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Hebrew Forum</a>, <a href="./viewforum.php?f=403&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Hungarian Forum</a>, <a href="./viewforum.php?f=162&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Indic Languages Forum</a>, <a href="./viewforum.php?f=53&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Indonesian Forum</a>, <a href="./viewforum.php?f=55&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Italian Forum</a>, <a href="./viewforum.php?f=141&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Japanese Forum</a>, <a href="./viewforum.php?f=569&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Khmer Forum</a>, <a href="./viewforum.php?f=358&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Latvian Forum</a>, <a href="./viewforum.php?f=189&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Lithuanian Forum</a>, <a href="./viewforum.php?f=215&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Malaysian Forum</a>, <a href="./viewforum.php?f=191&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Maltese Forum</a>, <a href="./viewforum.php?f=97&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Norwegian Forum</a>, <a href="./viewforum.php?f=102&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Persian Forum</a>, <a href="./viewforum.php?f=18&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Polish Forum</a>, <a href="./viewforum.php?f=23&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Portuguese Forum</a>, <a href="./viewforum.php?f=30&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Romanian Forum</a>, <a href="./viewforum.php?f=26&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Russian Forum</a>, <a href="./viewforum.php?f=29&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Serbian/Montenegrin Forum</a>, <a href="./viewforum.php?f=402&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Slovak Forum</a>, <a href="./viewforum.php?f=157&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Slovenian Forum</a>, <a href="./viewforum.php?f=24&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Spanish Forum</a>, <a href="./viewforum.php?f=63&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Swedish Forum</a>, <a href="./viewforum.php?f=545&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Tamil Forum</a>, <a href="./viewforum.php?f=15&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Thai Forum</a>, <a href="./viewforum.php?f=51&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Turkish Forum</a>, <a href="./viewforum.php?f=340&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Urdu Forum</a>, <a href="./viewforum.php?f=171&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Vietnamese Forum</a>, <a href="./viewforum.php?f=151&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Welsh Forum</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">117076</p></td>
-<td class="row2" align="center"><p class="topicdetails">575662</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=203&amp;p=3292368&amp;sid=7a784c443338b520f229994e327ca31c#p3292368">Re: Sách hướng dẫn sử dụng Joomla! (En version) - Building W</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=777659&amp;sid=7a784c443338b520f229994e327ca31c">quocngocuong</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 3:38 am</p>
-</td>
-</tr>
-<tr>
-<td class="forum-cat" colspan="5"><h4><a href="./viewforum.php?f=507&amp;sid=7a784c443338b520f229994e327ca31c">Other Forums</a></h4></td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=46&amp;sid=7a784c443338b520f229994e327ca31c">Open Source Products for Joomla!</a>
-<p class="forumdesc">Do you have an Open Source Product available for Joomla!? Let everyone know here.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=19591&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">normdouglas</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">1859</p></td>
-<td class="row2" align="center"><p class="topicdetails">12543</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=46&amp;p=3292007&amp;sid=7a784c443338b520f229994e327ca31c#p3292007">Build A Deal And Coupon Site using Joomla</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=777622&amp;sid=7a784c443338b520f229994e327ca31c">shoes12345</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 2:49 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=306&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Events</a>
-<p class="forumdesc">The purpose of this forum is for announcements of approved Joomla events, all other event announcements are welcomed for submission to JoomlaConnect.</p>
-<p class="forumdesc"><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=94&amp;sid=7a784c443338b520f229994e327ca31c">rdeutz</a>, <a style="color:#006400;" href="./memberlist.php?mode=group&amp;g=20&amp;sid=7a784c443338b520f229994e327ca31c">OSM</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">368</p></td>
-<td class="row2" align="center"><p class="topicdetails">2703</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=306&amp;p=3289582&amp;sid=7a784c443338b520f229994e327ca31c#p3289582">Re: How to propose a Joomla! Day</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=777090&amp;sid=7a784c443338b520f229994e327ca31c">Walt78</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Tue Apr 07, 2015 3:19 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=514&amp;sid=7a784c443338b520f229994e327ca31c">Site Showcase</a>
-<p class="forumdesc">Have you seen:  <a class="postlink" href="http://community.joomla.org/showcase">http://community.joomla.org/showcase</a>  <br>In this forum you are only permitted to post one topic on your site. Threads in here are pruned automatically.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=28000&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">mandville</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">6</p></td>
-<td class="row2" align="center"><p class="topicdetails">12</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=514&amp;p=3290212&amp;sid=7a784c443338b520f229994e327ca31c#p3290212">Nordik Tech - Looking for feedback on design</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=774604&amp;sid=7a784c443338b520f229994e327ca31c">NordikTech</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 09, 2015 6:17 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=48&amp;sid=7a784c443338b520f229994e327ca31c">The Lounge</a>
-<p class="forumdesc">Relax and enjoy The Lounge. For all Non-Joomla! topics or ones that don't fit anywhere else. Normal forum rules apply.</p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">4626</p></td>
-<td class="row2" align="center"><p class="topicdetails">32410</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=48&amp;p=3291859&amp;sid=7a784c443338b520f229994e327ca31c#p3291859">Re: Creating a website, which host?</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=687678&amp;sid=7a784c443338b520f229994e327ca31c">sitesrus</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Tue Apr 14, 2015 4:57 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=562&amp;sid=7a784c443338b520f229994e327ca31c">Registered Joomla! User Groups</a>
-<p class="forumdesc">For discussion regarding Registered Joomla User Groups. All non-registered user group announcements can be submitted for possible inclusion to JoomlaConnect instead of this forum</p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">164</p></td>
-<td class="row2" align="center"><p class="topicdetails">1392</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=562&amp;p=3270906&amp;sid=7a784c443338b520f229994e327ca31c#p3270906">Re: Login info</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=600271&amp;sid=7a784c443338b520f229994e327ca31c">neo7sxn</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Feb 25, 2015 6:52 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=575&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Ideas Forum</a>
-<p class="forumdesc">Do you have an idea for the Joomla community that you can help implement? Discuss in here.</p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">245</p></td>
-<td class="row2" align="center"><p class="topicdetails">1449</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=575&amp;p=3291901&amp;sid=7a784c443338b520f229994e327ca31c#p3291901">Re: Initiatives?</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=723543&amp;sid=7a784c443338b520f229994e327ca31c">mrcorex</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Tue Apr 14, 2015 6:16 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=704&amp;sid=7a784c443338b520f229994e327ca31c">Community Blog Discussions</a>
-<p class="forumdesc">This board is for discussions about joomla.org blog posts.</p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">88</p></td>
-<td class="row2" align="center"><p class="topicdetails">2137</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=704&amp;p=3292357&amp;sid=7a784c443338b520f229994e327ca31c#p3292357">Re: Community Feedback on the Proposal for a New Organizatio</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=251146&amp;sid=7a784c443338b520f229994e327ca31c">porwig</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 2:35 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=681&amp;sid=7a784c443338b520f229994e327ca31c">Help wanted in the community</a>
-<p class="forumdesc">Do you want to help out within the Joomla community? In this forum you can find help requests from various areas within the Joomla project.</p>
-<p class="forumdesc"><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=471&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #000066;" class="username-coloured">pe7er</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=208380&amp;sid=7a784c443338b520f229994e327ca31c">QBParis</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">34</p></td>
-<td class="row2" align="center"><p class="topicdetails">35</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=681&amp;p=3074468&amp;sid=7a784c443338b520f229994e327ca31c#p3074468">Joomla! Marketing and PR Team: representatives wanted</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=471&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #000066;" class="username-coloured">pe7er</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Tue Aug 27, 2013 4:17 pm</p>
-</td>
-</tr>
-<tr>
-<td class="forum-cat" colspan="5"><h4><a href="./viewforum.php?f=646&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Development Forums</a></h4></td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=509&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Development</a>
-<p class="forumdesc"></p>
-<p class="forumdesc"><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=218211&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #000066;" class="username-coloured">ooffick</a></p>
-<p class="forumdesc"><strong>Subforums: </strong> <a href="./viewforum.php?f=727&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 3.x Coding</a>, <a href="./viewforum.php?f=642&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 2.5 Coding</a>, <a href="./viewforum.php?f=728&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 3.x Bug Reporting</a>, <a href="./viewforum.php?f=579&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 2.5 Bug Reporting</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">3935</p></td>
-<td class="row2" align="center"><p class="topicdetails">14107</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=727&amp;p=3292359&amp;sid=7a784c443338b520f229994e327ca31c#p3292359">Re: Add component items to Joomla frontend menu</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=766512&amp;sid=7a784c443338b520f229994e327ca31c">jcms</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 16, 2015 2:46 am</p>
-</td>
-</tr>
-<tr>
-<td class="forum-cat" colspan="5"><h4><a href="./viewforum.php?f=508&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Official Sites &amp; Infrastructure</a></h4></td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=262&amp;sid=7a784c443338b520f229994e327ca31c">Extensions.Joomla.org - Feedback/Information</a>
-<p class="forumdesc">Here you can contact the editors of our <a href="http://extensions.joomla.org" class="postlink">Extensions site</a>, as well as access infomation relating to this site.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a style="color:##D2BE0;" href="./memberlist.php?mode=group&amp;g=16&amp;sid=7a784c443338b520f229994e327ca31c">JED Team</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">2134</p></td>
-<td class="row2" align="center"><p class="topicdetails">14761</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=262&amp;p=3291365&amp;sid=7a784c443338b520f229994e327ca31c#p3291365">Re: Does ticket system work ?</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=770054&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">ABSolutions</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Mon Apr 13, 2015 5:59 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=563&amp;sid=7a784c443338b520f229994e327ca31c">Resources.joomla.org - Feedback/Information</a>
-<p class="forumdesc">Here you can contact the editors of our <a href="http://resources.joomla.org" class="postlink">Resources site</a>, as well as access infomation relating to this site.</p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">63</p></td>
-<td class="row2" align="center"><p class="topicdetails">335</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=563&amp;p=3292116&amp;sid=7a784c443338b520f229994e327ca31c#p3292116">Re: [Solved]Problem with volunteers.joomla.org and banned IP</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=777657&amp;sid=7a784c443338b520f229994e327ca31c">vuicomcom</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 9:40 am</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=303&amp;sid=7a784c443338b520f229994e327ca31c">Documentation - Feedback/Information/Suggestions</a>
-<p class="forumdesc"><a href="http://docs.joomla.org/" class="postlink">Joomla! Documentation</a> Workgroup</p>
-<p class="forumdesc"><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=143&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660099;" class="username-coloured">Chris Davenport</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=282497&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">Hutchy68</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">432</p></td>
-<td class="row2" align="center"><p class="topicdetails">2385</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=303&amp;p=3290107&amp;sid=7a784c443338b520f229994e327ca31c#p3290107">Re: Articles Preview</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=730728&amp;sid=7a784c443338b520f229994e327ca31c">itoctopus</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Thu Apr 09, 2015 1:05 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=7&amp;sid=7a784c443338b520f229994e327ca31c">Sites &amp; Infrastructure - Feedback/Information</a>
-<p class="forumdesc">If you have any 'mechanical' forum or Joomla! sites related issues/suggestions with <a href="http://www.joomla.org" class="postlink">joomla.org</a>, <a href="http://community.joomla.org" class="postlink">community.joomla.org</a>, <a href="http://forum.joomla.org" class="postlink">forum.joomla.org</a>, <a href="http://vel.joomla.org" class="postlink">vel.joomla.org</a>.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=166991&amp;sid=7a784c443338b520f229994e327ca31c">brad</a></p>
-<p class="forumdesc"><strong>Subforums: </strong> <a href="./viewforum.php?f=406&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">JoomlaCode.org</a>, <a href="./viewforum.php?f=364&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Shop.Joomla.org</a>, <a href="./viewforum.php?f=199&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 1.5 Bug Reporting</a>, <a href="./viewforum.php?f=304&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 1.5 Coding</a>, <a href="./viewforum.php?f=703&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! 3 Beta Support</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">43834</p></td>
-<td class="row2" align="center"><p class="topicdetails">234622</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=7&amp;p=3292311&amp;sid=7a784c443338b520f229994e327ca31c#p3292311">dev.j.o/security* Duplicate-ish</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=724660&amp;sid=7a784c443338b520f229994e327ca31c">NathanHawks</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Apr 15, 2015 9:39 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=701&amp;sid=7a784c443338b520f229994e327ca31c">Templates.Joomla.org - Feedback/Information</a>
-<p class="forumdesc">Here you can contact the editors of our new template site, as well as access information relating to this site.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=19536&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">hefesto</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">2</p></td>
-<td class="row2" align="center"><p class="topicdetails">27</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=701&amp;p=3271162&amp;sid=7a784c443338b520f229994e327ca31c#p3271162">Re: Joomla.com templates</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=85&amp;sid=7a784c443338b520f229994e327ca31c">TomT</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Wed Feb 25, 2015 4:13 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=573&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Community Magazine</a>
-<p class="forumdesc">A place to discuss and manage all matters related to the <a href="http://magazine.joomla.org/" class="postlink">Joomla! Community Magazine</a>.</p>
-<p class="forumdesc"><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=251146&amp;sid=7a784c443338b520f229994e327ca31c">porwig</a></p>
-<p class="forumdesc"><strong>Subforum: </strong> <a href="./viewforum.php?f=574&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! Community Magazine Editors</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">48</p></td>
-<td class="row2" align="center"><p class="topicdetails">442</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=573&amp;p=3254566&amp;sid=7a784c443338b520f229994e327ca31c#p3254566">Re: Links to older Community magazines.</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=246141&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">Per Yngve Berg</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Sat Jan 03, 2015 2:23 pm</p>
-</td>
-</tr>
-<tr>
-<td class="row1" width="50" align="center"><img src="./styles/joomla09/imageset/forum_read_subforum.gif" width="46" height="25" alt="No unread posts" title="No unread posts"></td>
-<td class="row1" width="100%">
-<a class="forumlink" href="./viewforum.php?f=510&amp;sid=7a784c443338b520f229994e327ca31c">Joomla! Working Groups</a>
-<p class="forumdesc"></p>
-<p class="forumdesc"><strong>Subforums: </strong> <a href="./viewforum.php?f=11&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Translations</a>, <a href="./viewforum.php?f=381&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">OpenSourceMatters.org</a>, <a href="./viewforum.php?f=699&amp;sid=7a784c443338b520f229994e327ca31c" class="subforum read" title="No unread posts">Joomla! Marketing and PR Team</a></p>
-</td>
-<td class="row2" align="center"><p class="topicdetails">939</p></td>
-<td class="row2" align="center"><p class="topicdetails">9983</p></td>
-<td class="row2 last-post">
-<p class="topicdetailsx">Subject: <a href="./viewtopic.php?f=11&amp;p=3291633&amp;sid=7a784c443338b520f229994e327ca31c#p3291633">Re: Language Change label in GitHub</a>
-</p><p class="topicdetailsx">Posted by: <a href="./memberlist.php?mode=viewprofile&amp;u=376742&amp;sid=7a784c443338b520f229994e327ca31c">Bakual</a></p>
-<p class="topicdetailsx" style="white-space: nowrap;">on Tue Apr 14, 2015 9:10 am</p>
-</td>
-</tr>
-</tbody></table>
-<span class="gensmall"><a href="./ucp.php?mode=delete_cookies&amp;sid=7a784c443338b520f229994e327ca31c">Delete all board cookies</a> | <a href="./memberlist.php?mode=leaders&amp;sid=7a784c443338b520f229994e327ca31c">The team</a></span><br>
-<br clear="all" class="breakpad">
-<table class="tablebg" width="100%" cellspacing="1" cellpadding="0" style="margin-top: 5px;">
-<tbody><tr>
-<td class="row1">
-<p class="breadcrumbs"><a href="./index.php?sid=7a784c443338b520f229994e327ca31c">Board index</a></p>
-</td>
-</tr>
-</tbody></table>
-<br clear="all" class="breakpad">
-<table class="tablebg" width="100%" cellspacing="1">
-<tbody><tr>
-<td class="cat cat-gray" colspan="2"><h4>Who is online</h4></td>
-</tr>
-<tr>
-<td class="row1" rowspan="2" align="center" valign="middle"><img src="./styles/joomla12/theme/images/whosonline.gif" alt="Who is online"></td>
-<td class="row1" width="100%"><span class="genmed">In total there are <strong>604</strong> users online :: 16 registered, 1 hidden and 587 guests (based on users active over the past 30 minutes)<br>Most users ever online was <strong>10365</strong> on Mon Aug 29, 2011 1:27 am<br><br>Registered users: <span style="color: #9E8DA7;" class="username-coloured">Alexa [Bot]</span>, <span style="color: #9E8DA7;" class="username-coloured">Baidu [Spider]</span>, <span style="color: #9E8DA7;" class="username-coloured">Bing [Bot]</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=3582&amp;sid=7a784c443338b520f229994e327ca31c">bobgen</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=775281&amp;sid=7a784c443338b520f229994e327ca31c">CHec44</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=276807&amp;sid=7a784c443338b520f229994e327ca31c" style="color: #660000;" class="username-coloured">Enes</a>, <span style="color: #9E8DA7;" class="username-coloured">Exabot [Bot]</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=774833&amp;sid=7a784c443338b520f229994e327ca31c">Felicpavlo</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=315272&amp;sid=7a784c443338b520f229994e327ca31c">Fendermate</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=774120&amp;sid=7a784c443338b520f229994e327ca31c">fuyuka</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=738217&amp;sid=7a784c443338b520f229994e327ca31c">gaelicwinter</a>, <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span>, <span style="color: #9E8DA7;" class="username-coloured">Google Adsense [Bot]</span>, <span style="color: #9E8DA7;" class="username-coloured">Google Feedfetcher</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=777618&amp;sid=7a784c443338b520f229994e327ca31c">Mr LePaK</a>, <span style="color: #9E8DA7;" class="username-coloured">Yahoo [Bot]</span></span></td>
-</tr>
-<tr>
-<td class="row1"><b class="gensmall">Legend :: <a style="color:#660000" href="./memberlist.php?mode=group&amp;g=10&amp;sid=7a784c443338b520f229994e327ca31c">Community Workgroup</a>, <a style="color:#CC6600" href="./memberlist.php?mode=group&amp;g=19&amp;sid=7a784c443338b520f229994e327ca31c">Development</a>, <a style="color:#660099" href="./memberlist.php?mode=group&amp;g=11&amp;sid=7a784c443338b520f229994e327ca31c">Documentation</a>, <a style="color:#000066" href="./memberlist.php?mode=group&amp;g=34&amp;sid=7a784c443338b520f229994e327ca31c">Global moderators</a>, <a style="color:#006400" href="./memberlist.php?mode=group&amp;g=20&amp;sid=7a784c443338b520f229994e327ca31c">OSM</a>, <a style="color:#666600" href="./memberlist.php?mode=group&amp;g=13&amp;sid=7a784c443338b520f229994e327ca31c">Translation Teams</a>, <a style="color:#666600" href="./memberlist.php?mode=group&amp;g=47&amp;sid=7a784c443338b520f229994e327ca31c">Translation Workgroup</a></b></td>
-</tr>
-</tbody></table>
-<br clear="all" class="breakpad">
-<table class="tablebg" width="100%" cellspacing="1">
-<tbody><tr>
-<td class="cat cat-gray" colspan="2"><h4>Statistics</h4></td>
-</tr>
-<tr>
-<td class="row1"><img src="./styles/joomla12/theme/images/whosonline.gif" alt="Statistics"></td>
-<td class="row1" width="100%" valign="middle"><p class="genmed">Total posts <strong>2992685</strong> | Total topics <strong>718630</strong> | Total members <strong>666820</strong> | Our newest member <strong><a href="./memberlist.php?mode=viewprofile&amp;u=777710&amp;sid=7a784c443338b520f229994e327ca31c">chocobo11</a></strong></p></td>
-</tr>
-</tbody></table>
-<br clear="all" class="breakpad">
-<form method="post" action="./ucp.php?mode=login&amp;sid=7a784c443338b520f229994e327ca31c">
-<table class="tablebg" width="100%" cellspacing="1">
-<tbody><tr>
-<td class="cat cat-gray"><h4><a href="./ucp.php?mode=login&amp;sid=7a784c443338b520f229994e327ca31c">Login</a></h4></td>
-</tr>
-<tr>
-<td class="row1" align="center"><span class="genmed">Username:</span> <input class="post" type="text" name="username" size="10">&nbsp; <span class="genmed">Password:</span> <input class="post" type="password" name="password" size="10">&nbsp; <span class="gensmall">Log me on automatically each visit</span> <input type="checkbox" class="radio" name="autologin">&nbsp; <input type="submit" class="btnmain" name="login" value="Login"></td>
-</tr>
-</tbody></table>
-<input type="hidden" name="redirect" value="./index.php?sid=7a784c443338b520f229994e327ca31c">
-</form>
-<div class="vis-clear">&nbsp;</div>
-</div>
-<div id="wrapfooter">
-<span class="copyright">Powered by <a href="http://www.phpbb.com/" target="_blank">phpBB</a>® Forum Software © phpBB Group
-</span>
-</div>
-</div>
-<div class="clear"></div>
-</div>
-</div>
-<div class="clear"></div>
-<div id="closingWrap"><div id="closing" class="container_12 clearfix"></div></div>
-<div class="clear"></div>
-<div id="footerWrap">
-<div id="footer" class="container_12 clearfix">
-<div class="inside">
-<div id="copy">
-<ul class="menu">
-<li class="item97">
-<a href="http://www.joomla.org"><span>Home</span></a>
-</li>
-<li class="item110"><a href="http://www.joomla.org/about-joomla.html"><span>About</span></a>
-</li>
-<li class="item98"><a href="http://community.joomla.org"><span>Community</span></a></li><li class="item99"><a href="http://forum.joomla.org"><span>Forum</span></a>
-</li>
-<li class="item100"><a href="http://extensions.joomla.org"><span>Extensions</span></a></li><li class="item206"><a href="http://resources.joomla.org"><span>Resources</span></a>
-</li>
-<li class="item102"><a href="http://docs.joomla.org"><span>Docs</span></a></li><li class="item101"><a href="http://developer.joomla.org"><span>Developer</span></a>
-</li>
-<li class="item103"><a href="http://shop.joomla.org"><span>Shop</span></a>
-</li>
-</ul>
-<div class="clr"></div>
-</div>
-<div id="link">
-<div id="footerInfo">©2005-2013 <a href="http://www.opensourcematters.org">Open Source Matters, Inc.</a> All rights reserved.&nbsp;&nbsp;&nbsp;
-<a href="http://www.rochenhost.com/joomla-hosting" target="_blank">Joomla Hosting by Rochen Ltd.</a>&nbsp;&nbsp;&nbsp;
-<a href="http://www.joomla.org/accessibility-statement.html">Accessibility Statement</a>&nbsp;&nbsp;&nbsp;
-<a href="http://www.joomla.org/privacy-policy.html">Privacy Policy</a>&nbsp;&nbsp;&nbsp;
-<a href="http://community.joomla.org/login.html">Log in</a>
- </div>
-<div class="clr"></div>
-</div>
-<div class="clr"></div>
-</div>
-</div>
-</div>
-<div id="debug">
-</div>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write("\<script src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'>\<\/script>" );
-</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-544070-3");
-pageTracker._setDomainName("joomla.org");
-pageTracker._initData();
-pageTracker._trackPageview();
+	<script>
+	var _prum = [['id', '59300ad15992c776ad970068'],
+	             ['mark', 'firstbyte', (new Date()).getTime()]];
+	(function() {
+	    var s = document.getElementsByTagName('script')[0]
+	      , p = document.createElement('script');
+	    p.async = 'async';
+	    p.src = '//rum-static.pingdom.net/prum.min.js';
+	    s.parentNode.insertBefore(p, s);
+	})();
+	</script>
+	<script>
+	dataLayer = [{
+   'forumID': '0',
+   'topicID': '0'
+}]; 
 </script>
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-544070-18");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
+</head>
+<body id="phpbb" class="nojs notouch section-index ltr ">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TWSN2R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TWSN2R');</script>
+<!-- End Google Tag Manager -->
 
-</body></html>
+<a class="toplink" name="top"></a>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+<div class="nav-collapse collapse">
+	<ul id="nav-joomla" class="nav">
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				<span dir="ltr"><span aria-hidden="true" class="icon-joomla"></span> Joomla!<sup>&reg;</sup></span> <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li class="nav-header"><span>About us</span></li>
+				<li>
+					<a href="https://www.joomla.org">
+						<span aria-hidden="true" class="icon-joomla"></span> Joomla Home
+					</a>
+				</li>
+				<li><a href="https://www.joomla.org/about-joomla.html">What is Joomla?</a></li>
+				<li><a href="https://www.joomla.org/core-features.html">Benefits &amp; Features</a></li>
+				<li><a href="https://www.joomla.org/about-joomla/the-project.html">Project &amp; Leadership</a></li>
+				<li><a href="https://tm.joomla.org">Trademark &amp; Licensing</a></li>
+				<li><a href="https://foundation.joomla.org">The Joomla Foundation</a></li>
+				<li class="divider"></li>
+				<li class="nav-header"><span>Support us</span></li>
+				<li><a href="https://www.joomla.org/contribute-to-joomla.html">Contribute</a></li>
+				<li><a href="https://www.joomla.org/sponsor.html">Sponsor</a></li>
+				<li><a href="https://www.joomla.org/about-joomla/partners.html">Partner</a></li>
+				<li><a href="https://shop.joomla.org">Shop</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Download &amp; Extend <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="https://downloads.joomla.org">Downloads</a></li>
+				<li><a href="https://extensions.joomla.org">Extensions</a></li>
+				<li><a href="https://community.joomla.org/translations.html">Languages</a></li>
+				<li><a href="https://launch.joomla.org">Get a free site</a></li>
+				<li><a href="https://domains.joomla.org">Get a domain</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Discover &amp; Learn <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="https://docs.joomla.org">Documentation</a></li>
+				<li><a href="https://training.joomla.org">Training</a></li>
+				<li><a href="https://certification.joomla.org">Certification</a></li>
+				<li><a href="https://showcase.joomla.org">Site Showcase</a></li>
+				<li><a href="https://www.joomla.org/announcements.html">Announcements</a></li>
+				<li><a href="https://community.joomla.org/blogs.html">Blogs</a></li>
+				<li><a href="https://magazine.joomla.org">Magazine</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Community &amp; Support <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="https://community.joomla.org">Community Portal</a></li>
+				<li><a href="https://community.joomla.org/events.html">Events</a></li>
+				<li><a href="https://community.joomla.org/user-groups.html">User Groups</a></li>
+				<li><a href="https://forum.joomla.org">Forum</a></li>
+				<li><a href="https://resources.joomla.org">Resources Directory</a></li>
+				<li><a href="https://volunteers.joomla.org">Volunteers Portal</a></li>
+				<li><a href="https://vel.joomla.org">Vulnerable Extensions List</a></li>
+			</ul>
+		</li>
+		<li class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">Developer Resources <span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="https://developer.joomla.org">Developer Network</a></li>
+				<li><a href="https://developer.joomla.org/security.html">Security Centre</a></li>
+				<li><a href="https://issues.joomla.org">Issue Tracker</a></li>
+				<li><a href="https://github.com/joomla">GitHub</a></li>
+				<li><a href="https://api.joomla.org">API Documentation</a></li>
+				<li><a href="https://framework.joomla.org"><span dir="ltr">Joomla!</span> Framework</a></li>
+				<li><a href="http://joomlacode.org">JoomlaCode</a></li>
+			</ul>
+		</li>
+	</ul>
+	<div id="nav-search" class="navbar-search pull-right">
+		<form action="/results.php" id="searchbox_007628682600509520926:higrppcfurc"><div class="search-box-area"><input type="hidden" name="cx" value="007628682600509520926:higrppcfurc" /><input type="hidden" name="cof" value="FORID:9" /><input type="text" class="text inputbox" name="q" size="25" /></div></form><script type="text/javascript" src="https://www.google.com/coop/cse/brand?form=searchbox_007628682600509520926%3Ahigrppcfurc&amp;lang=en"></script>
+	</div>
+</div>
+<!-- Cached 20200211101754 --><!-- Cached -->			</div>
+		</div>
+	</nav>
+	<header class="header">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span7">
+					<h1 class="page-title">
+						The Joomla! Forum&trade;
+					</h1>
+				</div>
+				<div class="span5">
+					<div class="btn-toolbar pull-right">
+						<div class="btn-group">
+							<a href="https://downloads.joomla.org" class="btn btn-large btn-warning">Download</a>
+						</div>
+						<div class="btn-group">
+							<a href="https://launch.joomla.org" class="btn btn-large btn-primary">Launch</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+    <div class="clear"></div>
+
+<div class="subnav-wrapper">
+		<div class="subnav">
+			<div class="container">
+				<ul class="nav menu nav-pills">
+		<li><a href="https://forum.joomla.org">Home</a></li>
+		
+							<li><a href="./ucp.php?mode=register&amp;sid=23cb9c4b444e055d1535548110c8e246">Register</a></li>
+											
+		<li><a href="/viewtopic.php?f=8&t=65">Forum rules</a></li>
+		<li><a href="/app.php/help/faq?sid=23cb9c4b444e055d1535548110c8e246">FAQ</a></li>
+									<li><a href="">The team</a></li>
+				<li><a href="./ucp.php?mode=login&amp;sid=23cb9c4b444e055d1535548110c8e246">Login</a></li>						</ul>
+
+			</div>
+					</div>
+	</div>
+
+
+<div id="outerwrap"><div id="wrap">
+	<a id="top" class="anchor" accesskey="t"></a>
+	<div id="page-header">
+				<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-main" class="nav-main linklist" role="menubar">
+
+		<li id="quick-links" class="quick-links dropdown-container responsive-menu hidden" data-skip-responsive="true">
+			<a href="#" class="responsive-menu-link dropdown-trigger">
+				<i class="icon fa-bars fa-fw" aria-hidden="true"></i><span>Quick links</span>
+			</a>
+			<div class="dropdown hidden">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents" role="menu">
+					
+					
+										<li class="separator"></li>
+
+									</ul>
+	</div>
+		</li>
+
+				<li style="display: none;" data-skip-responsive="true">
+			<a href="/app.php/help/faq?sid=23cb9c4b444e055d1535548110c8e246" rel="help" title="Frequently Asked Questions" role="menuitem">
+				<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>FAQ</span>
+			</a>
+		</li>
+						
+			<li class="rightside"  data-skip-responsive="true">
+			<a href="./ucp.php?mode=login&amp;sid=23cb9c4b444e055d1535548110c8e246" title="Login" accesskey="x" role="menuitem">
+				<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>Login</span>
+			</a>
+		</li>
+					<li class="rightside" data-skip-responsive="true">
+				<a href="./ucp.php?mode=register&amp;sid=23cb9c4b444e055d1535548110c8e246" role="menuitem">
+					<i class="icon fa-pencil-square-o  fa-fw" aria-hidden="true"></i><span>Register</span>
+				</a>
+			</li>
+						</ul>
+
+	<ul id="nav-breadcrumbs" class="nav-breadcrumbs linklist navlinks" role="menubar">
+						<li class="breadcrumbs">
+										<span class="crumb"  itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""><a href="./index.php?sid=23cb9c4b444e055d1535548110c8e246" itemprop="url" accesskey="h" data-navbar-reference="index"><i class="icon fa-home fa-fw"></i><span itemprop="title">Board index</span></a></span>
+
+								</li>
+		
+			</ul>
+
+	</div>
+</div>
+	</div>
+
+	
+	<a id="start_here" class="anchor"></a>
+	<div id="page-body" role="main">
+		                        						<div style="text-align:center;">
+						
+<ins data-revive-zoneid="66" data-revive-id="4bacaeba2f8655edc9ca810c946aab5a"></ins>
+
+						</div>
+                        		
+<p class="right responsive-center time">It is currently Tue Feb 11, 2020 10:24 am</p>
+
+
+
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner"><a href="./viewforum.php?f=504&amp;sid=23cb9c4b444e055d1535548110c8e246">Joomla! Announcements</a></div></dt>
+						<dd class="topics">Topics</dd>
+						<dd class="posts">Posts</dd>
+						<dd class="lastpost"><span>Last post</span></dd>
+					</dl>
+									</li>
+			</ul>
+			<ul class="topiclist forums">
+		
+	
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Announcements" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=8">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Announcements</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=8&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Announcements</a>
+						<br />Announcements from the Joomla! Project for the attention of all Users. We encourage all Joomla! users to subscribe to this forum or check it regularly. <br>
+<strong class="text-strong"><span style="color:red">Joomla! Security Updates</span></strong>: <a href="http://feeds.joomla.org/JoomlaSecurityNews" class="postlink">http://feeds.joomla.org/JoomlaSecurityNews</a> | <strong class="text-strong"><span style="color:red">Joomla! Vulnerable Extensions</span></strong>: <a href="http://feeds.joomla.org/JoomlaSecurityVulnerableExtensions" class="postlink">http://feeds.joomla.org/JoomlaSecurityV ... Extensions</a>																										<br /><strong>Subforum:</strong>
+															<a href="./viewforum.php?f=9&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Announcements Discussions</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>521</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">521 <dfn>Topics</dfn></dd>
+					<dd class="posts">11980 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=9&amp;p=3595044&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595044" title="Re: Discuss Joomla! 3.9.15" class="lastsubject">Re: Discuss Joomla! 3.9.15</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=2567&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">leolam</a>
+																	<a href="./viewtopic.php?f=9&amp;p=3595044&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595044" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Fri Feb 07, 2020 4:10 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+				</ul>
+
+			</div>
+		</div>
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner"><a href="./viewforum.php?f=705&amp;sid=23cb9c4b444e055d1535548110c8e246">Joomla! 3.x - Ask Support Questions Here</a></div></dt>
+						<dd class="topics">Topics</dd>
+						<dd class="posts">Posts</dd>
+						<dd class="lastpost"><span>Last post</span></dd>
+					</dl>
+									</li>
+			</ul>
+			<ul class="topiclist forums">
+		
+	
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - General Questions/New to Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=706">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - General Questions/New to Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=706&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">General Questions/New to Joomla! 3.x</a>
+						<br />General questions relating to Joomla! 3.x.													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>28722</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">28722 <dfn>Topics</dfn></dd>
+					<dd class="posts">123779 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=706&amp;p=3595412&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595412" title="Re: Verify ownership help - metadata, index.php..." class="lastsubject">Re: Verify ownership help - m…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=859862&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">jps800</a>
+																	<a href="./viewtopic.php?f=706&amp;p=3595412&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595412" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 9:23 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Installation Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=707">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Installation Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=707&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Installation Joomla! 3.x</a>
+						<br />Need help installing Joomla! 3.x? For all Joomla! 3.x installation issues please use this forum.													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																										<br /><strong>Subforum:</strong>
+															<a href="./viewforum.php?f=717&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Joomla! 3.x on IIS webserver</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>3042</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">3042 <dfn>Topics</dfn></dd>
+					<dd class="posts">16937 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=707&amp;p=3595324&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595324" title="Re: from mamp to live server" class="lastsubject">Re: from mamp to live server</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=196282&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Webdongle</a>
+																	<a href="./viewtopic.php?f=707&amp;p=3595324&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595324" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Mon Feb 10, 2020 2:02 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Administration Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=708">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Administration Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=708&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Administration Joomla! 3.x</a>
+						<br />Need help with the Administration of your Joomla! 3.x site? This is the spot for you.													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																										<br /><strong>Subforum:</strong>
+															<a href="./viewforum.php?f=719&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Access Control List (ACL) in Joomla! 3.x</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>10033</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">10033 <dfn>Topics</dfn></dd>
+					<dd class="posts">46998 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=708&amp;p=3595419&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595419" title="Re: folder - file permissions and ownership" class="lastsubject">Re: folder - file permissions…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=196282&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Webdongle</a>
+																	<a href="./viewtopic.php?f=708&amp;p=3595419&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595419" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 9:54 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Migrating and Upgrading to Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=710">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Migrating and Upgrading to Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=710&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Migrating and Upgrading to Joomla! 3.x</a>
+						<br />Need help upgrading your Joomla! website or converting to Joomla! 3.x?													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>4869</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">4869 <dfn>Topics</dfn></dd>
+					<dd class="posts">30794 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=710&amp;p=3595404&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595404" title="Re: Old website (inherited) Need help getting upgraded and running" class="lastsubject">Re: Old website (inherited) N…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=394584&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">AMurray</a>
+																	<a href="./viewtopic.php?f=710&amp;p=3595404&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595404" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 8:47 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Security in Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=714">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Security in Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=714&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Security in Joomla! 3.x</a>
+						<br />Discussion regarding Joomla! 3.x security issues.													<br /><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=43445&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #660000;" class="username-coloured">Bernard T</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=28000&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #660000;" class="username-coloured">mandville</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=140392&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #660000;" class="username-coloured">fcoulter</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=67439&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #660000;" class="username-coloured">PhilD</a>, <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+<br /><span class="sponsor">
+<strong>Forum Sponsored by </strong><a target="_blank" href="https://www.sitelock.com/joomla?utm_campaign=joomla-partner" class="sponsorlink">SiteLock</a>
+</span>
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>1548</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">1548 <dfn>Topics</dfn></dd>
+					<dd class="posts">10297 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=714&amp;p=3595410&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595410" title="Re: Database erased" class="lastsubject">Re: Database erased</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=858735&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">alfabeto</a>
+																	<a href="./viewtopic.php?f=714&amp;p=3595410&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595410" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 9:05 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Extensions for Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=715">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Extensions for Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=715&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Extensions for Joomla! 3.x</a>
+						<br />This forum is for general questions about extensions for Joomla! 3.x.													<br /><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=471&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">pe7er</a>, <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>10808</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">10808 <dfn>Topics</dfn></dd>
+					<dd class="posts">36631 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=715&amp;p=3595409&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595409" title="j25_jcomments in use - Corrupted" class="lastsubject">j25_jcomments in use - Corrup…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=595118&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">hi2rashid2</a>
+																	<a href="./viewtopic.php?f=715&amp;p=3595409&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595409" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 9:05 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Templates for Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=713">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Templates for Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=713&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Templates for Joomla! 3.x</a>
+						<br />Everything to do with Joomla! 3.x templates and templating.													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>5943</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">5943 <dfn>Topics</dfn></dd>
+					<dd class="posts">25480 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=713&amp;p=3595323&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595323" title="Re: Site name doesn't show - template built in Nicepage" class="lastsubject">Re: Site name doesn't show - …</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=856134&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">newbie888</a>
+																	<a href="./viewtopic.php?f=713&amp;p=3595323&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595323" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Mon Feb 10, 2020 2:02 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Search Engine Optimization (Joomla! SEO) in Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=712">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Search Engine Optimization (Joomla! SEO) in Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=712&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Search Engine Optimization (Joomla! SEO) in Joomla! 3.x</a>
+						<br />Discuss Search Engine Optimization in relation to Joomla! 3.x. This forum will also have discussions on SEF/SEO Joomla! 3.x extensions.													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>1497</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">1497 <dfn>Topics</dfn></dd>
+					<dd class="posts">9131 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=712&amp;p=3595394&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595394" title="itemReviewed property error" class="lastsubject">itemReviewed property error</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=294598&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Mojsplet</a>
+																	<a href="./viewtopic.php?f=712&amp;p=3595394&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595394" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 7:44 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Language - Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=711">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Language - Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=711&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Language - Joomla! 3.x</a>
+						<br />General questions regarding the use of languages in Joomla! 3.x.													<br /><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=14&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #666600;" class="username-coloured">infograf768</a>, <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>1345</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">1345 <dfn>Topics</dfn></dd>
+					<dd class="posts">7389 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=711&amp;p=3595418&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595418" title="Re: 403 forbidden on one language homepage" class="lastsubject">Re: 403 forbidden on one lang…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=568756&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">PaysB</a>
+																	<a href="./viewtopic.php?f=711&amp;p=3595418&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595418" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 9:54 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Performance - Joomla! 3.x" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=709">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Performance - Joomla! 3.x</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=709&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Performance - Joomla! 3.x</a>
+						<br />Discussion regarding Joomla! 3.x Performance issues.													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>853</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">853 <dfn>Topics</dfn></dd>
+					<dd class="posts">4291 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=709&amp;p=3594757&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594757" title="Re: One of my Joomla sites suddenly slow (front and backends)" class="lastsubject">Re: One of my Joomla sites su…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=9&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">brian</a>
+																	<a href="./viewtopic.php?f=709&amp;p=3594757&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594757" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Wed Feb 05, 2020 4:34 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+				</ul>
+
+			</div>
+		</div>
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner"><a href="./viewforum.php?f=513&amp;sid=23cb9c4b444e055d1535548110c8e246">Joomla! Versions which are End of Life</a></div></dt>
+						<dd class="topics">Topics</dd>
+						<dd class="posts">Posts</dd>
+						<dd class="lastpost"><span>Last post</span></dd>
+					</dl>
+									</li>
+			</ul>
+			<ul class="topiclist forums">
+		
+	
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewforum.php?f=614&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Joomla! 2.5 - End of Life 31 Dec 2014</a>
+																																<br /><strong>Subforums:</strong>
+															<a href="./viewforum.php?f=615&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>General Questions/New to Joomla! 2.5</a>, 															<a href="./viewforum.php?f=622&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Installation Joomla! 2.5</a>, 															<a href="./viewforum.php?f=623&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Joomla! 2.5 on IIS webserver</a>, 															<a href="./viewforum.php?f=624&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Administration Joomla! 2.5</a>, 															<a href="./viewforum.php?f=673&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Access Control List (ACL) in Joomla! 2.5</a>, 															<a href="./viewforum.php?f=620&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Extensions for Joomla! 2.5</a>, 															<a href="./viewforum.php?f=619&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Templates for Joomla! 2.5</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>88728</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">88728 <dfn>Topics</dfn></dd>
+					<dd class="posts">328691 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=615&amp;p=3595387&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595387" title="Re: Unable to login with Safari" class="lastsubject">Re: Unable to login with Safa…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=95290&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">toivo</a>
+																	<a href="./viewtopic.php?f=615&amp;p=3595387&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595387" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 5:55 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewforum.php?f=506&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Joomla! 1.5 - End of Life Sep 2012</a>
+																																<br /><strong>Subforums:</strong>
+															<a href="./viewforum.php?f=428&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>General Questions/New to Joomla! 1.5</a>, 															<a href="./viewforum.php?f=429&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Installation 1.5</a>, 															<a href="./viewforum.php?f=543&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Joomla! 1.5 on IIS webserver</a>, 															<a href="./viewforum.php?f=431&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Administration 1.5</a>, 															<a href="./viewforum.php?f=430&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Migrating and Upgrading to Joomla! 1.5</a>, 															<a href="./viewforum.php?f=432&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Security in Joomla! 1.5</a>, 															<a href="./viewforum.php?f=470&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Extensions for Joomla! 1.5</a>, 															<a href="./viewforum.php?f=466&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Templates for Joomla! 1.5</a>, 															<a href="./viewforum.php?f=544&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Search Engine Optimization (Joomla! SEO) in Joomla! 1.5</a>, 															<a href="./viewforum.php?f=485&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Language - Joomla! 1.5</a>, 															<a href="./viewforum.php?f=433&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Performance - Joomla! 1.5</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>261368</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">261368 <dfn>Topics</dfn></dd>
+					<dd class="posts">955811 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=466&amp;p=3591225&amp;sid=23cb9c4b444e055d1535548110c8e246#p3591225" title="Re: How to change of Bengali font Size" class="lastsubject">Re: How to change of Bengali …</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=854583&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">juanforce</a>
+																	<a href="./viewtopic.php?f=466&amp;p=3591225&amp;sid=23cb9c4b444e055d1535548110c8e246#p3591225" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Jan 07, 2020 4:54 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewforum.php?f=505&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Joomla! 1.0 - End of Life 22 July 2009</a>
+																								
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>148869</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">148869 <dfn>Topics</dfn></dd>
+					<dd class="posts">605370 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=267&amp;p=3591412&amp;sid=23cb9c4b444e055d1535548110c8e246#p3591412" title="Re: Hacked Mambo website redirecting traffic" class="lastsubject">Re: Hacked Mambo website redi…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=858168&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">MarkSteger</a>
+																	<a href="./viewtopic.php?f=267&amp;p=3591412&amp;sid=23cb9c4b444e055d1535548110c8e246#p3591412" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Wed Jan 08, 2020 4:03 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+				</ul>
+
+			</div>
+		</div>
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner"><a href="./viewforum.php?f=542&amp;sid=23cb9c4b444e055d1535548110c8e246">Joomla! International Language Support</a></div></dt>
+						<dd class="topics">Topics</dd>
+						<dd class="posts">Posts</dd>
+						<dd class="lastpost"><span>Last post</span></dd>
+					</dl>
+									</li>
+			</ul>
+			<ul class="topiclist forums">
+		
+	
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - International Zone" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=511">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - International Zone</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=511&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">International Zone</a>
+																																<br /><strong>Subforums:</strong>
+															<a href="./viewforum.php?f=243&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Albanian Forum</a>, 															<a href="./viewforum.php?f=17&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Arabic Forum</a>, 															<a href="./viewforum.php?f=568&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Azeri Forum</a>, 															<a href="./viewforum.php?f=274&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Basque Forum</a>, 															<a href="./viewforum.php?f=753&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Belarusian Forum</a>, 															<a href="./viewforum.php?f=64&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Bengali Forum</a>, 															<a href="./viewforum.php?f=104&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Bosnian Forum</a>, 															<a href="./viewforum.php?f=95&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Catalan Forum</a>, 															<a href="./viewforum.php?f=98&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Chinese Forum</a>, 															<a href="./viewforum.php?f=150&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Croatian Forum</a>, 															<a href="./viewforum.php?f=16&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Danish Forum</a>, 															<a href="./viewforum.php?f=13&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Dutch Forum</a>, 															<a href="./viewforum.php?f=21&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Filipino Forum</a>, 															<a href="./viewforum.php?f=25&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Finnish Forum</a>, 															<a href="./viewforum.php?f=19&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>French Forum</a>, 															<a href="./viewforum.php?f=14&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>German Forum</a>, 															<a href="./viewforum.php?f=50&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Greek Forum</a>, 															<a href="./viewforum.php?f=172&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Hebrew Forum</a>, 															<a href="./viewforum.php?f=403&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Hungarian Forum</a>, 															<a href="./viewforum.php?f=162&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Indic Languages Forum</a>, 															<a href="./viewforum.php?f=53&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Indonesian Forum</a>, 															<a href="./viewforum.php?f=55&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Italian Forum</a>, 															<a href="./viewforum.php?f=141&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Japanese Forum</a>, 															<a href="./viewforum.php?f=569&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Khmer Forum</a>, 															<a href="./viewforum.php?f=358&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Latvian Forum</a>, 															<a href="./viewforum.php?f=189&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Lithuanian Forum</a>, 															<a href="./viewforum.php?f=215&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Malaysian Forum</a>, 															<a href="./viewforum.php?f=191&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Maltese Forum</a>, 															<a href="./viewforum.php?f=97&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Norwegian Forum</a>, 															<a href="./viewforum.php?f=102&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Persian Forum</a>, 															<a href="./viewforum.php?f=18&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Polish Forum</a>, 															<a href="./viewforum.php?f=23&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Portuguese Forum</a>, 															<a href="./viewforum.php?f=30&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Romanian Forum</a>, 															<a href="./viewforum.php?f=26&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Russian Forum</a>, 															<a href="./viewforum.php?f=29&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Serbian/Montenegrin Forum</a>, 															<a href="./viewforum.php?f=402&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Slovak Forum</a>, 															<a href="./viewforum.php?f=157&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Slovenian Forum</a>, 															<a href="./viewforum.php?f=24&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Spanish Forum</a>, 															<a href="./viewforum.php?f=63&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Swedish Forum</a>, 															<a href="./viewforum.php?f=545&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Tamil Forum</a>, 															<a href="./viewforum.php?f=15&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Thai Forum</a>, 															<a href="./viewforum.php?f=51&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Turkish Forum</a>, 															<a href="./viewforum.php?f=340&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Urdu Forum</a>, 															<a href="./viewforum.php?f=171&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Vietnamese Forum</a>, 															<a href="./viewforum.php?f=151&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Welsh Forum</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>122592</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">122592 <dfn>Topics</dfn></dd>
+					<dd class="posts">593013 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=773&amp;p=3595408&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595408" title="Re: site overzetten van mamp naar subdomein" class="lastsubject">Re: site overzetten van mamp …</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=708988&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">hvdmeer</a>
+																	<a href="./viewtopic.php?f=773&amp;p=3595408&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595408" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 9:00 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+				</ul>
+
+			</div>
+		</div>
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner"><a href="./viewforum.php?f=507&amp;sid=23cb9c4b444e055d1535548110c8e246">Other Forums</a></div></dt>
+						<dd class="topics">Topics</dd>
+						<dd class="posts">Posts</dd>
+						<dd class="lastpost"><span>Last post</span></dd>
+					</dl>
+									</li>
+			</ul>
+			<ul class="topiclist forums">
+		
+	
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Open Source Products for Joomla!" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=46">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Open Source Products for Joomla!</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=46&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Open Source Products for Joomla!</a>
+						<br />Do you have an Open Source Product available for Joomla!? Let everyone know here.																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>1969</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">1969 <dfn>Topics</dfn></dd>
+					<dd class="posts">12633 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=46&amp;p=3594274&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594274" title="Re: 2 free Joomla template quickstart packages" class="lastsubject">Re: 2 free Joomla template qu…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=95290&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">toivo</a>
+																	<a href="./viewtopic.php?f=46&amp;p=3594274&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594274" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Sun Feb 02, 2020 5:11 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Joomla! Events" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=306">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Joomla! Events</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=306&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Joomla! Events</a>
+						<br />The purpose of this forum is for announcements of approved Joomla events, all other Joomla related event announcements can be submitted at <a href="https://community.joomla.org/events.html" class="postlink">https://community.joomla.org/events.html</a>													<br /><strong>Moderators:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=94&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">rdeutz</a>, <a style="color:#006400;" href="./memberlist.php?mode=group&amp;g=20&amp;sid=23cb9c4b444e055d1535548110c8e246">OSM</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>380</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">380 <dfn>Topics</dfn></dd>
+					<dd class="posts">2727 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=306&amp;p=3592570&amp;sid=23cb9c4b444e055d1535548110c8e246#p3592570" title="Joomla Day - Austria" class="lastsubject">Joomla Day - Austria</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=398540&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">MyFirstPage</a>
+																	<a href="./viewtopic.php?f=306&amp;p=3592570&amp;sid=23cb9c4b444e055d1535548110c8e246#p3592570" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Fri Jan 17, 2020 2:35 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Site Showcase" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=514">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Site Showcase</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=514&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Site Showcase</a>
+						<br />Have you seen: <a href="http://community.joomla.org/showcase" class="postlink">http://community.joomla.org/showcase</a> <br>
+In this forum you are only permitted to post one topic on your site. Threads in here are pruned automatically.													<br /><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=28000&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #660000;" class="username-coloured">mandville</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>3</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">3 <dfn>Topics</dfn></dd>
+					<dd class="posts">3 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=28000&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #660000;" class="username-coloured">mandville</a>
+																	<a href="./viewtopic.php?f=514&amp;p=2317417&amp;sid=23cb9c4b444e055d1535548110c8e246#p2317417" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Mon Nov 15, 2010 2:27 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - The Lounge" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=48">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - The Lounge</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=48&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">The Lounge</a>
+						<br />Relax and enjoy The Lounge. For all Non-Joomla! topics or ones that don't fit anywhere else. Normal forum rules apply.																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>5080</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">5080 <dfn>Topics</dfn></dd>
+					<dd class="posts">35665 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=48&amp;p=3595367&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595367" title="Re: Alternatives to Flickr" class="lastsubject">Re: Alternatives to Flickr</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=858576&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">CorpMike</a>
+																	<a href="./viewtopic.php?f=48&amp;p=3595367&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595367" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Mon Feb 10, 2020 7:39 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Forum Post Assistant (FPA)" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=806">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Forum Post Assistant (FPA)</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=806&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Forum Post Assistant (FPA)</a>
+						<br />This Forum board is about discussions about the FPA tool.													<br /><strong>Moderator:</strong> <a style="color:#660000;" href="./memberlist.php?mode=group&amp;g=41&amp;sid=23cb9c4b444e055d1535548110c8e246">General Support Moderators</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>22</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">22 <dfn>Topics</dfn></dd>
+					<dd class="posts">240 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=806&amp;p=3594419&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594419" title="Re: where exactly to post resulsts of fpa?" class="lastsubject">Re: where exactly to post res…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=95290&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">toivo</a>
+																	<a href="./viewtopic.php?f=806&amp;p=3594419&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594419" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Mon Feb 03, 2020 11:52 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Registered Joomla! User Groups" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=562">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Registered Joomla! User Groups</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=562&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Registered Joomla! User Groups</a>
+						<br />For discussion regarding Registered Joomla User Groups. For all non-registered user group announcements:please register your Joomla User Group first at <a href="https://community.joomla.org/user-groups.html" class="postlink">https://community.joomla.org/user-groups.html</a>																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>171</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">171 <dfn>Topics</dfn></dd>
+					<dd class="posts">1441 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=562&amp;p=3591834&amp;sid=23cb9c4b444e055d1535548110c8e246#p3591834" title="Atlanta Joomla User Group - please take over" class="lastsubject">Atlanta Joomla User Group - p…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=233320&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">uaintgotthisid</a>
+																	<a href="./viewtopic.php?f=562&amp;p=3591834&amp;sid=23cb9c4b444e055d1535548110c8e246#p3591834" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Sat Jan 11, 2020 12:59 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Joomla! Ideas Forum" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=575">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Joomla! Ideas Forum</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=575&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Joomla! Ideas Forum</a>
+						<br />Do you have an idea for the Joomla community that you can help implement? Discuss in here.																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>342</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">342 <dfn>Topics</dfn></dd>
+					<dd class="posts">1926 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=575&amp;p=3594594&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594594" title="Re: Use of Google translate directly in Joomla?" class="lastsubject">Re: Use of Google translate d…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=561429&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">john-doe</a>
+																	<a href="./viewtopic.php?f=575&amp;p=3594594&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594594" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 04, 2020 1:04 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Community Blog Discussions" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=704">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Community Blog Discussions</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=704&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Community Blog Discussions</a>
+						<br />This board is for discussions about joomla.org blog posts.																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>113</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">113 <dfn>Topics</dfn></dd>
+					<dd class="posts">2497 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=704&amp;p=3595380&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595380" title="Re: Why is Joomla always ignored!" class="lastsubject">Re: Why is Joomla always igno…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=399395&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">mbabker</a>
+																	<a href="./viewtopic.php?f=704&amp;p=3595380&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595380" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 12:01 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+				</ul>
+
+			</div>
+		</div>
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner"><a href="./viewforum.php?f=646&amp;sid=23cb9c4b444e055d1535548110c8e246">Joomla! Development Forums</a></div></dt>
+						<dd class="topics">Topics</dd>
+						<dd class="posts">Posts</dd>
+						<dd class="lastpost"><span>Last post</span></dd>
+					</dl>
+									</li>
+			</ul>
+			<ul class="topiclist forums">
+		
+	
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Joomla! Development" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=509">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Joomla! Development</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=509&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Joomla! Development</a>
+																			<br /><strong>Moderator:</strong> <a href="./memberlist.php?mode=viewprofile&amp;u=218211&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">ooffick</a>
+																										<br /><strong>Subforums:</strong>
+															<a href="./viewforum.php?f=803&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Joomla! 4 Related</a>, 															<a href="./viewforum.php?f=727&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Joomla! 3.x Coding</a>, 															<a href="./viewforum.php?f=728&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Joomla! 3.x Bug Reporting</a>, 															<a href="./viewforum.php?f=796&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>User eXperience (UX)</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>5286</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">5286 <dfn>Topics</dfn></dd>
+					<dd class="posts">19676 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=727&amp;p=3595421&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595421" title="Re: How to catch SMTP connection errors?" class="lastsubject">Re: How to catch SMTP connect…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=95290&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">toivo</a>
+																	<a href="./viewtopic.php?f=727&amp;p=3595421&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595421" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Feb 11, 2020 10:09 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+				</ul>
+
+			</div>
+		</div>
+	
+				<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+										<dl class="row-item">
+						<dt><div class="list-inner"><a href="./viewforum.php?f=508&amp;sid=23cb9c4b444e055d1535548110c8e246">Joomla! Official Sites &amp; Infrastructure</a></div></dt>
+						<dd class="topics">Topics</dd>
+						<dd class="posts">Posts</dd>
+						<dd class="lastpost"><span>Last post</span></dd>
+					</dl>
+									</li>
+			</ul>
+			<ul class="topiclist forums">
+		
+	
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - docs.joomla.org - Feedback/Information" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=303">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - docs.joomla.org - Feedback/Information</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=303&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">docs.joomla.org - Feedback/Information</a>
+						<br /><a href="http://docs.joomla.org/" class="postlink">Joomla! Documentation</a> Workgroup													<br /><strong>Moderator:</strong> <a style="color:#660099;" href="./memberlist.php?mode=group&amp;g=11&amp;sid=23cb9c4b444e055d1535548110c8e246">Documentation</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>459</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">459 <dfn>Topics</dfn></dd>
+					<dd class="posts">2489 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=303&amp;p=3593511&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593511" title="Joomla Glossary Issues" class="lastsubject">Joomla Glossary Issues</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=237152&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">blancanieve</a>
+																	<a href="./viewtopic.php?f=303&amp;p=3593511&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593511" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Mon Jan 27, 2020 5:47 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - extensions.joomla.org - Feedback/Information" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=262">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - extensions.joomla.org - Feedback/Information</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=262&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">extensions.joomla.org - Feedback/Information</a>
+						<br />Here you can contact the editors of our <a href="http://extensions.joomla.org" class="postlink">Extensions site</a>, as well as access infomation relating to this site.													<br /><strong>Moderator:</strong> <a style="color:##D2BE0;" href="./memberlist.php?mode=group&amp;g=16&amp;sid=23cb9c4b444e055d1535548110c8e246">JED Team</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>2480</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">2480 <dfn>Topics</dfn></dd>
+					<dd class="posts">17412 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=262&amp;p=3593532&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593532" title="Feedbacks and suggestions about the JED." class="lastsubject">Feedbacks and suggestions abo…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=859093&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">tittouille</a>
+																	<a href="./viewtopic.php?f=262&amp;p=3593532&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593532" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Mon Jan 27, 2020 9:31 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - joomla.com - Feedback/Information" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=805">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - joomla.com - Feedback/Information</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=805&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">joomla.com - Feedback/Information</a>
+																								
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>39</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">39 <dfn>Topics</dfn></dd>
+					<dd class="posts">173 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=805&amp;p=3593744&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593744" title="Re: Error session_start() in joomla.com site" class="lastsubject">Re: Error session_start() in …</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=95290&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">toivo</a>
+																	<a href="./viewtopic.php?f=805&amp;p=3593744&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593744" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Tue Jan 28, 2020 6:36 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - magazine.joomla.org - Feedback/Information" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=573">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - magazine.joomla.org - Feedback/Information</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=573&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">magazine.joomla.org - Feedback/Information</a>
+						<br />A place to discuss and manage all matters related to the <a href="http://magazine.joomla.org/" class="postlink">Joomla! Community Magazine</a>.													<br /><strong>Moderator:</strong> <a href="./memberlist.php?mode=group&amp;g=55&amp;sid=23cb9c4b444e055d1535548110c8e246">Community Magazine</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>52</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">52 <dfn>Topics</dfn></dd>
+					<dd class="posts">463 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=573&amp;p=3593784&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593784" title="Re: Progress update about JCM?" class="lastsubject">Re: Progress update about JCM?</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=329103&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">sozzled</a>
+																	<a href="./viewtopic.php?f=573&amp;p=3593784&amp;sid=23cb9c4b444e055d1535548110c8e246#p3593784" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Wed Jan 29, 2020 12:29 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - resources.joomla.org - Feedback/Information" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=563">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - resources.joomla.org - Feedback/Information</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=563&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">resources.joomla.org - Feedback/Information</a>
+						<br />Here you can contact the editors of our <a href="http://resources.joomla.org" class="postlink">Resources site</a>, as well as access infomation relating to this site.													<br /><strong>Moderator:</strong> <a style="color:##D2BE0;" href="./memberlist.php?mode=group&amp;g=52&amp;sid=23cb9c4b444e055d1535548110c8e246">JRD Team</a>
+																		
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>71</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">71 <dfn>Topics</dfn></dd>
+					<dd class="posts">371 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=563&amp;p=3546345&amp;sid=23cb9c4b444e055d1535548110c8e246#p3546345" title="Re: Change Username" class="lastsubject">Re: Change Username</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=840750&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">JamesWycoff</a>
+																	<a href="./viewtopic.php?f=563&amp;p=3546345&amp;sid=23cb9c4b444e055d1535548110c8e246#p3546345" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Fri Nov 02, 2018 6:58 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+													<!--
+								<a class="feed-icon-forum" title="Feed - Sites &amp; Infrastructure - Feedback/Information" href="/app.php/feed?sid=23cb9c4b444e055d1535548110c8e246?f=7">
+									<i class="icon fa-rss-square fa-fw icon-orange" aria-hidden="true"></i><span class="sr-only">Feed - Sites &amp; Infrastructure - Feedback/Information</span>
+								</a>
+							-->
+																		<a href="./viewforum.php?f=7&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Sites &amp; Infrastructure - Feedback/Information</a>
+						<br />If you have any 'mechanical' forum or Joomla! sites related issues/suggestions with <a href="http://www.joomla.org" class="postlink">joomla.org</a>, <a href="http://community.joomla.org" class="postlink">community.joomla.org</a>, <a href="http://forum.joomla.org" class="postlink">forum.joomla.org</a>, <a href="http://vel.joomla.org" class="postlink">vel.joomla.org</a>.																										<br /><strong>Subforum:</strong>
+															<a href="./viewforum.php?f=406&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>JoomlaCode.org</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>44097</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">44097 <dfn>Topics</dfn></dd>
+					<dd class="posts">236095 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=7&amp;p=3594163&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594163" title="Re: I am not reporting anything to the forum moderators anymore" class="lastsubject">Re: I am not reporting anythi…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=329103&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">sozzled</a>
+																	<a href="./viewtopic.php?f=7&amp;p=3594163&amp;sid=23cb9c4b444e055d1535548110c8e246#p3594163" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Fri Jan 31, 2020 8:38 pm
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+	
+	
+			
+					<li class="row">
+						<dl class="row-item forum_read_subforum">
+				<dt title="No unread posts">
+										<div class="list-inner">
+																		<a href="./viewforum.php?f=510&amp;sid=23cb9c4b444e055d1535548110c8e246" class="forumtitle">Joomla! Working Groups</a>
+																																<br /><strong>Subforums:</strong>
+															<a href="./viewforum.php?f=11&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Translations</a>, 															<a href="./viewforum.php?f=381&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>OpenSourceMatters.org</a>, 															<a href="./viewforum.php?f=699&amp;sid=23cb9c4b444e055d1535548110c8e246" class="subforum read" title="No unread posts">
+									<i class="icon fa-file-o fa-fw  icon-blue icon-md" aria-hidden="true"></i>Joomla! Marketing and PR Team</a>																										
+
+												<div class="responsive-show" style="display: none;">
+															Topics: <strong>973</strong>
+													</div>
+											</div>
+				</dt>
+									<dd class="topics">973 <dfn>Topics</dfn></dd>
+					<dd class="posts">10180 <dfn>Posts</dfn></dd>
+					<dd class="lastpost">
+						<span>
+																						<dfn>Last post</dfn>
+																										<a href="./viewtopic.php?f=11&amp;p=3595128&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595128" title="Re: Crowdin translations replaced" class="lastsubject">Re: Crowdin translations repl…</a> <br />
+																	by <a href="./memberlist.php?mode=viewprofile&amp;u=14&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #666600;" class="username-coloured">infograf768</a>
+																	<a href="./viewtopic.php?f=11&amp;p=3595128&amp;sid=23cb9c4b444e055d1535548110c8e246#p3595128" title="View the latest post">
+										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">View the latest post</span>
+									</a>
+																<br />Sat Feb 08, 2020 11:30 am
+													</span>
+					</dd>
+							</dl>
+					</li>
+			
+				</ul>
+
+			</div>
+		</div>
+		
+
+
+	<form method="post" action="./ucp.php?mode=login&amp;sid=23cb9c4b444e055d1535548110c8e246" class="headerspace">
+	<h3><a href="./ucp.php?mode=login&amp;sid=23cb9c4b444e055d1535548110c8e246">Login</a>&nbsp; &bull; &nbsp;<a href="./ucp.php?mode=register&amp;sid=23cb9c4b444e055d1535548110c8e246">Register</a></h3>
+		<fieldset class="quick-login">
+<div class="row-fluid">
+<div class="span3">
+			<label for="username"><span>Username:</span> <input placeholder="Username" type="text" tabindex="1" name="username" id="username" size="10" class="inputbox" title="Username" /></label>
+</div>
+<div class="span3">
+			<label for="password"><span>Password:</span> <input type="password" tabindex="2" name="password" id="password" size="10" class="inputbox" title="Password" placeholder="Password" autocomplete="off" /></label>
+</div>
+<div class="span2">
+			<input type="submit" tabindex="5" name="login" value="Login" class="button2" />
+			<input type="hidden" name="redirect" value="./index.php?height=300&amp;html=1&amp;images=0&amp;png=1&amp;timeout=10&amp;url=http%3A%2F%2Fforum.joomla.org%2F&amp;width=400&amp;sid=23cb9c4b444e055d1535548110c8e246" />
+
+</div>
+<div class="span4">
+							<a href="./ucp.php?mode=sendpassword&amp;sid=23cb9c4b444e055d1535548110c8e246">I forgot my password</a>
+										<span class="responsive-hide">|</span> <label for="autologin">Remember me <input type="checkbox" tabindex="4" name="autologin" id="autologin" /></label>
+			</div>
+</div>
+		</fieldset>
+	</form>
+
+
+	<div class="stat-block online-list">
+		<h3>Who is online</h3>		<p>
+						In total there are <strong>1415</strong> users online :: 22 registered, 1 hidden and 1392 guests (based on users active over the past 30 minutes)<br />Most users ever online was <strong>15612</strong> on Tue Jan 14, 2020 4:26 pm<br /> <br />Registered users: <a href="./memberlist.php?mode=viewprofile&amp;u=167544&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">alex_blanc</a>, <span style="color: #9E8DA7;" class="username-coloured">Baidu [Spider]</span>, <span style="color: #9E8DA7;" class="username-coloured">Bing [Bot]</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=822167&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">DV-admin</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=858951&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">F3rr3t3</a>, <span style="color: #9E8DA7;" class="username-coloured">Google [Bot]</span>, <span style="color: #9E8DA7;" class="username-coloured">Google Feedfetcher</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=1694&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">gws</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=79952&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">H13</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=817323&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Jaydot</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=853260&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Linneajones</a>, <span style="color: #9E8DA7;" class="username-coloured">Majestic-12 [Bot]</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=859138&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Monehomes</a>, <span style="color: #9E8DA7;" class="username-coloured">MSN [Bot]</span>, <a href="./memberlist.php?mode=viewprofile&amp;u=859916&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">NomadAfrica</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=859914&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">pankajkaul</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=568756&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">PaysB</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=849355&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">sk-webb</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=859770&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Suprb</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=95290&amp;sid=23cb9c4b444e055d1535548110c8e246" style="color: #000066;" class="username-coloured">toivo</a>, <a href="./memberlist.php?mode=viewprofile&amp;u=196282&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">Webdongle</a>, <span style="color: #9E8DA7;" class="username-coloured">YaCy [Bot]</span>
+			<br /><em>Legend: <a style="color:#660000" href="./memberlist.php?mode=group&amp;g=10&amp;sid=23cb9c4b444e055d1535548110c8e246">Community Workgroup</a>, <a style="color:#660099" href="./memberlist.php?mode=group&amp;g=11&amp;sid=23cb9c4b444e055d1535548110c8e246">Documentation</a>, <a style="color:#000066" href="./memberlist.php?mode=group&amp;g=34&amp;sid=23cb9c4b444e055d1535548110c8e246">Global moderators</a>, <a style="color:#006400" href="./memberlist.php?mode=group&amp;g=20&amp;sid=23cb9c4b444e055d1535548110c8e246">OSM</a>, <a style="color:#666600" href="./memberlist.php?mode=group&amp;g=13&amp;sid=23cb9c4b444e055d1535548110c8e246">Translation Teams</a>, <a style="color:#666600" href="./memberlist.php?mode=group&amp;g=47&amp;sid=23cb9c4b444e055d1535548110c8e246">Translation Workgroup</a></em>					</p>
+	</div>
+
+
+	<div class="stat-block statistics">
+		<h3>Statistics</h3>
+		<p>
+						Total posts <strong>3227564</strong> &bull; Total topics <strong>765957</strong> &bull; Total members <strong>740971</strong> &bull; Our newest member <strong><a href="./memberlist.php?mode=viewprofile&amp;u=859916&amp;sid=23cb9c4b444e055d1535548110c8e246" class="username">NomadAfrica</a></strong>
+					</p>
+	</div>
+
+<div style="text-align:center;">
+<ins data-revive-zoneid="64" data-revive-id="4bacaeba2f8655edc9ca810c946aab5a"></ins>
+								</div>
+
+
+
+		<!-- Cleantalk -->
+<script type="text/javascript">
+			var ct_cookie_name = "ct_checkjs",
+				ct_cookie_value = "b410806d86e51850f7920d5a4e162742";
+</script>
+<!--/Cleantalk -->	</div>
+
+
+<div id="page-footer" class="page-footer" role="contentinfo">
+	<div class="navbar" role="navigation">
+	<div class="inner">
+
+	<ul id="nav-footer" class="nav-footer linklist" role="menubar">
+		<li class="breadcrumbs">
+									<span class="crumb"><a href="./index.php?sid=23cb9c4b444e055d1535548110c8e246" data-navbar-reference="index"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span>Board index</span></a></span>					</li>
+		
+				<li class="rightside">All times are <span title="UTC">UTC</span></li>
+							<li class="rightside">
+				<a href="./ucp.php?mode=delete_cookies&amp;sid=23cb9c4b444e055d1535548110c8e246" data-ajax="true" data-refresh="true" role="menuitem">
+					<i class="icon fa-trash fa-fw" aria-hidden="true"></i><span>Delete cookies</span>
+				</a>
+			</li>
+														</ul>
+
+	</div>
+</div>
+
+	<div class="copyright">
+				Powered by <a href="https://www.phpbb.com/">phpBB</a>&reg; Forum Software &copy; phpBB Limited
+									</div>
+
+	<div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="AJAX error" data-ajax-error-text="Something went wrong when processing your request." data-ajax-error-text-abort="User aborted request." data-ajax-error-text-timeout="Your request timed out; please try again." data-ajax-error-text-parsererror="Something went wrong with the request and the server returned an invalid reply.">
+		<div id="darken" class="darken">&nbsp;</div>
+	</div>
+
+	<div id="phpbb_alert" class="phpbb_alert" data-l-err="Error" data-l-timeout-processing-req="Request timed out.">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+	</div>
+	<div id="phpbb_confirm" class="phpbb_alert">
+		<a href="#" class="alert_close">
+			<i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+		</a>
+		<div class="alert_text"></div>
+	</div>
+</div></div>
+
+</div>
+
+<div class="footer center">
+		<div class="container-fluid">
+<div class="social">
+	<ul class="soc">
+		<li><a href="https://twitter.com/joomla" target="_blank" class="icon-twitter2" title="Joomla! on Twitter"><span class="element-invisible">Joomla! on Twitter</span></a></li>
+		<li><a href="https://www.facebook.com/joomla" target="_blank" class="icon-facebook2" title="Joomla! on Facebook"><span class="element-invisible">Joomla! on Facebook</span></a></li>
+		<li><a href="https://www.youtube.com/user/joomla" target="_blank" class="icon-youtube3" title="Joomla! on YouTube"><span class="element-invisible">Joomla! on YouTube</span></a></li>
+		<li><a href="https://www.linkedin.com/company/joomla" target="_blank" class="icon-linkedin" title="Joomla! on LinkedIn"><span class="element-invisible">Joomla! on LinkedIn</span></a></li>
+		<li><a href="https://www.pinterest.com/joomla" target="_blank" class="icon-pinterest2" title="Joomla! on Pinterest"><span class="element-invisible">Joomla! on Pinterest</span></a></li>
+		<li><a href="https://www.instagram.com/joomlaofficial/" target="_blank" class="icon-instagram" title="Joomla! on Instagram"><span class="element-invisible">Joomla! on Instagram</span></a></li>
+		<li><a href="https://github.com/joomla" target="_blank" class="icon-github3" title="Joomla! on GitHub"><span class="element-invisible">Joomla! on GitHub</span></a></li>
+	</ul>
+</div>
+
+<div class="footer-menu">
+	<ul class="nav-inline">
+		<li><a href="https://www.joomla.org"><span>Home</span></a></li>
+		<li><a href="https://www.joomla.org/about-joomla.html"><span>About</span></a></li>
+		<li><a href="https://community.joomla.org"><span>Community</span></a></li>
+		<li><a href="https://forum.joomla.org"><span>Forum</span></a></li>
+		<li><a href="https://extensions.joomla.org"><span>Extensions</span></a></li>
+		<li><a href="https://resources.joomla.org"><span>Resources</span></a></li>
+		<li><a href="https://docs.joomla.org"><span>Docs</span></a></li>
+		<li><a href="https://developer.joomla.org"><span>Developer</span></a></li>
+		<li><a href="https://community.joomla.org/the-joomla-shop.html"><span>Shop</span></a></li>
+	</ul>
+
+	<ul class="nav-inline">
+		<li><a href="https://www.joomla.org/accessibility-statement.html">Accessibility Statement</a></li>
+		<li><a href="https://www.joomla.org/privacy-policy.html">Privacy Policy</a></li>
+		<li><a href="https://community.joomla.org/sponsorship-campaigns.html">Sponsor Joomla! with $5</a></li>
+		<li><a href="https://crowdin.com/projects/Joomla">Help Translate</a></li>
+		<li><a href="https://github.com/joomla/joomla-websites/issues/new?title=[forum.joomla.org]%20&amp;body=Please%20describe%20the%20problem%20or%20your%20issue">Report an Issue</a></li>
+		<li><a href="/ucp.php?mode=login">Log in</a></li>
+	</ul>
+
+	<p class="copyright">&copy; 2005 - 2020 <a href="https://opensourcematters.org">Open Source Matters, Inc.</a> All Rights Reserved.</p>
+
+	<div class="hosting">
+		<div class="hosting-image"><a href="https://www.rochen.com/joomla-hosting" target="_blank"><img class="rochen" src="https://cdn.joomla.org/rochen/rochen_footer_logo_white.png" alt="Rochen" /></a></div>
+		<div class="hosting-text"><a href="https://www.rochen.com/joomla-hosting" target="_blank"><span dir="ltr">Joomla!</span> Hosting by Rochen</a></div>
+	</div>
+</div>
+
+<div id="adblock-msg" class="navbar navbar-fixed-bottom hide">
+	<div class="navbar-inner">
+		<a class="close" data-dismiss="alert" href="#">&times;</a>
+		<i class="icon-warning"></i>
+        We have detected that you are using an ad blocker. The Joomla! Project relies on revenue from these advertisements so please consider disabling the ad blocker for this domain.
+	</div>
+</div>
+<!-- Cached 20200211101754 --><!-- Cached -->		</div>
+	</div>
+<div id="debug">
+
+</div>
+<div style="position: absolute; top:-999px">
+	<a id="bottom" class="anchor" accesskey="z"></a>
+	<img src="./cron.php?cron_type=cron.task.cleantalk_antispam_check_payment_status&amp;sid=23cb9c4b444e055d1535548110c8e246" width="1" height="1" alt="cron" /></div>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('\x3Cscript src="./assets/javascript/jquery.min.js?assets_version=164">\x3C/script>');</script><script type="text/javascript" src="./assets/javascript/core.js?assets_version=164"></script>
+	<script type="text/javascript">
+		(function($){
+			var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
+				$span = $('<span class="fa" style="display:none"></span>').appendTo('body');
+			if ($span.css('fontFamily') !== 'FontAwesome' ) {
+				$fa_cdn.after('<link href="./assets/css/font-awesome.min.css" rel="stylesheet">');
+				$fa_cdn.remove();
+			}
+			$span.remove();
+		})(jQuery);
+	</script>
+
+
+<script type="text/javascript">
+(function($) {  // Avoid conflicts with other libraries
+
+'use strict';
+	
+	phpbb.addAjaxCallback('reporttosfs', function(data) {
+		if (data.postid !== "undefined") {
+			$('#sfs' + data.postid).hide();
+			phpbb.closeDarkenWrapper(5000);
+		}
+	});
+
+})(jQuery);
+</script>
+<script src="./ext/cleantalk/antispam/styles/all/template/cleantalk.js?assets_version=164"></script>
+<script src="./styles/joomla/template/forum_fn.js?assets_version=164"></script>
+<script src="./styles/joomla/template/ajax.js?assets_version=164"></script>
+
+
+<script async src="https://ads.joomla.org/www/delivery/asyncjs.php"></script>
+</body>
+</html>
