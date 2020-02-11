@@ -6,6 +6,8 @@ import joblib
 import features_extraction
 import sys
 import numpy as np
+import json
+import sys
 
 from features_extraction import LOCALHOST_PATH, DIRECTORY_NAME
 
@@ -47,6 +49,20 @@ def main():
         elif prediction == -1:
             # print "The website has phishing features. DO NOT VISIT!"
             print("PHISHING")
+            #data = {'url': url}
+            json_path = '/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/sites.json'
+            with open(json_path, 'r') as json_file:
+                results = json.load(json_file)
+                print(results)
+
+            with open(json_path) as json_file:
+                json_decoded = json.load(json_file)
+
+            json_decoded['url'] = url
+
+            with open(json_path, 'w') as json_file:
+                json.dump(json_decoded, json_file)      
+
 
             # print 'Error -', features_test
 
