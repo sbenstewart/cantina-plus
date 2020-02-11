@@ -4,6 +4,7 @@ import json
 import lxml.html
 import sys
 import re
+import os
 
 
 def main():
@@ -52,8 +53,11 @@ def main():
 
             # print("%s -> %s: %0.1f%% Predicted:%s Actual:%s" % (path1, path2, similarity, predict_same, actual_same))
 
-    m = re.search('data/(.*)\-', similar_path)
-    similar_path = m.group(1)
+    try:
+        m = re.search('data/(.*)\-', similar_path)
+        similar_path = m.group(1)
+    except:
+        similar_path = None
 
     print("Most similar site is %s with similarity %s" % (similar_path,max_similarity))
 
@@ -75,4 +79,5 @@ def get_tags(doc):
 
 
 if __name__ == '__main__':
+    os.chdir('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/')
     main()

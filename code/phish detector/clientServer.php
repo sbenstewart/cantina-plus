@@ -17,4 +17,7 @@ $bytes=file_put_contents('markup.txt', $html);
 // Replace the path with the path of your python2.x installation.
 $decision=exec("/Users/benstewart/anaconda3/envs/py2/bin/python /Users/benstewart/BEN\ STUFF/PROJECTS/fyp/code/phish\ detector/test.py $site 2>&1 ");
 echo $decision;
+
+$decision=exec("/Users/benstewart/anaconda3/envs/py2/bin/python /Users/benstewart/BEN\ STUFF/PROJECTS/fyp/code/target\ identifier/compare-tags-all.py data 2>&1 ");
+echo $decision;
 ?>

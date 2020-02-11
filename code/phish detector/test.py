@@ -9,6 +9,7 @@ import numpy as np
 import json
 import sys
 import os
+import subprocess
 
 from features_extraction import LOCALHOST_PATH, DIRECTORY_NAME
 
@@ -74,8 +75,10 @@ def main():
 
 
             # call the target identifier
-            os.chdir('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/')
-            os.system('python compare-tags-all.py data')
+            #os.chdir('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/')
+            # os.system('python compare-tags-all.py data')
+            #output = subprocess.check_output("python compare-tags-all.py data", shell=True)
+            #print(output)
 
 
 
