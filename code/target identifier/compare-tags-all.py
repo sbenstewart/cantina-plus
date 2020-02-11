@@ -59,7 +59,7 @@ def main():
     except:
         similar_path = None
 
-    print("Most similar site is %s with similarity %s" % (similar_path,max_similarity))
+    print(" and the most similar site is %s with similarity %s" % (similar_path,max_similarity))
 
     with open('compare-tags.json', 'w') as json_out:
         json.dump(results, json_out, indent=4)
