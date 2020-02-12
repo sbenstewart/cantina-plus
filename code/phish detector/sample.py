@@ -10,6 +10,14 @@ from scikit_roughsets.rs_reduction import RoughSetsSelector
 
 import joblib
 
+def extractDigits(lst): 
+    res = [] 
+    for el in lst: 
+        sub = el.split(' ') 
+        res.append(sub) 
+      
+    return(res) 
+
 labels = []
 data_file = open('dataset/Training Dataset.arff').read()
 data_list = data_file.split('\r\n')
@@ -23,13 +31,30 @@ features = data1[:, :-1]
 # Choose only the relevant features from the data set.
 # features = features[:, [0, 1, 2, 3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 15, 16, 17, 22, 23, 24, 25, 27, 29]]
 features = np.array(features).astype(np.int)
+labels = extractDigits(labels)
 labels = np.array(labels).astype(np.int)
 
-print(features)
-print(labels)
+y = labels 
+X = features
+'''
+y = np.array([[1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1]]).T
+X = np.array([[1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1],
+              [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              [1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+              [0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1],
+              [1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0],
+              [0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1],
+              [1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1],
+              [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1],
+              [1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1],
+              [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1],
+              [1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1],
+              [1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1]])
+'''
+print(y.shape)
+print(X.shape)
+print(y)
 
-y = features.T
-X = labels
 
 selector = RoughSetsSelector()
 X_selected = selector.fit(X, y).transform(X)
