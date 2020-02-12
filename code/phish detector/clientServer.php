@@ -20,6 +20,7 @@ echo $decision;
 
 if($decision == "PHISHING")
     {
+        $decision=exec("/Users/benstewart/anaconda3/envs/py2/bin/python /Users/benstewart/BEN\ STUFF/PROJECTS/fyp/code/target\ identifier/scrape.py http://localhost:8050 single-sites.json 1 data 2>&1 ");
         $decision=exec("/Users/benstewart/anaconda3/envs/py2/bin/python /Users/benstewart/BEN\ STUFF/PROJECTS/fyp/code/target\ identifier/compare-tags-all.py data 2>&1 ");
         echo $decision;
     }
