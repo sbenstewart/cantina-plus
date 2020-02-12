@@ -2,10 +2,11 @@
 # file to create your own version of the classifier.
 
 import numpy as np
-
 from sklearn.ensemble import RandomForestClassifier
-# from sklearn.metrics import accuracy_score, classification_report
-# from sklearn import metrics
+from sklearn.metrics import accuracy_score, classification_report
+from sklearn import metrics
+
+from scikit_roughsets.rs_reduction import RoughSetsSelector
 
 import joblib
 
@@ -25,8 +26,8 @@ features = np.array(features).astype(np.float)
 
 features_train = features
 labels_train = labels
-# features_test=features[10000:]
-# labels_test=labels[10000:]
+features_test=features[10000:]
+labels_test=labels[10000:]
 
 
 print("\n\n ""Random Forest Algorithm Results"" ")
@@ -40,10 +41,10 @@ print("Feature ranking:")
 for f in range(features_train.shape[1]):
     print("%d. feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
 
-# pred4=clf4.predict(features_test)
-# print(classification_report(labels_test, pred4))
-# print 'The accuracy is:', accuracy_score(labels_test, pred4)
-# print metrics.confusion_matrix(labels_test, pred4)
+pred4=clf4.predict(features_test)
+print(classification_report(labels_test, pred4))
+print 'The accuracy is:', accuracy_score(labels_test, pred4)
+print metrics.confusion_matrix(labels_test, pred4)
 
 # sys.setrecursionlimit(9999999)
-joblib.dump(clf4, 'classifier/random_forest.pkl', compress=9)
+#joblib.dump(clf4, 'classifier/random_forest.pkl', compress=9)
