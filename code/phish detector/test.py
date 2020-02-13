@@ -1,7 +1,3 @@
-# Purpose - Receive the call for testing a page from the Chrome extension and return the result (SAFE/PHISHING)
-# for display. This file calls all the different components of the project (The ML model, features_extraction) and
-# consolidates the result.
-
 import joblib
 import features_extraction
 import sys
@@ -16,7 +12,6 @@ from features_extraction import LOCALHOST_PATH, DIRECTORY_NAME
 
 def get_prediction_from_url(test_url):
     features_test = features_extraction.main(test_url)
-    # Due to updates to scikit-learn, we now need a 2D array as a parameter to the predict function.
     features_test = np.array(features_test).reshape((1, -1))
 
     clf = joblib.load(LOCALHOST_PATH + DIRECTORY_NAME + '/classifier/random_forest.pkl')
@@ -72,13 +67,6 @@ def main():
             single_json_decoded['url'] = url
             with open(json_path, 'w') as json_file:
                 json.dump(single_json_decoded, json_file, sort_keys=True, indent=4, separators=(',', ': '))    
-
-
-            # call the target identifier
-            #os.chdir('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/')
-            # os.system('python compare-tags-all.py data')
-            #output = subprocess.check_output("python compare-tags-all.py data", shell=True)
-            #print(output)
 
 
 

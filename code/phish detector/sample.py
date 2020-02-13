@@ -1,6 +1,3 @@
-# Purpose - This file is used to create a classifier and store it in a .pkl file. You can modify the contents of this
-# file to create your own version of the classifier.
-
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
@@ -28,29 +25,12 @@ for i in data1:
     labels.append(i[30])
 data1 = np.array(data1)
 features = data1[:, :-1]
-# Choose only the relevant features from the data set.
-# features = features[:, [0, 1, 2, 3, 4, 5, 6, 8, 9, 11, 12, 13, 14, 15, 16, 17, 22, 23, 24, 25, 27, 29]]
 features = np.array(features).astype(np.int)
 labels = extractDigits(labels)
 labels = np.array(labels).astype(np.int)
 
 y = labels 
 X = features
-'''
-y = np.array([[1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1]]).T
-X = np.array([[1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1],
-              [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-              [1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
-              [0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1],
-              [1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0],
-              [0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1],
-              [1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1],
-              [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1],
-              [1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1],
-              [1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1],
-              [1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1],
-              [1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 1]])
-'''
 print(y.shape)
 print(X.shape)
 print(y)

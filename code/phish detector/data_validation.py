@@ -1,6 +1,3 @@
-# Purpose - To print the training data and check the parsing logic for it.
-# Note: This file is not a part of the codepath which is used by the Chrome extension for making a decision.
-
 import numpy as np
 from features_extraction import DIRECTORY_NAME, LOCALHOST_PATH
 

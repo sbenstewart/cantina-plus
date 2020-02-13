@@ -1,5 +1,3 @@
-# Purpose - This file includes unit tests for all the functionality of features_extraction.py
-
 import unittest
 from features_extraction import *
 from test import get_prediction_from_url

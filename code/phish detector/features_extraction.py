@@ -1,10 +1,3 @@
-# Purpose -
-# Running this file (stand alone) - For extracting all the features from a web page for testing.
-# Notes -
-# 1 stands for legitimate
-# 0 stands for suspicious
-# -1 stands for phishing
-
 from bs4 import BeautifulSoup
 import urllib
 import bs4
@@ -14,16 +7,12 @@ import whois
 from datetime import datetime
 import time
 
-# https://breakingcode.wordpress.com/2010/06/29/google-search-python/
-# Previous package structure was modified. Import statements according to new structure added. Also code modified.
 from googlesearch import search
 
-# This import is needed only when you run this file in isolation.
 import sys
 
 from patterns import *
 
-# Path of your local server. Different for different OSs.
 LOCALHOST_PATH = "/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/"
 DIRECTORY_NAME = "phish detector"
 
@@ -53,8 +42,6 @@ def having_at_symbol(url):
 
 
 def double_slash_redirecting(url):
-    # since the position starts from 0, we have given 6 and not 7 which is according to the document.
-    # It is convenient and easier to just use string search here to search the last occurrence instead of re.
     last_double_slash = url.rfind('//')
     return -1 if last_double_slash > 6 else 1
 
@@ -65,9 +52,6 @@ def prefix_suffix(domain):
 
 
 def having_sub_domain(url):
-    # Here, instead of greater than 1 we will take greater than 3 since the greater than 1 condition is when www and
-    # country domain dots are skipped
-    # Accordingly other dots will increase by 1
     if having_ip_address(url) == -1:
         match = re.search(
             '(([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\.'
@@ -90,8 +74,6 @@ def domain_registration_length(domain):
     today = datetime.strptime(today, '%Y-%m-%d')
 
     registration_length = 0
-    # Some domains do not have expiration dates. This if condition makes sure that the expiration date is used only
-    # when it is present.
     if expiration_date:
         registration_length = abs((expiration_date - today).days)
     return -1 if registration_length / 365 <= 1 else 1
@@ -207,7 +189,6 @@ def links_in_tags(wiki, soup, domain):
 
 
 # Server Form Handler (SFH)
-# Have written conditions directly from word file..as there are no sites to test ######
 def sfh(wiki, soup, domain):
     for form in soup.find_all('form', action=True):
         if form['action'] == "" or form['action'] == "about:blank":
@@ -220,11 +201,9 @@ def sfh(wiki, soup, domain):
 
 
 # Mail Function
-# PHP mail() function is difficult to retrieve, hence the following function is based on mailto
 def submitting_to_email(soup):
     for form in soup.find_all('form', action=True):
         return -1 if "mailto:" in form['action'] else 1
-    # In case there is no form in the soup, then it is safe to return 1.
     return 1
 
 
@@ -237,12 +216,10 @@ def abnormal_url(domain, url):
 # IFrame Redirection
 def i_frame(soup):
     for i_frame in soup.find_all('i_frame', width=True, height=True, frameBorder=True):
-        # Even if one iFrame satisfies the below conditions, it is safe to return -1 for this method.
         if i_frame['width'] == "0" and i_frame['height'] == "0" and i_frame['frameBorder'] == "0":
             return -1
         if i_frame['width'] == "0" or i_frame['height'] == "0" or i_frame['frameBorder'] == "0":
             return 0
-    # If none of the iframes have a width or height of zero or a frameBorder of size 0, then it is safe to return 1.
     return 1
 
 
@@ -296,7 +273,6 @@ def statistical_report(url, hostname):
 
 def get_hostname_from_url(url):
     hostname = url
-    # TODO: Put this pattern in patterns.py as something like - get_hostname_pattern.
     pattern = "https://|http://|www.|https://www.|http://www."
     pre_pattern_match = re.search(pattern, hostname)
 
@@ -308,7 +284,6 @@ def get_hostname_from_url(url):
 
     return hostname
 
-# TODO: Put the DNS and domain code into a function.
 
 
 def main(url):
@@ -365,10 +340,8 @@ def main(url):
     return status
 
 
-# Use the below two lines if features_extraction.py is being run as a standalone file. If you are running this file as
-# a part of the workflow pipeline starting with the chrome extension, comment out these two lines.
 # if __name__ == "__main__":
 #     if len(sys.argv) != 2:
-#         print("Please use the following format for the command - `python2 features_extraction.py <url-to-be-tested>`")
+#         print("Command - `python2 features_extraction.py <url-to-be-tested>`")
 #         exit(0)
 #     main(sys.argv[1])
