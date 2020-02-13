@@ -47,4 +47,4 @@ print 'The accuracy is:', accuracy_score(labels_test, pred4)
 print metrics.confusion_matrix(labels_test, pred4)
 
 # sys.setrecursionlimit(9999999)
-#joblib.dump(clf4, 'classifier/random_forest.pkl', compress=9)
+joblib.dump(clf4, 'classifier/random_forest.pkl', compress=9)
