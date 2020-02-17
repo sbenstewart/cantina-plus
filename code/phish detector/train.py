@@ -3,8 +3,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn import metrics
 
-from scikit_roughsets.rs_reduction import RoughSetsSelector
-
 import joblib
 
 labels = []
@@ -44,4 +42,4 @@ print 'The accuracy is:', accuracy_score(labels_test, pred4)
 print metrics.confusion_matrix(labels_test, pred4)
 
 # sys.setrecursionlimit(9999999)
-joblib.dump(clf4, 'classifier/random_forest.pkl', compress=9)
+joblib.dump(clf4, 'classifier/random_forest_temp.pkl', compress=9)
