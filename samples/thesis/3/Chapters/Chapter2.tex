@@ -1,0 +1,53 @@
+% Chapter 2
+\chapter{RELATED WORKS} % Chapter Title in ALL CAPSacs
+This section involves description all relevant methods that have been used since. Not all the methods could produce accurate results and not all the systems could be inefficient and efficient in the same way. Each are unique in it's own perspective. Hence it is necessary to review all available methods and then establish a good reasoning for the method used by us. This could help in using the best method available and also understanding of various available techniques. This could be useful in case of analysing test cases.
+    
+\bigskip
+\section{JPEG IMAGE COMPRESSION}
+There exists many methods for the performance evaluation of digital image forgery detection as mentioned in [2]. A forensic algorithm to discriminate between original and forged regions in JPEG images, under the hypothesis that the tampered image presents a double JPEG compression, either aligned or nonaligned. A method is a based on the derivation of a unified statistical model characterizing the Direct Cosine Transforms coefficients when an aligned or a nonaligned double JPEG compression is applied. The validity of the proposed system has been demonstrated by computing the ROC curves and the corresponding AUC values for the double compression detector based on properly thresholding the likelihood map. 
+\newline
+
+\bigskip
+The effectiveness of the proposed method is also confirmed by tests carried on realistic tampered images such as in [13]. The property of the proposed Bayesian approach is that it can be easily extended to work with traces left by other kinds of processing.
+\section{GLOBAL CONTRAST ENHANCEMENT DETECTION}
+Global contrast enhancement detection is one of the method of image manipulation detection which against the post processing operation such as JPEG compression as mentioned in [10] and [1]. The goal of contrast enhancement is to improve visibility of image details without introducing unrealistic visual appearances and/or unwanted artifacts. While global contrast-enhancement techniques enhance the overall contrast, their dependences on the global content of the image limit their ability to enhance local details. They also result in significant change in image brightness and introduce saturation artefacts. Local enhancement methods, on the other hand, improve image details but can produce block discontinuities, noise amplification and unnatural image modifications. In the copypaste forgery detection method, the algorithm is proposed to detect the copy-paste forgery created using single source image.
+
+\bigskip
+Here, \cite{somnath} used the DCT for extracting the feature in order to detect the forged image. The proposed technique can efficiently detect the large block size areas up to size 64*64. 
+\bigskip
+
+\bigskip
+\section{BLOCKING ARTIFACTS}
+Blocking artifacts method is used for detecting painted areas on widely used JPEG images. The block processing during JPEG compression presents horizontal and vertical breaks into images, which is recognized as Block Artifact Grids (BAGs). The above technique to detect the forged image is used in [9]. The detection technique is based on the fact that BAGs usually disarrange after performing painting operations. extensively used JPEG standard, the blocking processing presents horizontal and vertical breaks into images, which is recognized as block artifacts grids (BAGs). This phenomenon is typically preserved as flaw of JPEG, and many efforts have been done to estimate it or to weaken it. Though, the block artifact is used in the proposed method to indicate whether an image is manipulated or not. To achieve the objective, the block artifact grid must be extracted initially as clearly as possible and it is proved in [4].
+
+\bigskip
+Unlike in uncompressed images, when a JPEG compressed image is cropped, there is a change in the inter-block correlation of DCT coefficients due to the shifting of blocking artifacts. The change in the correlation is to detect the blockiness in an image as used in [8].
+\section{FEATURE BASED CLUSTERING}
+Feature based clustering method is very simple and effective which uses the analysis of histograms of doubly compressed images and some features in the histogram are then utilized in order to differentiate the doubly compressed area from that of singly compressed area which is mentioned in [5]. The method is effective in the sense that it can detect forged region accurately and at the same time, it is computationally more efficient as opposed to the previous techniques of forgery detection. It uses a feature based clustering on the grayscale version of the image which makes computationally efficient. It classifies the area of the image as original or tampered based on feature computed on the histogram of a doubly compressed JPEG image.
+
+\bigskip
+The main focus is to detect picture replica circulate forgery which is depended on SIFT (scale invariant feature transform) descriptors, which are invariant to rotation,scaling etc. Clustering algorithm is used for clustering of key points in images which is same as that used in [7].
+\section{WAVELET DECOMPOSITION}
+ [11] used wavelet decomposition that process larger size images with reduced time complexity, as we know that there are many ways to create, alter, and digitally manipulate any given image and the accuracy of a detection method is influenced by the amount of compression and subsequent recompression, file size of the image.
+
+\bigskip
+[11] first takes a forged image for analysis purpose, then we follow the main step:
+\begin{itemize}
+  \item Wavelet decomposition of an input image;
+  \item Block matching;
+  \item Duplicated regions map creation. 
+\end{itemize}  
+
+\bigskip
+[14] detects the copy-create forgery shows better performance with tampered images independent of noise or contrast changes in the copied areas. Haar-based Discrete Wavelet Transform (DWT) is used for edge analysis that decompose an image into four sub-images and it followed by Speed-Up Robust Feature (SURF) method which is a keypointbased feature extractor technique. SURF extracts features from the decomposed images of DWT and used that features for performing classification using Support Vector Machine linear classifier.
+\section{PIXEL BASED }
+[12] takes into account of two important techniques used in pixel based forgery detection. DWT is firstly applied to the input image  to yield  a  reduced dimension  representation, i.e., LL1 subband. Then the LL1 subband are divided into  sub-images.  Phase  correlation  is  adopted  to compute  the  spatial  offset  (Δx,  Δy)  between  the Copy-Move regions. The Copy-Move regions can be easily  located  by  pixel-matching,  i.e.,  shifting  the input  image according  to the  offset and  calculating the  difference  between  the  image  and  its  shifted version.  At  last,  the  MMO  (Mathematical Morphological  Operations)  are  used  to  remove isolated points so as to improve the location.
+
+\bigskip
+Auto Color Correlogram, which is a low complexity feature extraction technique, is employed to obtain feature vectors from the forged image. [3] is not used for detection of copy-move forgery in the previous detection schemes. The scheme is also successful in detecting forged region which is scaled or rotated on pasting, also effectively detects multiple region duplication. 
+
+
+
+
+
+ 

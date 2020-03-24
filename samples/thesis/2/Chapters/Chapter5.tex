@@ -1,0 +1,109 @@
+% Chapter 5
+
+\chapter{SYSTEM DEVELOPMENT} % Write in your own chapter title
+
+In this chapter we discuss the algorithms implemented to develop
+this System. We have three phases in our project. They are,
+\begin{enumerate}
+    \item Preprocessing Phase
+\item Transaction Generation Phase
+\item Blockchain Miner
+\end{enumerate}
+\section{Prototype across the phases}
+The input and output to each module of the system is described in
+this section.
+\begin{enumerate}
+    \item Preprocessing Phase
+    \begin{itemize}
+        \item \textbf{Smart Contracts}
+        It takes the Bill ID and Bill amount as input.
+        
+\item \textbf{Private Key Encryption}
+It takes the patient treatment details as the input and encrypts the data using RSA Algorithms and produces the encrypted data.
+\item \textbf{Preprocessing}
+It takes the encrypted data as input and checks all the necessary data to instantiate a claim that has been uploaded or not and produces the block containing the block header and transaction header
+    \end{itemize}
+    \item Transaction Generation Phase
+    \begin{itemize}
+        \item \textbf{Hashing}
+        It takes the block containing the block header and transaction header as the input and hashes the data in the block using SHA-256 algorithm.
+        \item \textbf{Received Packet Verification}
+        In blockchain every transaction has to be verified by other peers in a network to take appropriate decision. The following steps has to be done in this module.
+        \item \textbf{Block Validation}
+        This module is available in every peer of the blockchain network. The peers in the network obtains the newly mined block from the miner. They check the validity of the block.
+    \end{itemize}
+    \item Blockchain Miner
+    \begin{itemize}
+        \item \textbf{Data Verification}
+        This module finds a hash below a targeted hash value (PoW).
+        \item \textbf{Genesis Block Creation}
+        In this module, the genesis block for bootstrapping the blockchain application is created using configtxgen tool which is an inbuilt tool with Hyper ledger.
+        \item \textbf{Broadcasting Blockchain}
+        This module broadcasts the newly created block to other peers in the network.
+    \end{itemize}
+    
+\end{enumerate}
+\section{Smart Contract Algorithm}
+
+
+\begin{verbatim}
+        Begin
+            For each transactions do
+                let input:=getbillamount();
+                if(input<=insurancelimit)
+                    encrypt input data
+                else
+                    discard
+            done
+        End
+\end{verbatim}
+
+
+\section{Private Key Encryption}
+\begin{enumerate}
+    \item Choose two different large random prime numbers p and q
+    \item Calculate n where n=p*q
+    \item n is the modulus for the public key and the private keys
+    \item Calculate the totient Φ(n) where Φ(n)=(p-1)*(q-1)
+    \item Choose an integer e such that 1<e<phi(n) and e is co-prime and e and Φ(n) share no factors other than 1
+gcd(e, Φ(n))=1
+    \item Calculate d to satisfy the congruence relation deΞ1(mod Φ(n)) i.e., de=1+k*Φ(n) for some integer k where d is kept as the private key exponent
+\end{enumerate}
+\section{Preprocessing}
+
+\begin{verbatim}
+        if (input not equal NULL)
+            append previous block’s hash value to the current block
+            append date and time of occurrence of transactions
+        else
+            upload bills
+\end{verbatim}
+\section{Hashing}
+\begin{verbatim}
+        Begin
+            Det := Givedata(Did)
+            Hval := ComputeHash(Det)
+            Kbpub := Public key of the peer;
+            TxData := encrypt ( Det, Kbpub);
+            TxData := append (TxData,Hval);
+        End
+        
+        
+        
+\end{verbatim}
+\section{Consensus Algorithm}
+\begin{verbatim}
+        set target to current target
+        broadcast target
+        Set nonce to 0
+        While (hash greater than target) AND (NoPoWCompleteSignal) do
+            nonce = nonce + 1
+            hash = Hash( block + nonce )
+        Done
+        Send NoPoWCompleteSignal
+        Update block to BlockChain
+\end{verbatim}
+
+\section{Deployment Details}
+The deployment of the system requires hospital bills should be
+available as a json file. We need Hyperledger for blockchain and IDE’s like NodeJS to deploy the system successfully.

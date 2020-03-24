@@ -1,0 +1,8 @@
+
+\tab Currently the science with its technological development becomes very easy to tamper the images using image processing software such as Adobe Photoshop, Corel Draw. Therefore it becomes very challenging for end users to distinguish whether the image is original or forged. In the fields such as forensics, medical imaging, e-commerce, and industrial photography, legitimacy and integrity of digital images is crucial. As a result, digital images are increasingly taking the place of their classical analog counterparts.
+
+\tab This project focuses on detecting the genuineness of the digital images. Thus an architecture is designed using a convolutional neural network and a robust forgery detection algorithm to extract features and learn on how to detect the illegitimacy of the digital images.
+
+\tab The main objective of the system developed is to find if the user's input image is tampered or not along with its type. Passive type of image forgery which are splicing and copy  move are focused here.
+
+\tab Spliced images are detected by the developed neural network which is fed with the pre-processed image and it extracts and learns the features of spliced images during the training phase and hence can detect such images once it is fully trained. Images detected to be not spliced are checked for copy move forgery where the image pixels will be split into blocks and the system will check for similar properties in the split blocks and if any such properties are found it will be detected to be of the type copy move forgery.
