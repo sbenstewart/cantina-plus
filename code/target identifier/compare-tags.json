@@ -2,436 +2,436 @@
     {
         "path2": "data/worldoftanks-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.4096385542168677
+        "similarity": 0.6756756756756757
     }, 
     {
         "path2": "data/yahoo-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.318840579710145
+        "similarity": 4.9281314168377826
     }, 
     {
         "path2": "data/irs-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 0.8027522935779817
+        "similarity": 4.515745692216281
     }, 
     {
         "path2": "data/pandora-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 11.41304347826087
+        "similarity": 13.029315960912053
     }, 
     {
         "path2": "data/linkedin-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.302325581395349
+        "similarity": 6.508875739644971
     }, 
     {
         "path2": "data/outbrain-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.6853932584269662
+        "similarity": 5.837173579109063
     }, 
     {
         "path2": "data/twitter-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.766798418972332
+        "similarity": 2.7339642481598316
     }, 
     {
         "path2": "data/groupon-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.297997644287397
+        "similarity": 2.7918781725888326
     }, 
     {
         "path2": "data/microsoft-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.7491408934707904
+        "similarity": 4.679802955665025
     }, 
     {
         "path2": "data/msn-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.857142857142857
+        "similarity": 4.381846635367762
     }, 
     {
         "path2": "data/somethingawful-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 5.139664804469274
+        "similarity": 3.597122302158273
     }, 
     {
         "path2": "data/apple-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.6096579476861168
+        "similarity": 2.786709539121115
     }, 
     {
         "path2": "data/bing-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 4.521739130434783
+        "similarity": 7.782101167315175
     }, 
     {
         "path2": "data/espn-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.515625
+        "similarity": 4.610169491525424
     }, 
     {
         "path2": "data/wikia-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.9241754505270316
+        "similarity": 2.2916666666666665
     }, 
     {
         "path2": "data/imgur-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 5.063291139240507
+        "similarity": 10.778443113772456
     }, 
     {
         "path2": "data/plex-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.9605263157894735
+        "similarity": 5.484460694698354
     }, 
     {
         "path2": "data/vimeo-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 7.142857142857142
+        "similarity": 11.699164345403899
     }, 
     {
         "path2": "data/ubuntu-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.203661327231121
+        "similarity": 7.134071340713407
     }, 
     {
         "path2": "data/google-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 14.918414918414918
+        "similarity": 13.586956521739129
     }, 
     {
         "path2": "data/aol-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.00647016534867
+        "similarity": 2.0580668871738332
     }, 
     {
         "path2": "data/usatoday-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.7918781725888326
+        "similarity": 3.576341127922971
     }, 
     {
         "path2": "data/yelp-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.437538086532602
+        "similarity": 4.430379746835443
     }, 
     {
         "path2": "data/mysql-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.5815217391304346
+        "similarity": 6.803685329553508
     }, 
     {
         "path2": "data/comcast-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 5.3120849933598935
+        "similarity": 7.803468208092486
     }, 
     {
         "path2": "data/buzzfeed-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.201524132091448
+        "similarity": 2.17296827466319
     }, 
     {
         "path2": "data/cbssports-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.147239263803681
+        "similarity": 1.688654353562005
     }, 
     {
         "path2": "data/aws-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.390593047034765
+        "similarity": 1.342281879194631
     }, 
     {
         "path2": "data/gentoo-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.2834116856950972
+        "similarity": 1.8207282913165268
     }, 
     {
         "path2": "data/verizon-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 17.073170731707318
+        "similarity": 23.49570200573066
     }, 
     {
         "path2": "data/xbox-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.4447884416924663
+        "similarity": 5.286343612334802
     }, 
     {
         "path2": "data/linuxmint-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.266713581984518
+        "similarity": 4.705882352941177
     }, 
     {
         "path2": "data/reference-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 13.872832369942195
+        "similarity": 17.03056768558952
     }, 
     {
         "path2": "data/weatherchan-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.7069726390114734
+        "similarity": 6.343283582089552
     }, 
     {
         "path2": "data/about-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.359882005899705
+        "similarity": 6.158833063209076
     }, 
     {
         "path2": "data/cnetforums-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.887468030690537
+        "similarity": 1.478352692713833
     }, 
     {
         "path2": "data/tumblr-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.0136986301369864
+        "similarity": 3.587443946188341
     }, 
     {
         "path2": "data/darpa-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 5.133470225872689
+        "similarity": 5.695509309967141
     }, 
     {
         "path2": "data/answers-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 4.91283676703645
+        "similarity": 4.995836802664446
     }, 
     {
         "path2": "data/imdb-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.0285949393128986
+        "similarity": 1.6666666666666667
     }, 
     {
         "path2": "data/slickdeal-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.4857142857142858
+        "similarity": 1.8610061064262866
     }, 
     {
         "path2": "data/baidu-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 12.010443864229766
+        "similarity": 17.391304347826086
     }, 
     {
         "path2": "data/indeed-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.466204506065858
+        "similarity": 9.689922480620156
     }, 
     {
         "path2": "data/forbes-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.6877470355731226
+        "similarity": 2.6578073089700998
     }, 
     {
         "path2": "data/wellsfargo-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.8121911037891267
+        "similarity": 4.163052905464007
     }, 
     {
         "path2": "data/amex-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.2073863636363635
+        "similarity": 2.3230490018148817
     }, 
     {
         "path2": "data/twitch-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 6.91358024691358
+        "similarity": 21.511627906976745
     }, 
     {
         "path2": "data/eve-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.2835820895522385
+        "similarity": 4.597701149425287
     }, 
     {
         "path2": "data/weforum-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 5.927180355630822
+        "similarity": 4.107142857142857
     }, 
     {
         "path2": "data/gfycat-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.1791767554479415
+        "similarity": 7.8431372549019605
     }, 
     {
         "path2": "data/unity3d-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.368794326241135
+        "similarity": 1.6400911161731209
     }, 
     {
         "path2": "data/wikipedia-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.5015015015015014
+        "similarity": 3.304484657749803
     }, 
     {
         "path2": "data/ask-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.260869565217391
+        "similarity": 6.109979633401222
     }, 
     {
         "path2": "data/fedex-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.65625
+        "similarity": 4.4298605414273995
     }, 
     {
         "path2": "data/wordpress-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.3010546500479387
+        "similarity": 3.054989816700611
     }, 
     {
         "path2": "data/wapo-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.1739130434782608
+        "similarity": 3.3050468959356856
     }, 
     {
         "path2": "data/tripadvisor-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.0759355367385957
+        "similarity": 2.611111111111111
     }, 
     {
         "path2": "data/walmart-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.2271714922048997
+        "similarity": 3.8880248833592534
     }, 
     {
         "path2": "data/foxnews-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.3946280991735538
+        "similarity": 0.6822356336919444
     }, 
     {
         "path2": "data/flickr-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.2650056625141564
+        "similarity": 7.785888077858881
     }, 
     {
         "path2": "data/ebay-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.5915119363395225
+        "similarity": 1.7543859649122806
     }, 
     {
         "path2": "data/salesforce-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.381957773512476
+        "similarity": 2.358490566037736
     }, 
     {
         "path2": "data/etsy-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.1235955056179776
+        "similarity": 1.3146613318090883
     }, 
     {
         "path2": "data/cnet-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 0.9942004971002486
+        "similarity": 0.6799830004249894
     }, 
     {
         "path2": "data/oneplus-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 4.123711340206185
+        "similarity": 3.859141341051616
     }, 
     {
         "path2": "data/reddit-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.9255455712451863
+        "similarity": 4.008016032064128
     }, 
     {
         "path2": "data/warframe-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.706621556307395
+        "similarity": 3.6852589641434266
     }, 
     {
         "path2": "data/att-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.0710059171597637
+        "similarity": 5.731990704879938
     }, 
     {
         "path2": "data/nytimes-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.107266435986159
+        "similarity": 3.901734104046243
     }, 
     {
         "path2": "data/oscommerce-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 0.9150326797385622
+        "similarity": 3.9482641252552755
     }, 
     {
         "path2": "data/archlinux-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.9170506912442393
+        "similarity": 13.135068153655514
     }, 
     {
         "path2": "data/chase-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.488372093023256
+        "similarity": 4.755944931163955
     }, 
     {
         "path2": "data/joomla-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.787068004459309
+        "similarity": 3.0005770340450084
     }, 
     {
         "path2": "data/stackoverflow-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.0460358056265986
+        "similarity": 3.776978417266187
     }, 
     {
         "path2": "data/github-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.5525525525525525
+        "similarity": 5.350118017309206
     }, 
     {
         "path2": "data/bleacherreport-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.703940362087327
+        "similarity": 1.366742596810934
     }, 
     {
         "path2": "data/webmd-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.6200294550810017
+        "similarity": 6.4764841942945255
     }, 
     {
         "path2": "data/ups-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 7.687210072895957
+        "similarity": 1.2430939226519337
     }, 
     {
         "path2": "data/hulu-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 5.463182897862233
+        "similarity": 7.426376440460948
     }, 
     {
         "path2": "data/bizinsider-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.0578012844729883
+        "similarity": 3.789636504253674
     }, 
     {
         "path2": "data/macrumors-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 0.4048582995951417
+        "similarity": 2.7557698932139165
     }, 
     {
         "path2": "data/youtube-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 0.9337860780984719
+        "similarity": 2.8758169934640523
     }, 
     {
         "path2": "data/cnn-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.133640552995392
+        "similarity": 6.8359375
     }, 
     {
         "path2": "data/zillow-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 7.887323943661972
+        "similarity": 7.482993197278912
     }, 
     {
         "path2": "data/xda-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 3.753351206434316
+        "similarity": 3.780718336483932
     }, 
     {
         "path2": "data/minecraft-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 2.91363163371488
+        "similarity": 4.444444444444445
     }, 
     {
         "path2": "data/target-1.html", 
         "path1": "data/url-1.html", 
-        "similarity": 1.0084033613445378
+        "similarity": 0.70859167404783
     }
 ]

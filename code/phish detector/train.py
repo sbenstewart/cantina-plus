@@ -2,6 +2,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn import metrics
+import matplotlib.pyplot as plt
 
 import joblib
 
@@ -40,6 +41,22 @@ pred4=clf4.predict(features_test)
 print(classification_report(labels_test, pred4))
 print 'The accuracy is:', accuracy_score(labels_test, pred4)
 print metrics.confusion_matrix(labels_test, pred4)
+
+'''
+labels = ['phish', 'not phish']
+cm = metrics.confusion_matrix(labels_test, pred4)
+fig = plt.figure()
+ax = fig.add_subplot(111)
+cax = ax.matshow(cm)
+plt.title('Confusion matrix of the classifier')
+fig.colorbar(cax)
+ax.set_xticklabels([''] + labels)
+ax.set_yticklabels([''] + labels)
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.show()
+'''
+
 
 # sys.setrecursionlimit(9999999)
 joblib.dump(clf4, 'classifier/random_forest_temp.pkl', compress=9)
