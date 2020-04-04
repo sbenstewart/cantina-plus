@@ -42,7 +42,7 @@ print(classification_report(labels_test, pred4))
 print 'The accuracy is:', accuracy_score(labels_test, pred4)
 print metrics.confusion_matrix(labels_test, pred4)
 
-'''
+
 labels = ['phish', 'not phish']
 cm = metrics.confusion_matrix(labels_test, pred4)
 fig = plt.figure()
@@ -55,7 +55,6 @@ ax.set_yticklabels([''] + labels)
 plt.xlabel('Predicted')
 plt.ylabel('True')
 plt.show()
-'''
 
 
 # sys.setrecursionlimit(9999999)
