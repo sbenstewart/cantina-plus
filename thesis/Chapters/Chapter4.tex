@@ -1,26 +1,231 @@
 % Chapter 4
 
-\chapter{SYSTEM DESIGN} % All Chapter headings in ALL CAPS
+\chapter{DETAILED MODULE DESIGN} % All Chapter headings in ALL CAPS
+This chapter will explain in detail the modules and submodules that complete the functionality for this project.
 
-\section{Design Principles}
-\lipsum[1-2]
-\begin{table}
-\centering
-    \begin{tabular}{ | l | l | l | p{6cm} |}
-    \hline
-    Day & Min Temp & Max Temp & Summary \\ \hline
-    Monday & 11C & 22C & A clear day with lots of sunshine.  
-    However, the strong breeze will bring down the temperatures. \\ \hline
-    Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
-    across most of Scotland and Northern Ireland,
-    but rain reaching the far northwest. \\ \hline
-    Wednesday & 10C & 21C & Rain will still linger for the morning.
-    Conditions will improve by early afternoon and continue
-    throughout the evening. \\
-    \hline
-    \end{tabular}
-\caption{Pointless Table}
-\label{PT}
-\end{table}
-\lipsum[1-2]
+
+\section{MODULES}
+Our system has three modules that complete its functionality. They are as follows.
+
+\begin{enumerate}
+  \item Add on
+  \begin{enumerate}
+    \item Background script
+    \item Content script
+  \end{enumerate}
+  \item Background process
+  \begin{enumerate}
+    \item Dispatcher
+    \item Phish Detector
+    \item Target Identifier
+  \end{enumerate}
+  \item Web Browser
+  \begin{enumerate}
+    \item HTML content
+    \item Output UI
+  \end{enumerate}
+\end{enumerate}
+
+\section{ADD ON}
+An add on is required in the form of an extension because of the reasons that the frameworks provided by Javascript for tasks related to machine learning are still in its infant stages. And so the addon performs the two important tasks of getting the page contents from the browsers and also making changes to the elements in the web browser to convey the threat level for phishing.
+
+\subsection{BACKGROUND SCRIPT}
+The task to be done by this component is to get the list of redirection URL chains from the user's web browser, and publish it to the content script while also logging the links for reference purposes.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{For each page load redirect}\\
+\null\quad\quad\quad\textit{Add listener to that event}\\
+\null\quad\quad\quad\textit{Get the list of redirects from listener}\\
+\null\quad\quad\quad\textit{If page is fully loaded }\\
+\null\quad\quad\quad\quad\textit{Send the list of redirects to content script}\\
+\null\quad\quad\textit{Done}\\
+\null\quad\textit{End}\\
+
+The URL items that have to be sent by the background script are as follows.\\
+\null\quad\textit{url: pathItem.url,}\\
+\null\quad\textit{status: pathItem.statusLine,}\\
+\null\quad\textit{redirectType: pathItem.redirectType,}\\
+\null\quad\textit{redirectUrl: pathItem.redirectUrl,}\\
+\null\quad\textit{metaTimer: pathItem.metaTimer}\\
+
+\subsection{CONTENT SCRIPT}
+The task to be done by this component is to get the landing URL of the page and the contents of the page from the browser and also the URL redirection list from the background script and then combine those and send it to the background process which will have to do further computation.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{For each page load redirect}\\
+\null\quad\quad\quad\textit{If page is fully loaded}\\
+\null\quad\quad\quad\quad\textit{Get the URL from the tab}\\
+\null\quad\quad\quad\quad\textit{Get the HTML content from innerHTML tag}\\
+\null\quad\quad\quad\quad\textit{Get redirection list from background script}\\
+\null\quad\quad\quad\quad\textit{Send them to the background process}\\
+\null\quad\quad\textit{Done}\\
+\null\quad\textit{End}\\
+
+The main functionality of getting the URL and also loading the HTML content is done using the following snippets.\\
+\null\quad\textit{//Retrieve URL JS}\\
+\null\quad\textit{tablink = tab.url;}\\
+\null\quad\textit{//Retrieve Page content PHP}\\
+\null\quad\textit{$site=$\_POST['url'];}\\
+\null\quad\textit{$html = file\_get\_contents($site);}\\
+
+\section{BACKGROUND PROCESS}
+The background process gets the contents from the content script and identifies if the site is used for phishing or not. It has the following subcomponents which are discussed in detail.
+\begin{enumerate}
+    \item Dispatcher
+    \item Phish Detector
+    \item Target Identifier
+\end{enumerate}
+
+\subsection{DISPATCHER}
+The dispatcher is used for the performance enhancements it provides by using the whitelisted addresses that can be used without even having to run the model. It has direct control over the phish detector and target identifier.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{If page address is in whitelist}\\
+\null\quad\quad\quad\textit{Send the GREEN signal}\\
+\null\quad\quad\textit{Else}\\
+\null\quad\quad\quad\textit{Send content to phish detector}\\
+\null\quad\quad\quad\textit{Get results from phish detector}\\
+\null\quad\quad\quad\textit{If phish is FALSE}\\
+\null\quad\quad\quad\quad\textit{Send the GREEN signal}\\
+\null\quad\quad\quad\textit{Else}\\
+\null\quad\quad\quad\quad\quad\textit{Send the RED signal}\\
+\null\quad\quad\quad\quad\quad\textit{Send  content to target identifier}\\
+\null\quad\quad\quad\quad\quad\textit{If target is found}\\
+\null\quad\quad\quad\quad\quad\quad\textit{Publish target}\\
+\null\quad\quad\quad\quad\quad\textit{Else}\\
+\null\quad\quad\quad\quad\quad\quad\textit{No target matched}\\
+\null\quad\textit{End}\\
+
+\subsection{PHISH DETECTOR}
+The phish detector gets the content from the dispatcher and gives the result which is either the site is a phish or not. It is done by using a machine learning model.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{For each page URL}\\
+\null\quad\quad\quad\textit{Get the fuzzy set feature values for the URL}\\
+\null\quad\quad\quad\textit{Load the saved random forest model}\\
+\null\quad\quad\quad\textit{Publish the result}\\
+\null\quad\quad\textit{Done}\\
+\null\quad\textit{End}\\
+
+The features used are as follows,
+
+\begin{enumerate}
+  \item Have IP address
+  \item URL length
+  \item Shortening service
+  \item Having @ symbol
+  \item Double slash redirecting
+  \item Prefix suffix
+  \item Having sub domain
+  \item Domain registration length
+  \item Favicon
+  \item HTTPS token
+  \item Request URL
+  \item URL of anchor
+  \item Links in tags
+  \item Server form handler
+  \item Submitting to email
+  \item Abnormal URL
+  \item IFrame redirection
+  \item Age of domain
+  \item Web traffic
+  \item Google index
+  \item Statistical Reports
+\end{enumerate}
+
+The following is used to extract the features using the Fuzzy Rough Set Theory.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{Compute indiscernibility matrix M(A)}\\
+\null\quad\quad\textit{Reduce M using absorption laws}\\
+\null\quad\quad\textit{d - number of non-empty fields}\\
+\null\quad\quad\textit{Initialise all fields}\\
+\null\quad\quad\textit{For all fields}\\
+\null\quad\quad\quad\textit{Compute fields using formulas R=SUT}\\
+\null\quad\quad\textit{Done}\\
+\null\quad\textit{End}\\
+
+The model is a Random Forest Classifier which has the pseudocode as follows.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{For each record in dataset}\\
+\null\quad\quad\quad\textit{Get the fuzzy set feature values}\\
+\null\quad\quad\quad\textit{Create an arff file to save results}\\
+\null\quad\quad\textit{Done}\\
+\null\quad\quad\textit{Train the dataset with at least 7 splits as random forest}\\
+\null\quad\quad\textit{Save the model as pkl file}\\
+\null\quad\textit{End}\\
+
+\subsection{TARGET IDENTIFIER}
+Once the dispatcher gets the signal that a site is phishing, it can be useful to find which site is being used as a template so that the unsuspecting user is fooled. This is done by using the similarity of hashes between the phishing and target website. The SHA algorithm is as follows.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{Input is an array 8 items long where each item is 32 bits.}\\
+\null\quad\quad\textit{Calculate all the function boxes and store those values. }\\
+\null\quad\quad\textit{Store input, right shifted by 32 bits, into output. }\\
+\null\quad\quad\textit{Store the function boxes.}\\
+\null\quad\quad\textit{Store (Input H + Ch + ( (Wt+Kt) AND 2\^31 ) ) AND 2\^31 As mod1}\\
+\null\quad\quad\textit{Store (sum1 + mod1) AND 2\^31 as mod2}\\
+\null\quad\quad\textit{Store (d + mod2) AND 2\^31 into output E }\\
+\null\quad\quad\textit{Store (MA + mod2) AND 2\^31 as mod3}\\
+\null\quad\quad\textit{Store (sum0 + mod3) AND 2\^31 into output A}\\
+\null\quad\quad\textit{Output is an array 8 items long where each item is 32 bits.}\\
+\null\quad\textit{End}\\
+
+\section{WEB BROWSER}
+Though the above described components play major roles in this project, the one that the user will be able to view is this component. And so care has to be taken to make it look as professional as possible.
+
+\subsection{HTML CONTENT}
+The add on must be published as extensions for the browsers and so the UI of the components must be taken care of. And the tasks of the background scripts must run as helper tasks and not interfere with the main script, otherwise the UI of the extension will appear to be jittery.
+
+\subsection{OUTPUT UI}
+The two possible results for this project are that either the site is a phish or not. And if a site is not a phish no changes have to be made to notify the user. But if the site is found out to be a phish the changes made to the UI must meaningfully convey to the user that the site is a phish.\\
+\null\quad\textit{Begin}\\
+\null\quad\quad\textit{If site is phish}\\
+\null\quad\quad\quad\textit{Change icon to red}\\
+\null\quad\quad\quad\textit{Display warning message}\\
+\null\quad\quad\quad\textit{If site has target}\\
+\null\quad\quad\quad\quad\textit{Display target link}\\
+\null\quad\quad\quad\textit{Else}\\
+\null\quad\quad\quad\quad\textit{Display no target}\\
+\null\quad\quad\quad\textit{If site has target}\\
+\null\quad\quad\textit{Else}\\
+\null\quad\quad\quad\textit{Change icon to green}\\
+\null\quad\quad\quad\textit{Change icon to green}\\
+\null\quad\quad\textit{Display safe to proceed message}\\
+\null\quad\textit{End}\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
