@@ -1,29 +1,75 @@
 % Chapter 2
 \chapter{RELATED WORK} % Chapter Title in ALL CAPSacs
-\section{Acronymns}
-\lipsum[1]
-\begin{itemize}
-  \item The first item \acs{GSM}
-  \item The second item \acs{GSM}
-  \item The third\ldots \acs{GSM}
-\end{itemize}
-\subsection{Nested Enumerate}
-\lipsum[1-2]
-\begin{enumerate}
-  \item The first item
-  \begin{enumerate}
-    \item Nested item 1
-    \item Nested item 2
-  \end{enumerate}
-  \item The second item
-  \item The third etc \ldots
-\end{enumerate}
-\lipsum[2]
-\section{Itemize}
+This chapter would be a deep dive into the methods that have been implemented or at least served in the process of creating one to detect phishing locally in the client side machines.
 
-\begin{description}
-  \item[First] The first item
-  \item[Second] The second item
-  \item[Third] The third\ldots
-\end{description}
-\lipsum[2-3]
+\section{AUTOMATIC PHISHING CLASSIFICATION}
+The work by Colin Whittaker, Brian Ryner and Marria Nazif for Google provided the base benchmark for most of the future works and so would be better if we have a better understanding of what they did. For creating the base dataset required to train a machine learning model, they used the links from the Gmail spam filters and also those that were submitted by other users. The features used are the URL, the contents of the HTML page and also where the page is hosted. These features are then used by the model which is a logistic regression classifier to find if the site is used for phishing or not.
+
+The training for the model is done offline using the blacklist for the last three months. This has to be done to account for the temporal resilience required from such models. This method of using a published blacklist introduces another risk, which is the risk of feedback loops, that pass down the same error to the classifier. This is because the list might have some false recognitions for the web pages that are submitted manually by other users. This means that the whole dataset has to be manually checked and such wrong classifications be removed. Though the percentage of such instances are very low the fact that this list has to be verified manually really is a black mark for this method. Though they achieve an impressive false positive rate of under 0.1\%. Even though we consider that the black list is perfect, the fact that the system uses a black list to work means that there will be an inevitable time lag between the time the phishing site is up and that the page is detected to be used for phishing.
+
+This time lag has to be reduced by decreasing the time taken to develop the model and thereby help the users to find even the most recent phishing pages. In spite of the shortcomings that this work had, the features for the model are
+
+\begin{enumerate}
+    \item The URL of the page
+    \item The HTML page contents
+    \item The host server details
+  \end{enumerate}
+
+\section{CANTINA}
+This work was further taken up by Guang Xiang, Jason Hong, Carolyn P. Rose and  Lorrie Cranor in their CANTINA+ which provides a feature-rich machine learning framework for detecting phishing web sites. It is split into two phases. In the first phase, the task is to find the feature values for all the records in the database. Once this is done, the second phase is to find if the site is used for phishing or not. The above feature is limited to 15 features which are used in both the phases.
+
+This method for performance optimisation and to reduce false positives uses a hash based page removal model in which the similar looking components of the website are removed, making it easier to find the differences. Once, the similar components are removed, the presence of a login form in the HTML content is searched for. If the content matched that of the login page, then the pre-trained model is used.
+
+Since the creation of the model requires an updated list of phishing sites, the list provided by PhishTank’s verified blacklist is being used. And as far as the time required to find the similar looking sites is concerned, it is greatly reduced by using the SHA 1 hashing algorithm. It is noted that though this hashing algorithm can be easily broken, it is being used for the efficiency and the  high accuracy with which it finds out the phishing sites.
+
+Though this model provides a faster way of finding those sites, it definitely comes with its own set of drawbacks. The first one being that SHA 1 algorithm that defeats the whole purpose of the malicious actor never being able to circumvent the system.
+
+Though this system has it’s disadvantages, the features are a few things that can be taken from them. They include the embedded domain, IP address, number of dots in URL, suspicious URL, number of sensitive words in URL, out of position top level domains (TLD), bad forms, bad action fields, non-matching URLs, out of position brand names, the age of domain, page in top search results, page rank and page results while searching for copyright company name and host name. Many models were used and it was found out that the Bayesian models and the Random Forests performed remarkably well.
+
+\section{AUTO UPDATED WHITELIST}
+Ankit Kumar Jain and B. B. Gupta provided another approach to protect against phishing attacks at the client side using auto-updated white-list. The accurate and fast detection of phishing sites in a real time environment is paramount. The time constraints of the above methods are because they use a visual similarity based approach. This can be reduced by using a heuristic based  approach which depends mainly on the feature set, the classifier and the training data. 
+
+The hypothesis is based on the fact that though the phishing pages look similar to the corresponding real website, they do differ steeply in the functionality they offer. But almost all but the critical phishing functionality redirects to the corresponding real website.
+
+To provide such functionality, a whitelist is used in this method. The whitelist contains the domain name and IP address as the parameters. The whitelist provides for the faster running time and to reduce the false positive rate. The working of the whitelist is as follows.
+
+First when the user has never visited any site, the whitelist has no records. But when the user does so and visits a site, the whitelist is checked if it has the domain along with the IP address. If the record is present, the page is said to be a safe site. Else, the second component which is almost the same as that of the previous models kicks in to find if the requested site is a phishing site or not.
+
+Thus, because of the whitelist the model has the advantage of being language independent and is capable of finding the embedded components in the phishing website that can cause a DDOS attack.
+
+The model was developed further into a usable application down the lane. And this paper provided the following findings. The model provided the base for using auto-updated whitelists to speed up the process of finding out if the page is used for phishing or not. This is highly advantageous because most of the sites that a person accesses will not be a phishing page, significantly reducing the average time taken to process the site, as most of the websites visited by the end user will be safe sites and would not be ones used for phishing and become a threat. 
+
+\section{OFF-THE-HOOK}
+The work by Samuel Marchal, Giovanni Armano, Tommi Grondahl, Kalle Saari, Nidhi Singh, and N. Asokan implemented the client-side phishing prevention application named Off-the-hook.
+
+The main improvements that they provided were better privacy, realtime protection, resilience to dynamic phishing and effective warnings. It also has an emphasis on making a software application that can be easily used by the general public to protect themselves against phishing.
+
+A brand independent, evolution resistant model to detect the phishing pages has been developed. This means that sites of all domains will be identified correctly and the temporal resistance maintained. This is that even when the malicious actor knows how the system works, and tries to figure out a work around, the system learns and adapts itself to the changing conditions.
+
+The main upside for this project is the cross platform capabilities that it intends to provide and the user base that it can have based on the ease of use that the application provides.
+
+The downside is as follows. All the functionality required cannot be implemented inside the browser using Javascript alone. As a result of this, machine dependence creeps into the equation. This in the long run will be a major block to the ease of use that the application says will provide.
+
+The other main disadvantage is that the model does not take into account the static IP addresses on which the page might be hosted. This model relies on the assumption that such IP addresses that host the phishing pages will be blacklisted and removed by the host provider.
+
+Thus based on all the above mentioned related works, we will be redeveloping the application Off-the-hook to follow the basic networking and socket connections so that the applications both running inside the browser and within the operating system of the user will remain compatible.
+
+\section{FUZZY ROUGH SET FEATURE SELECTION}
+The conference paper by Mahdieh Zabihimayvan and Derek Doran on Fuzzy Rough Set Feature Selection to Enhance Phishing Attack Detection gives us the ways of choosing the best possible features for training the model over. It uses the Fuzzy Rough Set (RFS) theory to select the most effective features and finds out that the Random Forest method gave the maximum possible F-score.
+
+\section{COMPARISON}
+Table ~\ref{tab:ct} gives a comprehensive list of all the papers with their publications and problems solved along with the limitations that these solutions have.
+
+\begin{table}[h!]
+\centering
+    \begin{tabular}{ |m{3cm}|m{3cm}|m{4cm}|m{4cm}| }
+    \hline
+    Paper & Publication & Solved & Limitations \\ \hline
+    Large-Scale Automatic Classification of Phishing Pages & Proc. Netw. Distrib. Syst. Security Symp., 2010 & Machine learning models can be used with reliable accuracy. & Needs blacklist for updating. \\ \hline
+    CANTINA: A feature-rich machine learning framework for detecting phishing Web sites & ACM Trans. Inf. Syst. Secur., 2011 & SHA1 based similarity check for similar looking sites. & SHA1 could be manipulated. \\ \hline
+    A novel approach to protect against phishing attacks at client side using auto-updated white-list & EURASIP J. Inf. Secur., vol. 2016, no. 1, Dec. 2016 & Auto-updated whitelist for faster detection of sites on average. & Not temporally resilient. \\ \hline
+    Fuzzy Rough Set Feature Selection to Enhance Phishing Attack Detection & IEEE International Conference on Fuzzy Systems, June 2019 & Feature selection. & Not a user oriented application. \\ \hline
+    \end{tabular}
+\caption{Comparison Table}
+\label{tab:ct}
+\end{table}
