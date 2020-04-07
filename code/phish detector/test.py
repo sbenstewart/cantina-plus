@@ -9,7 +9,6 @@ import subprocess
 
 from features_extraction import LOCALHOST_PATH, DIRECTORY_NAME
 
-@profile
 def get_prediction_from_url(test_url):
     features_test = features_extraction.main(test_url)
     features_test = np.array(features_test).reshape((1, -1))

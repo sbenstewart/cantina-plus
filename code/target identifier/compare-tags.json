@@ -1,437 +1,437 @@
 [
     {
-        "path1": "data/url-1.html",
-        "path2": "data/worldoftanks-1.html",
+        "path2": "data/worldoftanks-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 0.6756756756756757
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/yahoo-1.html",
+        "path2": "data/yahoo-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.9281314168377826
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/irs-1.html",
+        "path2": "data/irs-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.515745692216281
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/pandora-1.html",
+        "path2": "data/pandora-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 13.029315960912053
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/linkedin-1.html",
+        "path2": "data/linkedin-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 6.508875739644971
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/outbrain-1.html",
+        "path2": "data/outbrain-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 5.837173579109063
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/twitter-1.html",
+        "path2": "data/twitter-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.7339642481598316
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/groupon-1.html",
+        "path2": "data/groupon-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.7918781725888326
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/microsoft-1.html",
+        "path2": "data/microsoft-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.679802955665025
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/msn-1.html",
+        "path2": "data/msn-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.381846635367762
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/somethingawful-1.html",
+        "path2": "data/somethingawful-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.597122302158273
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/apple-1.html",
+        "path2": "data/apple-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.786709539121115
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/bing-1.html",
+        "path2": "data/bing-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 7.782101167315175
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/espn-1.html",
+        "path2": "data/espn-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.610169491525424
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/wikia-1.html",
+        "path2": "data/wikia-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.2916666666666665
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/imgur-1.html",
+        "path2": "data/imgur-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 10.778443113772456
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/plex-1.html",
+        "path2": "data/plex-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 5.484460694698354
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/vimeo-1.html",
+        "path2": "data/vimeo-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 11.699164345403899
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/ubuntu-1.html",
+        "path2": "data/ubuntu-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 7.134071340713407
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/google-1.html",
+        "path2": "data/google-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 13.586956521739129
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/aol-1.html",
+        "path2": "data/aol-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.0580668871738332
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/usatoday-1.html",
+        "path2": "data/usatoday-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.576341127922971
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/yelp-1.html",
+        "path2": "data/yelp-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.430379746835443
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/mysql-1.html",
+        "path2": "data/mysql-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 6.803685329553508
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/comcast-1.html",
+        "path2": "data/comcast-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 7.803468208092486
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/buzzfeed-1.html",
+        "path2": "data/buzzfeed-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.17296827466319
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/cbssports-1.html",
+        "path2": "data/cbssports-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.688654353562005
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/aws-1.html",
+        "path2": "data/aws-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.342281879194631
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/gentoo-1.html",
+        "path2": "data/gentoo-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.8207282913165268
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/verizon-1.html",
+        "path2": "data/verizon-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 23.49570200573066
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/xbox-1.html",
+        "path2": "data/xbox-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 5.286343612334802
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/linuxmint-1.html",
+        "path2": "data/linuxmint-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.705882352941177
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/reference-1.html",
+        "path2": "data/reference-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 17.03056768558952
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/weatherchan-1.html",
+        "path2": "data/weatherchan-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 6.343283582089552
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/about-1.html",
+        "path2": "data/about-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 6.158833063209076
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/cnetforums-1.html",
+        "path2": "data/cnetforums-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.478352692713833
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/tumblr-1.html",
+        "path2": "data/tumblr-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.587443946188341
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/darpa-1.html",
+        "path2": "data/darpa-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 5.695509309967141
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/answers-1.html",
+        "path2": "data/answers-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.995836802664446
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/imdb-1.html",
+        "path2": "data/imdb-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.6666666666666667
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/slickdeal-1.html",
+        "path2": "data/slickdeal-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.8610061064262866
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/baidu-1.html",
+        "path2": "data/baidu-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 17.391304347826086
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/indeed-1.html",
+        "path2": "data/indeed-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 9.689922480620156
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/forbes-1.html",
+        "path2": "data/forbes-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.6578073089700998
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/wellsfargo-1.html",
+        "path2": "data/wellsfargo-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.163052905464007
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/amex-1.html",
+        "path2": "data/amex-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.3230490018148817
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/twitch-1.html",
+        "path2": "data/twitch-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 21.511627906976745
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/eve-1.html",
+        "path2": "data/eve-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.597701149425287
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/weforum-1.html",
+        "path2": "data/weforum-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.107142857142857
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/gfycat-1.html",
+        "path2": "data/gfycat-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 7.8431372549019605
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/unity3d-1.html",
+        "path2": "data/unity3d-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.6400911161731209
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/wikipedia-1.html",
+        "path2": "data/wikipedia-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.304484657749803
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/ask-1.html",
+        "path2": "data/ask-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 6.109979633401222
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/fedex-1.html",
+        "path2": "data/fedex-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.4298605414273995
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/wordpress-1.html",
+        "path2": "data/wordpress-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.054989816700611
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/wapo-1.html",
+        "path2": "data/wapo-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.3050468959356856
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/tripadvisor-1.html",
+        "path2": "data/tripadvisor-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.611111111111111
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/walmart-1.html",
+        "path2": "data/walmart-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.8880248833592534
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/foxnews-1.html",
+        "path2": "data/foxnews-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 0.6822356336919444
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/flickr-1.html",
+        "path2": "data/flickr-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 7.785888077858881
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/ebay-1.html",
+        "path2": "data/ebay-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.7543859649122806
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/salesforce-1.html",
+        "path2": "data/salesforce-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.358490566037736
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/etsy-1.html",
+        "path2": "data/etsy-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.3146613318090883
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/cnet-1.html",
+        "path2": "data/cnet-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 0.6799830004249894
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/oneplus-1.html",
+        "path2": "data/oneplus-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.859141341051616
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/reddit-1.html",
+        "path2": "data/reddit-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.008016032064128
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/warframe-1.html",
+        "path2": "data/warframe-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.6852589641434266
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/att-1.html",
+        "path2": "data/att-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 5.731990704879938
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/nytimes-1.html",
+        "path2": "data/nytimes-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.901734104046243
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/oscommerce-1.html",
+        "path2": "data/oscommerce-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.9482641252552755
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/archlinux-1.html",
+        "path2": "data/archlinux-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 13.135068153655514
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/chase-1.html",
+        "path2": "data/chase-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.755944931163955
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/joomla-1.html",
+        "path2": "data/joomla-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.0005770340450084
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/stackoverflow-1.html",
+        "path2": "data/stackoverflow-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.776978417266187
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/github-1.html",
+        "path2": "data/github-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 5.350118017309206
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/bleacherreport-1.html",
+        "path2": "data/bleacherreport-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.366742596810934
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/webmd-1.html",
+        "path2": "data/webmd-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 6.4764841942945255
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/ups-1.html",
+        "path2": "data/ups-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 1.2430939226519337
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/hulu-1.html",
+        "path2": "data/hulu-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 7.426376440460948
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/bizinsider-1.html",
+        "path2": "data/bizinsider-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.789636504253674
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/macrumors-1.html",
+        "path2": "data/macrumors-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.7557698932139165
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/youtube-1.html",
+        "path2": "data/youtube-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 2.8758169934640523
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/cnn-1.html",
+        "path2": "data/cnn-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 6.8359375
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/zillow-1.html",
+        "path2": "data/zillow-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 7.482993197278912
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/xda-1.html",
+        "path2": "data/xda-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 3.780718336483932
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/minecraft-1.html",
+        "path2": "data/minecraft-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 4.444444444444445
-    },
+    }, 
     {
-        "path1": "data/url-1.html",
-        "path2": "data/target-1.html",
+        "path2": "data/target-1.html", 
+        "path1": "data/url-1.html", 
         "similarity": 0.70859167404783
     }
 ]

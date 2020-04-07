@@ -4,4 +4,3 @@ https://www.netlify.com/
 https://www.youtube.com/watch?v=vHNe8tnAGq0
 https://www.google.com/
 https://www.annauniv.edu/
-http://cs.annauniv.edu/
