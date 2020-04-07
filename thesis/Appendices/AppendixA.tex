@@ -1,80 +1,48 @@
 % Appendix A
 
-\chapter{MESSAGE PASSING INTERFACE}
-MPI is a standard that allows computers to perform distributed computation by communicating with each other. MPI is mainly used in large clusters and super-computers to solve computationally challenging tasks. MPI provides a large collection of functions that can perform operations like message send, receive, broadcast etc. From the user's point of view, these functions are independent of the underlying communication mechanism. This level of independence makes MPI ideal for large clusters where the physical communication medium is different between different nodes. 
+\chapter{OUTPUT UI}
+The Output UI is the most important component that provides the interface between this system and the user. And so, all the possible outputs of this module needs explaining. 
 
-\section{ MPI Working Mechanism }
-    The executable of the user's program is copied to all the participating nodes. To connect all the nodes for computation, an MPI daemon is invoked individually in each of them. This daemon establishes a logical ring of nodes called the communicator. All communications happen within this ring. When the executable is run on one node(master node), the daemon takes care of automatically invoking the executable on other nodes also. Each process is given an identification number, called rank. The user program is written in such a way that based on the rank different sections of the code get executed. By default, a communicator called COMM\_WORLD is created. All participating nodes are a member of this communicator. MPI provides functions to create new communicators and explicitly nodes to be the members of this communicator. User programs use MPI's functions to send/receive data between nodes and perform computations using the data. When all computations are complete, the data is generally collected by the master program and the output is displayed.
+\section{SAFE WEBSITE}
+As most of the sites that will be visited by a user will be safe, unless the search engine that the user uses has been compromised. The above holds good statistically. And, in the Figure  ~\ref{fig:ahtmlc}, the Output UI for the official university website is shown.
 
-\section{ MPI Operations}
-    MPI standard defines a lot of functions that help the processes to communicate. Some of the important functions are outlined here.
-\subsection{Send/Receive}
-    MPI provides functions to send and receive data between nodes. These functions take the receiver's rank and the actual data as their parameters. They also take an additional parameter called the tag. A tag uniquely identifies a message. A message sent with a tag is matched with a receive call that expects the same tag. There are also facilities for receive operations to receive messages with any tag. The prototype of these functions is given below.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.2]{Figures/image2.png}
+\caption{SAFE Website}
+\label{fig:ahtmlc}
+\end{figure}
 
-\begin{verbatim}
-Blocking Send
-int MPI_Send( void *buf, int count, MPI_Datatype datatype,
-              int dest, int tag, MPI_Comm comm ) 
+\section{PHISHING WEBSITE}
+This type of websites make the smallest part of websites that the user visits. There are multiple different outputs possible for this scenario, which will be discussed in detail.
 
-Blocking Receive
-int MPI_Recv( void *buf, int count, MPI_Datatype datatype,
-              int source, int tag, MPI_Comm comm, 
-                            MPI_Status *status )
-              
-\end{verbatim}
-    
-\subsection{Non-Blocking Calls}
-    The basic MPI functions are all blocking. They block until the operation intended in the function completes. MPI also provides non blocking variants of these functions. For example, executing a non blocking receive will return immediately without the actual data. MPI provides a function to test if the actual call to this receive completed. If this function returns a true then the function is guaranteed to have been completed. The prototype of these functions is given below.
+\subsection{CORRECT PHISH DETECTION AND CORRECT TARGET IDENTIFICATION}
+The phish detector finds the phish correctly, and the target detector which displays the most closely related site is the same website that the phish is based on. This is shown in the Figure ~\ref{fig:cc}, where the phish website impersonates Twitter, which both the phish detector and target identifier find correctly.
 
-\begin{verbatim}
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.2]{Figures/image17.png}
+\caption{Correct Phish Detection and Correct Target Identification}
+\label{fig:cc}
+\end{figure}
 
-Non Blocking Send
-int MPI_Isend
-      ( void *buf, int count, MPI_Datatype datatype, int dest, 
-       int tag,MPI_Comm comm, MPI_Request *request )
+\subsection{CORRECT PHISH DETECTION AND INCORRECT TARGET IDENTIFICATION}
+The phish detector finds the phish correctly, but the target detector which displays the most closely related site is not the same website that the phish is based on. This is shown in the Figure ~\ref{fig:ci}, where the phish website impersonates FaceBook, but the target identifier could not classify it.
 
-Non Blocking Receive
-int MPI_Irecv
-      (void *buf, int count, MPI_Datatype datatype, int source, 
-               int tag, MPI_Comm comm, MPI_Request *request )
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.2]{Figures/image18.png}
+\caption{Correct Phish Detection and Incorrect Target Identification}
+\label{fig:ci}
+\end{figure}
 
+\subsection{INCORRECT PHISH DETECTION}
+The phish detector finds the phish incorrectly. This is a problem, and so the model has been skewed so that the incorrect classifications will be only where the safe websites are incorrectly classified as phish. Figure ~\ref{fig:i} shows the instance where the phish detector incorrectly classifies the personal website of S.Ben Stewart who worked on this system as a phish. The future work involves rooting out cases like this.
 
- Tests for the completion of a send or receive               
-int MPI_Test ( 
-        MPI_Request  *request,
-        int          *flag,
-        MPI_Status   *status) 
-                      
-\end{verbatim}
-    
-    
-\subsection{Collectives}
-    In addition to the point to point communication functions, MPI provides functions to perform collective operations. Collectives are operations that are performed on all the nodes within a communicator. For example, a broadcast function that broadcasts a message to all the nodes within a communicator is a collective operation. There are other operations like scatter, gather, reduce etc. In order to provide optimal performance, these collectives are implemented using various algorithms for different size of the message and underlying channel. The prototype of some of these functions is given below.
+\begin{figure}[htp]
+\centering
+\includegraphics[scale=0.5]{Figures/image19.png}
+\caption{Correct Phish Detection and Incorrect Target Identification}
+\label{fig:i}
+\end{figure}
 
-\begin{verbatim}
-Broadcast
-
-    MPI_Bcast(void *buffer, int count, MPI_Datatype datatype,
-	    int root, MPI_Comm comm);
-
-Scatter
-
-    MPI_Scatter(void *sndbuf, int sndcnt, MPI_Datatype sndtype,
-	    void *rcvbuf, int rcvcnt, MPI_Datatype rcvtype,
-	    int root, MPI_Comm comm);
-
-Reduce
-
-    MPI_Reduce(void *sndbuf, void *rcvbuf, int count,
-	    MPI_Datatype datatype, MPI_Op op,
-	    int root, MPI_Comm comm);
-
-Gather
-
-    MPI_Gather(void *sndbuf, int sndcnt, MPI_Datatype sndtype,
-	    void *rcvbuf, int rcvcnt, MPI_Datatype rcvtype,
-	    int root, MPI_Comm comm);
-
-\end{verbatim}    
-\section{MPI Profiling Environment}
-    Since MPI is a distributed application, traditional profiling ways are not efficient here. MPI provides its own profiling mechanism called MPE. MPE allows the collection of trace of every function called made by the user program. This trace is recorded per process and combined into a single file when the application terminates. The trace file is written in CLOG2 format. To enable tracing, the user program is linked with MPE library. In the MPE library all MPI calls are reimplemented. Thus whenever a user program makes an MPI call, its definition within the MPE library is executed. This function will record necessary details and call the actual MPI implementation of the function. 
