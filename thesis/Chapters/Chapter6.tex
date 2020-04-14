@@ -1,13 +1,13 @@
 % Chapter 6
 
 \chapter{EVALUATION METRICS} % Write in your own chapter title
-This application must be evaluated  for the following performance metrics, which become important as this is meant for users who will never need to know about computer programming. The metrics used here are as follows.
+Off-the-hook-plus must be evaluated  for the following performance metrics, which become important as this is meant for users who will never need to know about computer programming. The metrics used here are as follows.
 
 \begin{enumerate}
     \item Phish detection accuracy
     \item Target detection ratio
     \item Memory usage profiling
-    \item Addon rendering time
+    \item Add-on rendering time
     \item Temporal resilience accuracy
 \end{enumerate}
 
@@ -58,10 +58,10 @@ The Figure ~\ref{fig:bpmu} gives the average memory usage for the dispatcher alo
 \label{fig:amu}
 \end{figure}
 
-The Figure ~\ref{fig:amu} gives the average memory usage for the add on which includes both the content script and the background script, which is 1.9MB. This is a very reasonable memory requirement for the addon. Thus in total, the application requires 111.9MB on average.
+The Figure ~\ref{fig:amu} gives the average memory usage for the add on which includes both the content script and the background script, which is 1.9MB. This is a very reasonable memory requirement for the add-on. Thus in total, the application requires 111.9MB on average.
 
-\section{ADDON RENDERING TIME}
-Since the addon has a background component which has to collect the data from multiple tabs that could be running simultaneously, the addon must be tested to check if it is stable and does not take time to render and thereby blink.\\
+\section{ADD-ON RENDERING TIME}
+Since the add-on has a background component which has to collect the data from multiple tabs that could be running simultaneously, the add-on must be tested to check if it is stable and does not take time to render and thereby blink.\\
 \null\quad\textit{Rendering Time = End time - Start time}\\
 
 \begin{figure}[htp]

@@ -20,7 +20,7 @@ This work was further taken up by Guang Xiang, Jason Hong, Carolyn P. Rose and  
 
 This method for performance optimisation and to reduce false positives uses a hash based page removal model in which the similar looking components of the website are removed, making it easier to find the differences. Once, the similar components are removed, the presence of a login form in the HTML content is searched for. If the content matched that of the login page, then the pre-trained model is used.
 
-Since the creation of the model requires an updated list of phishing sites, the list provided by PhishTank’s verified blacklist is being used. And as far as the time required to find the similar looking sites is concerned, it is greatly reduced by using the SHA 1 hashing algorithm. It is noted that though this hashing algorithm can be easily broken, it is being used for the efficiency and the  high accuracy with which it finds out the phishing sites.
+Since the creation of the model requires an updated list of phishing sites, the list provided by PhishTank’s verified blacklist \cite{pt} is being used. And as far as the time required to find the similar looking sites is concerned, it is greatly reduced by using the SHA 1 hashing algorithm. It is noted that though this hashing algorithm can be easily broken, it is being used for the efficiency and the  high accuracy with which it finds out the phishing sites.
 
 Though this model provides a faster way of finding those sites, it definitely comes with its own set of drawbacks. The first one being that SHA 1 algorithm that defeats the whole purpose of the malicious actor never being able to circumvent the system.
 
@@ -56,6 +56,9 @@ Thus based on all the above mentioned related works, we will be redeveloping the
 
 \section{FUZZY ROUGH SET FEATURE SELECTION}
 The conference paper \cite{zabihimayvan} by Mahdieh Zabihimayvan and Derek Doran on Fuzzy Rough Set Feature Selection to Enhance Phishing Attack Detection gives us the ways of choosing the best possible features for training the model over. It uses the Fuzzy Rough Set (RFS) theory to select the most effective features and finds out that the Random Forest method gave the maximum possible F-score.
+
+\section{ADDITIONAL WORK}
+We will be implementing Off-the-hook-plus using programming languages that are designed with support for cross platforms. The Google index and web traffic will be used as additional features to increase the temporal resiliency. And to reduce the memory footprint, the required features will be selected using RFS theory. The target website will also be identified by using the SHA based similarity scores. The addon will also be made to be as lightweight as possible.
 
 \section{COMPARISON}
 Table ~\ref{tab:ct} gives a comprehensive list of all the papers with their publications and problems solved along with the limitations that these solutions have.

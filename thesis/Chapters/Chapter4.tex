@@ -1,14 +1,14 @@
 % Chapter 4
 
 \chapter{DETAILED MODULE DESIGN} % All Chapter headings in ALL CAPS
-This chapter will explain in detail the modules and submodules that complete the functionality for this project.
+This chapter will explain in detail the modules and submodules that complete the functionality of Off-the-hook-plus.
 
 
 \section{MODULES}
-Our system has three modules that complete its functionality. They are as follows.
+Off-the-hook-plus has three modules that complete its functionality. They are as follows.
 
 \begin{enumerate}
-  \item Add on
+  \item Add-on
   \begin{enumerate}
     \item Background script
     \item Content script
@@ -26,8 +26,8 @@ Our system has three modules that complete its functionality. They are as follow
   \end{enumerate}
 \end{enumerate}
 
-\section{ADD ON}
-An add on is required in the form of an extension because of the reasons that the frameworks provided by Javascript for tasks related to machine learning are still in its infant stages. And so the addon performs the two important tasks of getting the page contents from the browsers and also making changes to the elements in the web browser to convey the threat level for phishing.
+\section{ADD-ON}
+An add-on is required in the form of an extension because of the reasons that the frameworks provided by Javascript for tasks related to machine learning are still in its infant stages\cite{tfjs}. And so the add-on performs the two important tasks of getting the page contents from the browsers and also making changes to the elements in the web browser to convey the threat level for phishing.
 
 \subsection{BACKGROUND SCRIPT}
 The task to be done by this component is to get the list of redirection URL chains from the user's web browser, and publish it to the content script while also logging the links for reference purposes.\\
@@ -122,7 +122,7 @@ The features used are as follows,
   \item Server form handler
   \item Submitting to email
   \item Abnormal URL
-  \item IFrame redirection
+  \item iFrame redirection
   \item Age of domain
   \item Web traffic
   \item Google index
@@ -166,13 +166,13 @@ Once the dispatcher gets the signal that a site is phishing, it can be useful to
 \null\quad\textit{End}\\
 
 \section{WEB BROWSER}
-Though the above described components play major roles in this project, the one that the user will be able to view is this component. And so care has to be taken to make it look as professional as possible.
+Though the above described components play major roles in Off-the-hook-plus, the one that the user will be able to view is this component. And so care has to be taken to make it look as professional as possible.
 
 \subsection{HTML CONTENT}
 The add on must be published as extensions for the browsers and so the UI of the components must be taken care of. And the tasks of the background scripts must run as helper tasks and not interfere with the main script, otherwise the UI of the extension will appear to be jittery.
 
 \subsection{OUTPUT UI}
-The two possible results for this project are that either the site is a phish or not. And if a site is not a phish no changes have to be made to notify the user. But if the site is found out to be a phish the changes made to the UI must meaningfully convey to the user that the site is a phish.\\
+The two possible results for Off-the-hook-plus are that either the site is a phish or not. And if a site is not a phish no changes have to be made to notify the user. But if the site is found out to be a phish the changes made to the UI must meaningfully convey to the user that the site is a phish.\\
 \null\quad\textit{Begin}\\
 \null\quad\quad\textit{If site is phish}\\
 \null\quad\quad\quad\textit{Change icon to red}\\
@@ -187,45 +187,3 @@ The two possible results for this project are that either the site is a phish or
 \null\quad\quad\quad\textit{Change icon to green}\\
 \null\quad\quad\textit{Display safe to proceed message}\\
 \null\quad\textit{End}\\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

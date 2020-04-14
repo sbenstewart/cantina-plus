@@ -1,13 +1,13 @@
 % Chapter 5
 
 \chapter{IMPLEMENTATION} % Write in your own chapter title
-This chapter will discuss in detail how this project was implemented along with the key results and snapshots for better understanding.
+This chapter will discuss in detail how Off-the-hook-plus is implemented along with the key results and snapshots for better understanding.
 
-\section{ADD ON}
-The addon has the following components that were implemented using javascript and php as a Google Chrome extension.
+\section{ADD-ON}
+The add-on has the following components that were implemented using javascript and php as a Google Chrome extension.
 
 \subsection{CONTENT SCRIPT}
-This component takes the input which is the URL of the page and it’s contents and sends it to the background process along with the redirection URL from the background script. A design of this component is required as the Chrome Extension cannot get the tab HTML content in the background and so a script in php is used to get the content of the URL from the Javascript code segment. Figure ~\ref{fig:contentscript} shows the content script.\\
+This component takes the input which is the URL of the page and it’s contents and sends it to the background process along with the redirection URL from the background script. A design of this component is required as the Chrome Extension cannot get the tab HTML content in the background and so a script in PHP is used to get the content of the URL from the Javascript code segment. Figure ~\ref{fig:contentscript} shows the content script.\\
 \null\quad\textit{tablink = tab.url;}\\
 \null\quad\textit{\$html = file\_get\_contents(\$site);}\\
 
@@ -19,7 +19,7 @@ This component takes the input which is the URL of the page and it’s contents 
 \end{figure}
 
 \subsection{BACKGROUND SCRIPT}
-This script is based on the open sourced code on GitHub that demos how to get the background URL redirects of the current tab. It handles multiple types of redirects and also their security levels based on the URL redirects. This component finally returns the list of path components that the page had traversed through. Figure ~\ref{fig:bgscript} shows the background script contents. It has the path items, which are,
+This script is based on the open sourced code on GitHub\cite{ccampbell} that demos how to get the background URL redirects of the current tab. It handles multiple types of redirects and also their security levels based on the URL redirects. This component finally returns the list of path components that the page had traversed through. Figure ~\ref{fig:bgscript} shows the background script contents. It has the path items, which are,
 
 
 \begin{enumerate}
@@ -37,10 +37,10 @@ This script is based on the open sourced code on GitHub that demos how to get th
 \end{figure}
 
 \section{BACKGROUND PROCESS}
-This component receives the data from the addon and orchestrates the decision making using the dispatcher.
+This component receives the data from the add-on and orchestrates the decision making using the dispatcher.
 
 \subsection{PHISH DETECTOR}
-The dataset used for this project was scraped from PhishTank and has the records for 23827 such phishing sites with 30 features for each one of them. As a model using all features will take more time to execute, the most important features have to be extracted.
+The dataset used for this project was scraped from PhishTank\cite{pt} and has the records for 23827 such phishing sites with 30 features for each one of them. As a model using all features will take more time to execute, the most important features have to be extracted.
 
 The phish detector is a random forest model trained using the features derived from the Fuzzy Rough Set Theory for feature selection. A few roadblocks faced while developing this model were that the feature selection kit required the data set to be as integers.
 
@@ -83,7 +83,7 @@ The target identifier uses the following code to find the similarity between two
 \null\quad\textit{diff.set\_seq1(tags1)}\\
 \null\quad\textit{ diff.set\_seq2(tags2)}\\
 
-The dispatcher once confirms that the site is a phish from the phish detector and then writes the url into the single-sites.json file. The url is taken from there and scraped along with the html content and is then compared using the above method.\\
+The dispatcher once it confirms that the site is a phish from the phish detector and then writes the url into the single-sites.json file. The url is taken from there and scraped along with the html content and is then compared using the above method.\\
 \null\quad\textit{params['url'] = url}\\
 \null\quad\textit{response = requests.get(url, headers=headers, params=params)}\\
 
@@ -113,7 +113,7 @@ The dispatcher is called using the php script of the content script using the fo
 \null\quad\textit{\$decision=exec("python test.py \$site 2$>$\&1 ");}\\
 \null\quad\textit{echo \$decision;}\\
 
-The command is run in the default shell of the machine and the output is passed to the Output UI of the addon that reflects the same in the web browser.
+The command is run in the default shell of the machine and the output is passed to the Output UI of the add-on that reflects the same in the web browser.
 
 \section{WEB BROWSER}
 This component is what takes care of how and what is displayed to the end user when the application is being used.
