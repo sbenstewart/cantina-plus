@@ -30,4 +30,22 @@ The most common ways to phish are to send emails to those who are related. What 
 \section{PHISHING PREVENTION}
 Let us look into the other methods to prevent phishing. Since search engines have to index all pages to be displayed for the user’s query, it seems logical to use some mechanism to find such links while indexing and use the same in browsers to notify users that they are accessing a page which is probably used for phishing. This works for most cases, but fails for those dynamically created pages which are not indexed by the search engines and newly created sites which have yet to be crawled because it takes a few hours for search engines to index new pages. 
 
-Thus to prevent the problems caused by the above method, our implementation of Off-the-hook-plus will be cross platform with more useful features such as web traffic and also  reduce the memory usage while finding the target website.
+\section{PROBLEM STATEMENT}
+Phishing attacks that occur due to the time delay in searching the phishing websites and adding them to the phish list takes time and resources. And this has no role to be done by the client side. To prevent such attacks by using the client side resources is what must be achieve by Off-the-hook-plus.
+
+\section{OBJECTIVES}
+The objectives of Off-the-hook-plus are as follows. It must be cross platform compatible that most users can benefit from it. It must be accurate enough to be trusted with the phish detection. It must have a low memory usage so that even machines with low main memory resources can use them. The phish detection must also maintain the accuracy overtime making it temporally resilient. Also the target phish website detector will enable the users to find which website the phish is trying to impersonate.
+
+\section{ORGANIZATION OF THESIS}
+In the following chapters, we will look into the details of the system architecture, implementation and evaluation of Off-the-hook-plus.
+
+Chapter 2 gives the architectural models that have been used to detect phish websites along with the parameters that were incorporated. Then, the methods to optimise the models have been discussed. Finally we get to the part where we review the previous works with respect to Off-the-hook-plus to see how it is different from them. Chapter 3 gives the system architecture of Off-the-hook-plus along with its high level block diagram. Chapter 4 details down into the module design which gives the pseudocode of how each module works. Chapter 5 gives the implementation details for Off-the-hook-plus along with the expected inputs and outputs. Chapter 6 evaluates Off-the-hook-plus on the lines of its objectives to make sure that they meet those with performance metrics. Finally, we conclude what Off-the-hook-plus is and also list the future work that can be done on it. And then, we have the Appendix A which gives a detailed look into the possible states that the  Output UI module can be in because of the phish detector and the target identifier.
+
+
+
+
+
+
+
+
+

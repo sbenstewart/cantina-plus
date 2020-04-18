@@ -86,6 +86,22 @@ Temporal resilience accuracy is a metric which says that the application must be
 
 The Figure  ~\ref{fig:pdcmm2} gives the phish detection accuracy along with the precision, recall and f1-score for the model run after two months of the first instance being run whose results are in Figure ~\ref{fig:pdcmm}. The accuracy drop from the first run is 0.0035. This makes it almost temporally resilient.
 
+\section{COMPARISONS}
+In Table ~\ref{tab:ct2}  we will look into how our system compares with the systems implemented in the previous papers. The metrics that will be compared are the phish detection accuracy, memory usage, execution time and temporal resiliency. The metric of target detection has been omitted because those papers did not implement such a subsystem.
+
+\begin{table}[h!]
+\caption{Metrics Comparison Table}
+\centering
+    \begin{tabular}{ |m{4cm}|m{5cm}|m{5cm}| }
+    \hline
+    Metric & Previous Benchmark & Off-the-hook-plus \\ \hline
+    Phish Detection Accuracy (Percent) & 95.54 & 96.11 \\ \hline
+    Memory Usage (MB) & 295 & 111.9 \\ \hline
+   Execution Time (seconds) & 8.74 & 7.5 \\ \hline
+    Temporal Resiliency (Percent Decrease) & 6.44 & 0.35 \\ \hline
+    \end{tabular}
+\label{tab:ct2}
+\end{table}
 
 
 
