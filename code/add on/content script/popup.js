@@ -7,7 +7,7 @@ function transfer(){
 		params="url="+tablink;
         //alert(params);
 		var markup = "url="+tablink+"&html="+document.documentElement.innerHTML;
-		xhr.open("POST","http://localhost:8888/clientServer.php",false);
+		xhr.open("POST","http://localhost/clientServer.php",false);
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhr.send(markup);
 		//alert(xhr.responseText);
@@ -23,7 +23,7 @@ function safe(){
 
 		var xhr=new XMLHttpRequest();
 		var markup = "url="+tablink;
-		xhr.open("POST","http://localhost:8888/updatewhitelist.php",false);
+		xhr.open("POST","http://localhost/updatewhitelist.php",false);
 		xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		xhr.send(markup);
 		//alert(xhr.responseText);
