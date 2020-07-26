@@ -287,7 +287,7 @@ def get_hostname_from_url(url):
 
 
 def main(url):
-    with open('/Applications/MAMP/htdocs' + '/markup.txt', 'r') as file:
+    with open('/opt/lampp/htdocs' + '/markup.txt', 'r') as file:
         soup_string = file.read()
 
     soup = BeautifulSoup(soup_string, 'html.parser')
