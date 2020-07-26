@@ -79,5 +79,5 @@ def get_tags(doc):
 
 
 if __name__ == '__main__':
-    os.chdir('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/')
+    os.chdir('/mnt/neverdelete/projects/fyp/code/target identifier/')
     main()

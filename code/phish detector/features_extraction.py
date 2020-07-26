@@ -13,7 +13,7 @@ import sys
 
 from patterns import *
 
-LOCALHOST_PATH = "/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/"
+LOCALHOST_PATH = "/mnt/neverdelete/projects/fyp/code/"
 DIRECTORY_NAME = "phish detector"
 
 

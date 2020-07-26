@@ -22,7 +22,7 @@ def get_prediction_from_url(test_url):
 def main():
     url = sys.argv[1]
 
-    white_list_file = open('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/phish detector/whitelist.txt').read()
+    white_list_file = open('/mnt/neverdelete/projects/fyp/code/phish detector/whitelist.txt').read()
     white_list = white_list_file.split('\n')
     if url in white_list:
         print("SAFE")
@@ -37,7 +37,7 @@ def main():
         if prediction == 1:
             # print "The website is safe to browse"
             print("SAFE")
-            white_list_file=open('/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/phish detector/whitelist.txt', "a+")
+            white_list_file=open('/mnt/neverdelete/projects/fyp/code/phish detector/whitelist.txt', "a+")
             white_list_file.write(url)
             white_list_file.write("\n")
             white_list_file.close()
@@ -46,7 +46,7 @@ def main():
             # print "The website has phishing features. DO NOT VISIT!"
             print("PHISHING")
             # load into the whole list for target identifier
-            json_path = '/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/sites.json'
+            json_path = '/mnt/neverdelete/projects/fyp/code/target identifier/sites.json'
             with open(json_path, 'r') as json_file:
                 results = json.load(json_file)
                 #print(results)
@@ -62,7 +62,7 @@ def main():
              
             #only single url to be scraped
             single_json_decoded = {}
-            json_path = '/Users/benstewart/BEN STUFF/PROJECTS/fyp/code/target identifier/single-sites.json'
+            json_path = '/mnt/neverdelete/projects/fyp/code/target identifier/single-sites.json'
             single_json_decoded['url'] = url
             with open(json_path, 'w') as json_file:
                 json.dump(single_json_decoded, json_file, sort_keys=True, indent=4, separators=(',', ': '))    
