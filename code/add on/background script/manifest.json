@@ -20,7 +20,7 @@
       "run_at": "document_start"
     }
   ],
-  "content_security_policy": "script-src 'self' https://www.googletagservices.com https://adservice.google.co.uk https://adservice.google.com https://*.doubleclick.net https://*.googlesyndication.com/ 'sha256-DDNG2paLgkZPkGIYdWjFzEJV0LiVhAEp3skFKJejwzg=' 'sha256-RHA+m8eGG5L7m4CD7L4q4mSJBprdiVkPcqbKb6ye2So=' 'sha256-Ez5tszOI7IWbpOip+ikgcDLRrI8nforn8dgkZ89qFpg=' 'unsafe-inline'; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://www.googletagservices.com https://adservice.google.co.uk https://adservice.google.com https://*.doubleclick.net https://*.googlesyndication.com/ 'sha256-DDNG2paLgkZPkGIYdWjFzEJV0LiVhAEp3skFKJejwzg=' 'sha256-RHA+m8eGG5L7m4CD7L4q4mSJBprdiVkPcqbKb6ye2So=' 'sha256-Ez5tszOI7IWbpOip+ikgcDLRrI8nforn8dgkZ89qFpg='; object-src 'self'",
   "permissions": [
     "webRequest",
     "webNavigation",
