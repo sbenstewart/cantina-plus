@@ -18,39 +18,39 @@ If you really feel the urge to read the detailed thesis that was submitted, clic
 ```brainfuck
 cantina-plus
 ├── code
-│   ├── addon                       (chrome extensions)
+│   ├── addon                   <---chrome extensions
 │   │   ├── background script
 │   │   └── content script
-│   ├── phish detection             (safe or phish)
-│   └── target identification       (most similar site)
-├── contents                        (fyp submit data)
+│   ├── phish detection         <---safe or phish
+│   └── target identification   <---most similar site
+├── contents                    <---fyp submit data
 │   ├── done
 │   ├── notdone
-│   └── teamlist                    (2020 passouts)
+│   └── teamlist                <---2020 passouts
 ├── documentation
-│   └── (n)th review                (total 3 reviews)
+│   └── (n)th review            <---total 3 reviews
 │       ├── doc
 │       └── pdf
 ├── images
 │   ├── image
-│   │   ├── drawio                  (import in drawio)
+│   │   ├── drawio              <---import in drawio
 │   │   └── png
 │   └── screenshots
-├── mail these                      (mail before review)
+├── mail these                  <---mail before review
 │   └── (n)th review
 │       ├── ppt
 │       ├── pdf
 │       └── zip
-├── papers                          (ieee only)
-│   ├── literature survey           (base for base)     
+├── papers                      <---ieee only
+│   ├── literature survey       <---base for base     
 │   │   └──surveys
-│   └── pdf                         (base)
-├── presentation                    (total 3 reviews)
+│   └── pdf                     <---base
+├── presentation                <---total 3 reviews
 │   └── (n)th review
 │       ├── pptx
 │       └── pdf
-├── samples                         (samples)
-├── thesis                          (latex nightmare)
+├── samples                     <---samples
+├── thesis                      <---latex nightmare
 ├──LICENCE
 └──README.md
 ```
