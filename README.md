@@ -1,5 +1,5 @@
-# cantina-plus
-![GitHub repo size](https://img.shields.io/github/repo-size/sbenstewart/cantina-plus)
+# off-the-hook-plus
+![GitHub repo size](https://img.shields.io/github/repo-size/sbenstewart/off-the-hook-plus)
 
 An efficient and usable client-side cross platform compatible phishing prevention application.
 
@@ -16,7 +16,7 @@ If you really feel the urge to read the detailed thesis that was submitted, clic
 ## folder structure explained
 
 ```brainfuck
-cantina-plus
+off-the-hook-plus
 ├── code
 │   ├── addon                   <---chrome extensions
 │   │   ├── background script
@@ -55,7 +55,7 @@ cantina-plus
 └──README.md
 ```
 
-## install cantina-plus on your machine
+## install off-the-hook-plus on your machine
 
 ### prerequisites
 1. [XAMPP](https://www.apachefriends.org/index.html) for hosting the php files.
@@ -63,7 +63,7 @@ cantina-plus
 3. [Anaconda](https://www.anaconda.com/) as it is easier to install python and conda this way.
 
 ### installation
-1. Run the following in the shell to create the python environment, activate it and install the python packages needed for cantina-plus.
+1. Run the following in the shell to create the python environment, activate it and install the python packages needed for off-the-hook-plus.
 ```console
 $conda create --name fyp python=2.7 
 $conda activate fyp
@@ -86,7 +86,7 @@ $conda install -c anaconda lxml
 4. Open Google Chrome. Navigate to More Tools->Extensions. Make sure that the "Developer Mode" on the top right corner is on.
 5. Click "Load unpacked" button and open the folder /code/add on/background script.
 6. Repeat step 5 for the folder /code/add on/content script.
-7. Congratulate yourself for installing cantina-plus. To check the webpages, click the `content script` extension.
+7. Congratulate yourself for installing off-the-hook-plus. To check the webpages, click the `content script` extension.
 
 ## road map
 * Use python http client to remove dependency on php.
@@ -94,8 +94,8 @@ $conda install -c anaconda lxml
 * Use custom tree datastructure instead of files for whitelist.
 * Make python installable package.
 
-## contributing on cantina-plus
-To contribute on cantina-plus, follow these steps:
+## contributing on off-the-hook-plus
+To contribute on off-the-hook-plus, follow these steps:
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <user_name>`.
@@ -113,14 +113,14 @@ All the content which includes the code, the documentation and the decks are und
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## acknowledgements
-Down here I would like to acknowledge all those who made cantina-plus possible.
+Down here I would like to acknowledge all those who made off-the-hook-plus possible.
 
 * My awesome team mates [N.Dhanush](https://github.com/SimplyMrD) and [G.Santhosh](https://github.com/gsanthosh98) without whom it would not have been such fun doing a final year project.
-* [Dr. Angelin Gladston](mailto:angel@cs.annauniv.edu) for guiding cantina-plus to it's completion. 
-* [The panel from the Department of Computer Science and Engineering, CEG](http://cs.annauniv.edu/people/teaching.php) who gave meaningful inputs to make cantina-plus better.
+* [Dr. Angelin Gladston](mailto:angel@cs.annauniv.edu) for guiding off-the-hook-plus to it's completion. 
+* [The panel from the Department of Computer Science and Engineering, CEG](http://cs.annauniv.edu/people/teaching.php) who gave meaningful inputs to make off-the-hook-plus better.
 * [Google Docs and Slides](https://docs.google.com) for making the team collaboration a lot easier.
 * [Drawio Chrome App](https://chrome.google.com/webstore/detail/diagramsnet-desktop/pebppomjfocnoigkeepgbmcifnnlndla?hl=en-GB) that made it possible to easily render the images.
-* [LaTeX](https://en.wikipedia.org/wiki/LaTeX) for making it way harder to submit cantina-plus as a thesis.
+* [LaTeX](https://en.wikipedia.org/wiki/LaTeX) for making it way harder to submit off-the-hook-plus as a thesis.
 
 ## contact
 
