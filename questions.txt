@@ -1,0 +1,20 @@
+The Q&A we faced from the panel
+=======================================
+
+1. What is the differs of Off-the-hook from the rest?
+Off-the-hook in addition to detection if a site is a phish or not, gives what webpage, this phish is trying to copy.
+
+2. Why was a Random Forest model used?
+We wanted to get eliminate the overfitting problem, without spending much time bagging the features and records.
+
+3. How you compute the memory usage by your application?
+The OS allotes a processID(pid) for each process, and we get the pid for all components of Off-the-hook and sum them up to get the total memory usage.
+
+4. Why was Fuzzy Rough Set Theory used for Feature Selection?
+We are not sure on what features are realted to the labels and how they are related, and as Fuzzy Rough Set displays the relationships, it was used.
+
+5. How can we make the whitelist better?
+Having the URI stored as a trie with the levels similar to the DNS structure, followed by the directory structure and finally the html page as the leaf.
+
+6. How can SHA be used for finding similairty?
+By deault even a small change in the input must change the hash widely. And, so a modified version of SHA where the similar imputs have simlar MSB in the hash is used.
